@@ -1,12 +1,12 @@
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './JS/counter.js'
+// import javascriptLogo from './javascript.svg'
+// import viteLogo from '/vite.svg'
+// import { setupCounter } from './JS/counter.js'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-import * as bootstrap from 'bootstrap';
+// import * as bootstrap from 'bootstrap';
 
 
 
