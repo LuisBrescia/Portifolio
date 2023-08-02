@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,31 +8,71 @@
   <title>Luís Brescia</title>
 </head>
 
-<body class="bg-claro">
-  <!-- * Section 1 -->
-  <section class="my-3">
-    <nav class="container position-sticky w-75 mx-auto mb-3 d-flex align-items-stretch justify-content-between">
+<body class="bg-claro p-1">
 
-      <span class="fw-bold fs-5 bg-default text-white px-3 py-2 rounded-5 border-3 shadow">Feito na raça</span>
+  <nav class="container sticky-top my-3 d-flex align-items-stretch justify-content-end navbar">
 
-      <button id="menu_portifolio" class="border-0 px-3 py-2 btn btn-claro rounded-5 shadow">
-        <input id="show_menu" class="d-none" type="checkbox">
-        <label class="toggle" for="show_menu">
-          <div id="barra_cima" class="bars"></div>
-          <div id="barra_meio" class="bars"></div>
-          <div id="barra_baixo" class="bars"></div>
-        </label>
-      </button>
+    <button id="menu_portifolio" class="border-0 px-3 py-2 btn btn-claro rounded-5 shadow">
+      <input id="show_menu" class="d-none" type="checkbox">
+      <label class="toggle" for="show_menu">
+        <div id="barra_cima" class="bars"></div>
+        <div id="barra_meio" class="bars"></div>
+        <div id="barra_baixo" class="bars"></div>
+      </label>
+    </button>
 
-    </nav>
+  </nav>
 
-    <div class="fs-4 text-center fw-bold">QUEM SOU?</div>
-  </section>
-  
-  <!-- * Section 2 -->
-  <section class="my-3" style="min-height: 50vh; background-color: antiquewhite;">
-    <div class="fs-4 text-center">PROJETOS</div>
-  </section>
+  <main class="container mx-auto d-flex flex-column gap-4 my-3 px-sm-5">
+
+    <!-- * Event Manager -->
+    <section class="container shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-5 align-items-stretch">
+      <div class="col-12 col-md-6 ps-3">
+        <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
+        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap">Projeto da faculdade</div>
+        <p class="fs-smaller">Site que permite o gerenciamento e planejamento de eventos</p>
+        <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
+      </div>
+
+      <div class="col-12 col-md-6 d-flex mt-3 mt-md-0 justify-content-center fs-3">
+        <span class="bg-claro rounded-5 w-100 text-escuro h-100 d-flex align-items-center justify-content-center" style="min-height: 10vh;">Imagem</span>
+      </div>
+    </section>
+
+    <!-- * RDC - Material extra -->
+    <section class="container shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-5 align-items-stretch">
+
+      <div class="col-12 col-md-6 ps-3">
+        <div class="fs-3 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
+        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap">Projeto de extensão</div>
+        <p class="fs-smaller">
+          Contém todo conteúdo da matéria Redes de Computadores do CEFET-MG, desenvolvido
+          para ajudar alunos a reter o conteúdo.
+        </p>
+        <button class="border-0 btn btn-escuro rounded-5 fs-small">Mais detalhes</button>
+      </div>
+
+      <div class="col-12 col-md-6 d-flex mt-3 mt-md-0 justify-content-center fs-3">
+        <span class="bg-claro rounded-5 w-75 text-escuro h-100 d-flex align-items-center justify-content-center" style="min-height: 10vh;">Imagem</span>
+      </div>
+    </section>
+
+    <!-- * Music Maker -->
+    <section class="container shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-5 align-items-stretch">
+      
+      <div class="col-12 col-md-6 ps-3">
+        <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
+        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap">Projeto pessoal</div>
+        <p class="fs-smaller">Meu primeiro projeto, um editor de músicas desenvolvido utilizando javascript.</p>
+        <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
+      </div>
+
+      <div class="col-12 col-md-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center fs-3" style="min-height: 10vh;">
+        Imagem/Vídeo
+      </div>
+    </section>
+
+  </main>
 
   <script type="module" src="/main.js"></script>
 </body>

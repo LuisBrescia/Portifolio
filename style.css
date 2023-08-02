@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700&display=swap');
 
 :root {
   --color-escuro: #0f0f0f;
   --color-claro: #f5f5f5;
-  --color-azul: 
+  --color-azul: #9bf7ff;
 }
 
 body {
@@ -15,6 +15,33 @@ body {
 
 nav {
   border-radius: 10em;
+}
+
+main {
+  max-width: 720px !important;
+}
+
+section {
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: none;
+}
+
+section button {
+  transform: scale(1) !important;
+}
+
+section:hover {
+  box-shadow: inherit;
+  transform: scale(1.05);
+  background-color: var(--color-claro);
+}
+
+section:first-child {
+  filter: hue-rotate(-120deg);
+}
+
+section:last-child {
+  filter: hue-rotate(-240deg);
 }
 
 .toggle {
@@ -30,7 +57,7 @@ nav {
 
 .bars {
   width: 100%;
-  height: 2px;
+  height: 2.4px;
   background-color: var(--color-escuro);
   border-radius: 15px;
 }
@@ -68,9 +95,11 @@ nav {
 .bg-claro {
   background-color: var(--color-claro);
 }
-
-.bg-default {
+.bg-especial {
   background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+}
+.bg-principal {
+  background-color: var(--color-azul);
 }
 
 /** Texto - Personalizados */
@@ -80,6 +109,16 @@ nav {
 }
 .text-claro {
   color: var(--color-claro);
+}
+
+/** Tamanho de fontes - Personalizados */
+
+.fs-small {
+  font-size: small;
+}
+
+.fs-smaller {
+  font-size: smaller;
 }
 
 /** Border - Personalizados */
@@ -93,36 +132,50 @@ nav {
 
 /** Botões - Personalizados */
 
+button {
+  transition: all 0.3s ease-in-out !important;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(1.05);
+}
+
 .btn-claro {
   background-color: var(--color-claro);
   color: var(--color-escuro);
-  transition: all 0.3s ease-in-out;
 }
 
 .btn-claro:hover {
   background-color: var(--color-claro);
   color: var(--color-escuro);
-  transform: scale(1.1);
 }
 
 .btn-claro:active {
   background-color: var(--color-claro) !important;
   color: var(--color-escuro) !important;
-  transform: scale(1.05);
 }
 
 .btn-escuro {
   background-color: var(--color-escuro);
-  color: #212529;
+  color: var(--color-claro);
 }
 
 .btn-escuro:hover {
-  background-color: var(--color-escuro);
+  background-color: #191919;
   color: var(--color-claro);
 }
 
 .btn-escuro:active {
-  background-color: var(--color-escuro) !important;
+  background-color: #212528 !important;
+  color: var(--color-claro) !important;
+}
+
+.btn-default, .btn-default:hover, .btn-default:active {
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB) !important;
   color: var(--color-claro) !important;
 }
 

@@ -24,4 +24,14 @@ $(document).ready(function() {
       showMenuCheckbox.checked = false;
     }
   });
+
+  // Quando um elemento section estiver em hover esse elemento receberá a classe shadow
+  $('section').hover(function() {
+    console.log('hover');
+    $(this).addClass('shadow').removeClass('shadow-sm');
+    // Ao sair do hover a classe é removida
+  }, function() {
+    $(this).addClass('shadow-sm').removeClass('shadow');
+
+  });
 });
