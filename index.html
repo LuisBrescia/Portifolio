@@ -12,7 +12,8 @@
 
   <nav class="container sticky-top my-3 d-flex align-items-stretch justify-content-end navbar px-2 px-sm-0">
 
-    <button id="menu_portifolio" class="border-0 px-3 py-2 btn btn-claro rounded-5 shadow">
+    <!-- * Botão Menu -->
+    <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
       <input id="show_menu" class="d-none" type="checkbox">
       <label class="toggle" for="show_menu">
         <div id="barra_cima" class="bars"></div>
@@ -25,50 +26,55 @@
 
   <main class="container mx-auto d-flex flex-column gap-4 my-3 px-sm-5">
 
+    <!-- * Apresentação -->
+    <div class="text-center">
+      <div class="fw-bold fs-1 text-gradient">Olá, sou Luís.</div>
+      <div class="fw-medium fs-small bi-geo-alt mb-2">&nbsp;Belo Horizonte, Brasil</div>
+      <div class="fw-light fs-smaller mx-auto">
+        Estudante de 20 anos recém-formado no curso de Informática do CEFET-MG.<br>
+        Cursando o 2° período da faculdade de Engenharia de Software na PUC Minas.
+      </div>
+    </div>
+
     <!-- * Event Manager -->
-    <section class="container shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-5 align-items-stretch">
-      <div class="col-12 col-md-6 ps-3">
+    <section class="shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
+      <div class="col-12 col-md-6">
         <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
-        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap">Projeto da faculdade</div>
+        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
         <p class="fs-smaller">Site que permite o gerenciamento e planejamento de eventos</p>
         <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
       </div>
 
-      <div class="col-12 col-md-6 d-flex mt-3 mt-md-0 justify-content-center fs-3">
-        <span class="bg-claro rounded-5 w-100 text-escuro h-100 d-flex align-items-center justify-content-center" style="min-height: 10vh;">Imagem</span>
-      </div>
+      <img src="/public/event-manager.jpeg" class="col-12 col-md-6 d-flex mt-3 mt-md-0 rounded-3"></img>
     </section>
 
     <!-- * RDC - Material extra -->
-    <section class="container shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-5 align-items-stretch">
+    <section class="shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
 
-      <div class="col-12 col-md-6 ps-3">
+      <div class="col-12 col-md-6">
         <div class="fs-3 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
-        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap">Projeto de extensão</div>
+        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
         <p class="fs-smaller">
-          Contém todo conteúdo da matéria Redes de Computadores do CEFET-MG, desenvolvido
-          para ajudar alunos a reter o conteúdo.
+          Desenvolvido para ajudar alunos a reter conteúdo da matéria de RDC do CEFET-MG
         </p>
-        <button class="border-0 btn btn-escuro rounded-5 fs-small">Mais detalhes</button>
+        <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
       </div>
 
-      <div class="col-12 col-md-6 d-flex mt-3 mt-md-0 justify-content-center fs-3">
-        <span class="bg-claro rounded-5 w-75 text-escuro h-100 d-flex align-items-center justify-content-center" style="min-height: 10vh;">Imagem</span>
-      </div>
+      <img src="/public/projeto-redes.jpeg" class="col-12 col-md-6 d-flex mt-3 mt-md-0 rounded-3"></img>
     </section>
 
     <!-- * Music Maker -->
-    <section class="container shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-5 align-items-stretch">
+    <section class="shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
       
-      <div class="col-12 col-md-6 ps-3">
+      <div class="col-12 col-md-6">
         <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
-        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap">Projeto pessoal</div>
+        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
         <p class="fs-smaller">Meu primeiro projeto, um editor de músicas desenvolvido utilizando javascript.</p>
         <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
       </div>
 
       <div class="col-12 col-md-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center fs-3" style="min-height: 10vh;">
-        Imagem/Vídeo
+        <span class="bg-claro rounded-3 w-100 text-escuro h-100 d-flex align-items-center justify-content-center" style="min-height: 10vh;">Imagem</span>
       </div>
     </section>
 
