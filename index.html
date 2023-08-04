@@ -10,6 +10,16 @@
 
 <body class="bg-claro">
   <nav class="container sticky-top d-flex align-items-stretch justify-content-end navbar px-2 px-sm-0 py-0 pt-4">
+
+    <!-- * Botão Altera Tema -->
+    <!-- <button class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
+
+      <label class="toggle" for="altera_tema">
+        <div id="sol" class="text-especial fs-4 bi-brightness-high-fill"></div>
+      </label>
+
+    </button> -->
+
     <!-- * Botão Menu -->
     <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
       <input id="show_menu" class="d-none" type="checkbox">
@@ -22,10 +32,16 @@
 
       <ul id="menu_content" class="text-start bg-white list-unstyled position-absolute p-1 mt-1 rounded-3 shadow">
         <li class="rounded-3 py-1 px-2">
-          <span class="text-especial bi-house-fill" data-default="bi-house" data-fill="bi-house-fill">&nbsp; Home</span>
+          <span class="text-especial bi-mortarboard-fill" data-default="bi-mortarboard" data-fill="bi-mortarboard-fill">&nbsp; Formação</span>
         </li>
         <li class="rounded-3 py-1 px-2">
-          <span class="text-especial bi-person fw-light" data-default="bi-person" data-fill="bi-person-fill">&nbsp; About</span>
+          <span class="text-especial bi-person fw-light" data-default="bi-person" data-fill="bi-person-fill">&nbsp; Sobre mim</span>
+        </li>
+        <li class="rounded-3 py-1 px-2">
+          <span class="text-especial bi-rocket-takeoff fw-light" data-default="bi-rocket-takeoff" data-fill="bi-rocket-takeoff-fill">&nbsp; Projetos</span>
+        </li>
+        <li class="rounded-3 py-1 px-2">
+          <span class="text-especial bi-send fw-light" data-default="bi-send" data-fill="bi-send-fill">&nbsp; Contato</span>
         </li>
       </ul>
     </button>
@@ -35,7 +51,7 @@
 
     <!-- * Apresentação -->
     <div class="text-center">
-      <div class="fw-bold fs-big text-especial">Olá, sou Luís.</div>
+      <div class="fw-bold fs-big mx-auto text-especial" style="width: fit-content;">Olá, sou Luís.</div>
       <div class="bi-geo-alt-fill mb-2">&nbsp;Belo Horizonte, Brasil</div>
       <div class="fw-light mx-auto">
         Estudante de 20 anos recém-formado no curso de Informática do CEFET-MG.
@@ -43,8 +59,13 @@
       </div>
     </div>
 
+    <!-- ! Projetos -->
+    <div class="fs-1 text-especial mx-auto" style="width: fit-content;">
+      Projetos
+    </div>
+
     <!-- * Event Manager -->
-    <section class="shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
+    <section class="shadow-sm bg-especial text-white d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
       <div class="col-12 col-md-6">
         <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
         <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
@@ -58,7 +79,7 @@
     </section>
 
     <!-- * RDC - Material extra -->
-    <section class="shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
+    <section class="shadow-sm bg-especial text-white d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
 
       <div class="col-12 col-md-6">
         <div class="fs-3 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
@@ -75,7 +96,7 @@
     </section>
 
     <!-- * Music Maker -->
-    <section class="shadow-sm bg-especial text-claro d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
+    <section class="shadow-sm bg-especial text-white d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
 
       <div class="col-12 col-md-6">
         <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
@@ -87,9 +108,35 @@
       <div class="col-12 col-md-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center fs-3"
         style="min-height: 10vh;">
         <span class="bg-claro rounded-3 w-100 text-escuro h-100 d-flex align-items-center justify-content-center"
-          style="min-height: 10vh;">Imagem</span>
+          style="min-height: 14vh;">Imagem</span>
       </div>
     </section>
+
+    <!-- * Contatos -->
+
+    <div class="d-flex my-3 justify-content-center gap-3">
+
+      <button class="bg-white shadow-sm px-3 py-2 border-round">
+        <i class="text-especial fs-1 bi-envelope"></i>
+      </button>
+
+      <button class="bg-white shadow-sm px-3 py-2 border-round">
+        <i class="text-especial fs-1 bi-linkedin"></i>
+      </button>
+
+      <button class="bg-white shadow-sm px-3 py-2 border-round">
+        <i class="text-especial fs-1 bi-whatsapp"></i>
+      </button>
+
+      <button class="bg-white shadow-sm px-3 py-2 border-round">
+        <i class="text-especial fs-1 bi-github"></i>
+      </button>
+
+      <button class="bg-white shadow-sm px-3 py-2 border-round">
+        <i class="text-especial fs-1 bi-phone"></i>
+      </button>
+
+    </div>
 
   </main>
 
