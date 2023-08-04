@@ -8,50 +8,35 @@ import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 // import * as bootstrap from 'bootstrap';
 
-
-
-
 $(document).ready(function () {
+
   $('#menu_portifolio').on('click', function () {
 
-    // Se for clicado em #menu_content, retorna função
-    if ($(event.target).closest('#menu_content').length) {
-      console.log('menu_content AAAAAAAAAAAA');
-      return;
-    }
+    if ($(event.target).closest('#menu_content').length) {return;}
 
-    const showMenuCheckbox = document.getElementById('show_menu');
-    if (!showMenuCheckbox.checked) {
-      // Adicionar tranfosrm: scale(1.1) ao menu;
+    if (!$('#show_menu').checked) {
       $('#menu_portifolio').addClass('big');
     } else {
-      // Voltar para como se essa propriedade nunca tivesse sido aplicada
       $('#menu_portifolio').removeClass('big');
     }
-    // Se o elemento clicado for #menu_content, o menu não é fechado
-    showMenuCheckbox.checked = !showMenuCheckbox.checked;
+
+    $('#show_menu').checked = !$('#show_menu').checked;
   });
 
-  $('#menu_content').on('click', function () {
-    $('#menu_content li').addClass('fw-light');
-    $(event.target).closest('li').removeClass('fw-light');
+  $('#menu_content').on('click', 'span', function() {
+    
+    $('#menu_content span').addClass('fw-light');
+    $(this).removeClass('fw-light');
 
-    // Caso clique no 2 elemento
-    if ($(event.target).closest('li').is(':first-child')) {
-      $('#menu_content li:first-child  span').addClass('bi-house-fill').removeClass('bi-house');
-      $('#menu_content li:nth-child(2) span').addClass('bi-person').removeClass('bi-person-fill');
-    }
-    if ($(event.target).closest('li').is(':nth-child(2)')) {
-      $('#menu_content li:first-child  span').removeClass('bi-house-fill').addClass('bi-house');
-      $('#menu_content li:nth-child(2) span').removeClass('bi-person').addClass('bi-person-fill');
-    }
-    // Vou pegar o li atual, e printar a classe que comeca com bi-  
-    console.log($(event.target).closest('li').attr('class').match(/bi-.*/g));
-    // Vou printar apenas o que esiver entre bi- e -fill, sendo que talvez não tenha -fill
-    console.log($(event.target).closest('li').attr('class').match(/bi-(.*?)(-fill)?/)[1]);
+    $('#menu_content span').each(function() {	
+      $(this).addClass($(this).data('default')).removeClass($(this).data('fill'));
+    });
+    
+    $(this).addClass($(this).data('fill')).removeClass($(this).data('default'));
+
   });
 
-  // Caso o usuário clique fora do menu, o menu é fechado
+  // * Quando o usuário clica na página, o menu é fechado 
   $(document).on('click', function (event) {
     if (!$(event.target).closest('#menu_portifolio').length) {
       const showMenuCheckbox = document.getElementById('show_menu');
@@ -60,10 +45,11 @@ $(document).ready(function () {
     }
   });
 
-  // Quando um elemento section estiver em hover esse elemento receberá a classe shadow
+  // * Quando o mouse passa por cima de um projeto, este projeto ganha uma sobra maior
   $('section').hover(function () {
     $(this).addClass('shadow').removeClass('shadow-sm');
   }, function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
   });
+
 });

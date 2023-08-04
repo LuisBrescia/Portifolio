@@ -76,6 +76,7 @@ section:hover {
   justify-content: center;
   gap: 4px;
   transition-duration: .5s;
+  cursor: pointer;
 }
 
 .bars {
@@ -149,6 +150,7 @@ section:hover {
 .text-especial {
   background-clip: text;
   -webkit-background-clip: text;
+  --webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
 }
