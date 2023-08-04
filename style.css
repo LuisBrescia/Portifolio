@@ -4,7 +4,9 @@
   --color-escuro: #0f0f0f;
   --color-cinzento: #dadada;
   --color-claro: #f8f9fA;
-  --color-azul: #9bf7ff;
+  --color-azul: #00ddeb;
+  --color-indigo: #5b42f3;
+  --color-roxo: #8640ff;
 }
 
 body {
@@ -13,6 +15,11 @@ body {
   margin: 0;
   padding: 0;
   color: var(--color-escuro);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-azul);
 }
 
 nav {
@@ -154,6 +161,14 @@ section:hover {
   color: transparent;
   background-color: #5B42F3;
   background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+}
+
+.text-indigo {
+  color: var(--color-indigo);
+}
+
+.text-roxo {
+  color: var(--color-roxo);
 }
 
 .letter-spacing {
