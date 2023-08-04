@@ -38,13 +38,17 @@ $(document).ready(function () {
 
     // Caso clique no 2 elemento
     if ($(event.target).closest('li').is(':first-child')) {
-      $('#menu_content li:first-child ').addClass('bi-house-fill').removeClass('bi-house');
-      $('#menu_content li:nth-child(2) ').addClass('bi-person').removeClass('bi-person-fill');
+      $('#menu_content li:first-child  span').addClass('bi-house-fill').removeClass('bi-house');
+      $('#menu_content li:nth-child(2) span').addClass('bi-person').removeClass('bi-person-fill');
     }
     if ($(event.target).closest('li').is(':nth-child(2)')) {
-      $('#menu_content li:first-child ').removeClass('bi-house-fill').addClass('bi-house');
-      $('#menu_content li:nth-child(2) ').removeClass('bi-person').addClass('bi-person-fill');
+      $('#menu_content li:first-child  span').removeClass('bi-house-fill').addClass('bi-house');
+      $('#menu_content li:nth-child(2) span').removeClass('bi-person').addClass('bi-person-fill');
     }
+    // Vou pegar o li atual, e printar a classe que comeca com bi-  
+    console.log($(event.target).closest('li').attr('class').match(/bi-.*/g));
+    // Vou printar apenas o que esiver entre bi- e -fill, sendo que talvez não tenha -fill
+    console.log($(event.target).closest('li').attr('class').match(/bi-(.*?)(-fill)?/)[1]);
   });
 
   // Caso o usuário clique fora do menu, o menu é fechado
@@ -57,9 +61,7 @@ $(document).ready(function () {
 
   // Quando um elemento section estiver em hover esse elemento receberá a classe shadow
   $('section').hover(function () {
-    console.log('hover');
     $(this).addClass('shadow').removeClass('shadow-sm');
-    // Ao sair do hover a classe é removida
   }, function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
   });

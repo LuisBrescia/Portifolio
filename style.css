@@ -81,7 +81,7 @@ section:hover {
 .bars {
   width: 100%;
   height: 2.4px;
-  background-color: var(--color-escuro);
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   border-radius: 15px;
 }
 
@@ -146,8 +146,11 @@ section:hover {
   color: var(--color-claro);
 }
 
-.text-gradient {
-  color: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+.text-especial {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
 }
 
 .letter-spacing {
@@ -155,6 +158,10 @@ section:hover {
 }
 
 /** Tamanho de fontes - Personalizados */
+
+.fs-big {
+  font-size: 3em;
+}
 
 .fs-small {
   font-size: small;
