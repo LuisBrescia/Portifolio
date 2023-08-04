@@ -3,7 +3,7 @@
 :root {
   --color-escuro: #0f0f0f;
   --color-cinzento: #dadada;
-  --color-claro: #f5f5f5;
+  --color-claro: #f8f9fA;
   --color-azul: #9bf7ff;
 }
 
@@ -40,6 +40,31 @@ section:hover {
   box-shadow: inherit;
   transform: scale(1.05);
   background-color: var(--color-claro);
+}
+
+.big {
+  transform: scale(1.1) !important;
+}
+
+#menu_content {
+  width: 10rem;
+  top: 50px;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  transform: translateY(-20px) translateX(5px) scale(0.9);
+  pointer-events: none;
+}
+
+#menu_content li:hover {
+  background-color: var(--color-claro);
+}
+
+#show_menu:checked~#menu_content {
+  opacity: 1;
+  pointer-events: auto; 
+  transform: translate(0) scale(1); 
 }
 
 .toggle {
