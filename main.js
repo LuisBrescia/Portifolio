@@ -50,7 +50,7 @@ $(document).ready(function () {
   });
 
   // * Quando o mouse passa por cima de um projeto, este projeto ganha uma sobra maior
-  $('section').hover(function () {
+  $('.interativo').hover(function () {
     $(this).addClass('shadow').removeClass('shadow-sm');
   }, function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
