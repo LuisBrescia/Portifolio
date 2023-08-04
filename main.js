@@ -23,18 +23,22 @@ $(document).ready(function () {
     $('#show_menu').checked = !$('#show_menu').checked;
   });
 
-  $('#menu_content').on('click', 'span', function() {
+  $('#menu_content').on('click', 'li', function () {
     
-    $('#menu_content span').addClass('fw-light');
-    $(this).removeClass('fw-light');
-
+    var $clickedLi = $(this);
+    var $clickedSpan = $clickedLi.find('span');
+    var defaultClass = $clickedSpan.data('default');
+    var fillClass = $clickedSpan.data('fill');
+      
+    $('#menu_content span').addClass('fw-light').not($clickedSpan).removeClass('fw-light');
+      
     $('#menu_content span').each(function() {	
       $(this).addClass($(this).data('default')).removeClass($(this).data('fill'));
     });
-    
-    $(this).addClass($(this).data('fill')).removeClass($(this).data('default'));
-
+      
+    $clickedSpan.addClass(fillClass).removeClass(defaultClass);
   });
+  
 
   // * Quando o usuário clica na página, o menu é fechado 
   $(document).on('click', function (event) {
