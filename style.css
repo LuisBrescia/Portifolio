@@ -154,7 +154,6 @@ section:hover {
   color: transparent;
   background-color: #5B42F3;
   background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
-  background-image: -webkit-linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
 }
 
 .letter-spacing {
