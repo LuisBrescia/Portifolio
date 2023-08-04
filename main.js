@@ -56,6 +56,7 @@ $(document).ready(function () {
     if (!$(event.target).closest('#menu_portifolio').length) {
       const showMenuCheckbox = document.getElementById('show_menu');
       showMenuCheckbox.checked = false;
+      $('#menu_portifolio').removeClass('big');
     }
   });
 
