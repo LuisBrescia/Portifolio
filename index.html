@@ -8,8 +8,8 @@
   <title>Luís Brescia</title>
 </head>
 
-<body class="bg-claro">
-  <nav class="container sticky-top d-flex align-items-stretch justify-content-end navbar px-2 px-sm-0 py-0 pt-4">
+<body class="bg-claro p-1">
+  <nav class="container d-flex justify-content-end py-0 pt-3 sticky-top">
 
     <!-- * Botão Altera Tema -->
     <!-- <button class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
@@ -21,7 +21,7 @@
     </button> -->
 
     <!-- * Botão Menu -->
-    <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
+    <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-white rounded-5 shadow" for="show_menu">
       <input id="show_menu" class="d-none" type="checkbox">
 
       <label class="toggle" for="show_menu">
@@ -30,118 +30,154 @@
         <div id="barra_baixo" class="bars"></div>
       </label>
 
+      <!-- ? Tópicos-->
       <ul id="menu_content" class="text-start bg-white list-unstyled position-absolute p-1 mt-1 rounded-3 shadow">
         <li class="rounded-3 py-1 px-2">
           <span class="text-roxo bi-mortarboard-fill" data-default="bi-mortarboard" data-fill="bi-mortarboard-fill"> 
-            <h6 class="d-inline text-especial">&nbsp; Formação</h6>
+            <a class="d-inline text-especial">&nbsp; Formação</a>
           </span>
         </li>
         <li class="rounded-3 py-1 px-2">
           <span class="text-roxo bi-person" data-default="bi-person" data-fill="bi-person-fill"> 
-            <h6 class="d-inline text-especial fw-light">&nbsp; Sobre mim</h6>
+            <a class="d-inline text-especial fw-light">&nbsp; Sobre mim</a>
           </span>
         </li>
         <li class="rounded-3 py-1 px-2">
           <span class="text-roxo bi-rocket-takeoff" data-default="bi-rocket-takeoff" data-fill="bi-rocket-takeoff-fill"> 
-            <h6 class="d-inline text-especial fw-light">&nbsp; Projetos</h6>
+            <a class="d-inline text-especial fw-light">&nbsp; Projetos</a>
           </span>
         </li>
         <li class="rounded-3 py-1 px-2">
           <span class="text-roxo bi-send" data-default="bi-send" data-fill="bi-send-fill"> 
-            <h6 class="d-inline text-especial fw-light">&nbsp; Contato</h6>
+            <a href="#contatos" class="d-inline text-especial fw-light">&nbsp; Contato</a>
           </span>
         </li>
       </ul>
     </button>
   </nav>
 
-  <main class="container mx-auto d-flex flex-column gap-4 px-sm-5 mb-5">
+  <main class="container mx-auto d-flex flex-column gap-4 mb-5">
 
     <!-- * Apresentação -->
     <div class="text-center">
-      <div class="fw-bold fs-big mx-auto text-especial" style="width: fit-content;">Olá, sou Luís.</div>
-      <div class="bi-geo-alt-fill mb-2">&nbsp;Belo Horizonte, Brasil</div>
-      <div class="fw-light mx-auto">
-        Estudante de 20 anos recém-formado no curso de Informática do CEFET-MG.
-        Atualmente, cursando o 2° período da faculdade de Engenharia de Software na PUC Minas.
+      <div class="fw-bold fs-bigger text-especial">Olá, sou Luís.</div>
+      <div class="fs-4 bi-geo-alt-fill mb-2 letter-spacing">&nbsp;Belo Horizonte, Brasil</div>
+      <div class="fs-5 fw-light mx-auto text-start container">
+        Estudante de 20 anos recém-formado no curso de Informática do CEFET-MG,
+        atualmente, cursando o 2° período da faculdade de Engenharia de Software na PUC Minas.
       </div>
     </div>
 
     <!-- ! Projetos -->
-    <div class="fs-1 text-especial mx-auto" style="width: fit-content;">
+    <!-- <div class="fs-1 text-especial">
       Projetos
-    </div>
+    </div> -->
 
     <!-- * Event Manager -->
-    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
-      <div class="col-12 col-md-6">
-        <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
-        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
-        <p class="fs-smaller">Site que permite o gerenciamento e planejamento de eventos</p>
+    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-lg-row p-4 rounded-3 justify-content-between align-items-stretch">
+      <div class="col-lg-5">
+        <i class="bi-flower1 fs-3 text-white bg-indigo shadow-sm px-2 py-1 rounded-3 mb-3"></i>
+        <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
+        <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
+        <p>
+          Site com intuito de auxiliar o planejamento de um evento.
+          Contém diversas funcionalidades de <strong>alta complexidade </strong>
+          programadas em <strong>javascript</strong>,
+          sendo possível criar relações entre elementos abstratos de diferentes listas.
+        </p>
+        <a href="https://luisbrescia.github.io/DragonMusicMaker/" target="_blank">
+          <button class="border-0 btn btn-claro me-1">
+            Github <i class="ms-1 bi-github"></i>
+          </button>
+        </a>
         <a href="https://event-manager-tiaw-e7211e805cd0.herokuapp.com" target="_blank">
-          <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
+          <button class="border-0 btn btn-claro rounded-3">
+            Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+          </button>
         </a>
       </div>
 
-      <img src="/event-manager.jpeg" class="col-12 col-md-6 d-flex mt-3 mt-md-0 rounded-3"></img>
+      <img src="/event-manager.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-3 shadow"></img>
     </section>
 
     <!-- * RDC - Material extra -->
-    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
+    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-lg-row p-4 rounded-3 justify-content-between align-items-stretch">
 
-      <div class="col-12 col-md-6">
-        <div class="fs-3 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
-        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
-        <p class="fs-smaller">
-          Desenvolvido para ajudar alunos a reter conteúdo da matéria de RDC do CEFET-MG
+      <div class="col-lg-5">
+        <i class="bi-router fs-3 text-white bg-indigo shadow-sm px-2 py-1 rounded-3 mb-3"></i>
+        <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
+        <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
+        <p>
+          Desenvolvido para ajudar alunos a reter o conteúdo da matéria 
+          <strong>Redes de Computadores</strong> lecionada no CEFET-MG,
+          contém diversas atividades variadas, 
+          incluindo um questionário corrigido por Inteligência Artificial utilizando a API OpenAI.
         </p>
+        <a href="https://luisbrescia.github.io/DragonMusicMaker/" target="_blank">
+          <button class="border-0 btn btn-claro me-1">
+            Github <i class="ms-1 bi-github"></i>
+          </button>
+        </a>
         <a href="https://projeto-redes.onrender.com" target="_blank">
-          <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
+          <button class="border-0 btn btn-claro">
+            Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+          </button>
         </a>
       </div>
 
-      <img src="/projeto-redes.jpeg" class="col-12 col-md-6 d-flex mt-3 mt-md-0 rounded-3"></img>
+      <img src="/projeto-redes.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-3 shadow"></img>
     </section>
 
     <!-- * Music Maker -->
-    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-md-row p-3 rounded-3 align-items-stretch">
+    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-lg-row p-4 rounded-3 justify-content-between align-items-stretch">
 
-      <div class="col-12 col-md-6">
-        <div class="fs-3 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
-        <div class="fs-small text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
-        <p class="fs-smaller">Meu primeiro projeto, um editor de músicas desenvolvido utilizando javascript.</p>
-        <button class="border-0 btn btn-claro rounded-5 fs-small">Mais detalhes</button>
+      <div class="col-lg-5">
+        <i class="bi-music-player fs-3 text-white bg-indigo shadow-sm px-2 py-1 rounded-3 mb-3 ms-auto"></i>
+        <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
+        <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
+        <p>
+          Primeiro projeto que desenvolvi, nele é possível juntar faixas de áudio, 
+          criando uma música com diversos instrumentos, após um loop 
+          ser selecionado para entrar na faixa, ele aguarda o tempo certo para entrar. 
+          Foi utilizada a biblioteca <strong>Tone.js</strong>
+        </p>
+        <a href="https://luisbrescia.github.io/DragonMusicMaker/" target="_blank">
+          <button class="border-0 btn btn-claro me-1">
+            Github <i class="ms-1 bi-github"></i>
+          </button>
+        </a>
+        <a href="https://luisbrescia.github.io/DragonMusicMaker/" target="_blank">
+          <button class="border-0 btn btn-claro">
+            Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+          </button>
+        </a>
       </div>
 
-      <div class="col-12 col-md-6 mt-3 mt-md-0 d-flex align-items-center justify-content-center fs-3"
-        style="min-height: 10vh;">
-        <span class="bg-claro rounded-3 w-100 text-escuro h-100 d-flex align-items-center justify-content-center"
-          style="min-height: 14vh;">Imagem</span>
-      </div>
+      <img src="/music-maker.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-3 shadow"></img>
     </section>
 
     <!-- * Contatos -->
 
-    <div class="d-flex my-3 justify-content-center gap-3">
+    <div class="d-flex my-3 justify-content-center gap-3" id="contatos">
 
       <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-3 bi-envelope"></i>
+        <i class="text-indigo fs-2 bi-envelope"></i>
       </button>
 
       <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-3 bi-linkedin"></i>
+        <i class="text-indigo fs-2 bi-linkedin"></i>
       </button>
 
       <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-3 bi-whatsapp"></i>
+        <i class="text-indigo fs-2 bi-whatsapp"></i>
       </button>
 
       <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-3 bi-github"></i>
+        <i class="text-indigo fs-2 bi-github"></i>
       </button>
 
       <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-3 bi-phone"></i>
+        <i class="text-indigo fs-2 bi-phone"></i>
       </button>
 
     </div>

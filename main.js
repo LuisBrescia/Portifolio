@@ -6,19 +6,25 @@ import './style.css'
 // import { setupCounter } from './JS/counter.js'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-// import * as bootstrap from 'bootstrap';
+// import * as bootsrap from 'bootstrap';
 
 $(document).ready(function () {
 
   $('#menu_portifolio').on('click', function () {
 
+    console.log('menu_portifolio click');
+
     if ($(event.target).closest('#menu_content').length) {return;}
+
+    console.log('menu_portifolio click 2');
 
     if (!$('#show_menu').checked) {
       $('#menu_portifolio').addClass('big');
     } else {
       $('#menu_portifolio').removeClass('big');
     }
+
+    console.log('menu_portifolio click 3');
 
     $('#show_menu').checked = !$('#show_menu').checked;
   });
