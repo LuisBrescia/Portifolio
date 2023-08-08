@@ -12,25 +12,20 @@ $(document).ready(function () {
 
   $('#menu_portifolio').on('click', function () {
 
-    console.log('menu_portifolio click');
-
     if ($(event.target).closest('#menu_content').length) {return;}
 
-    console.log('menu_portifolio click 2');
-
-    if (!$('#show_menu').checked) {
+    if (!$('#show_menu').prop('checked')) {
       $('#menu_portifolio').addClass('big');
     } else {
       $('#menu_portifolio').removeClass('big');
     }
 
-    console.log('menu_portifolio click 3');
-
-    $('#show_menu').checked = !$('#show_menu').checked;
+    $('#show_menu').prop('checked', !$('#show_menu').prop('checked'));
+    console.log($('#show_menu').prop('checked'));
   });
 
+  // * O ícone é alterado quando o usuário o clica
   $('#menu_content').on('click', 'li', function () {
-
     var $clickedLi = $(this);
     var $clickedSpan = $clickedLi.find('span');
     var $clickedH6 = $clickedLi.find('h6');
@@ -82,5 +77,5 @@ $(document).ready(function () {
   $('#repo-music-maker').on('click', function () {
     window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
   });
-  
+
 });
