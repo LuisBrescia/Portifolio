@@ -28,11 +28,11 @@ $(document).ready(function () {
   $('#menu_content').on('click', 'li', function () {
     var $clickedLi = $(this);
     var $clickedSpan = $clickedLi.find('span');
-    var $clickedH6 = $clickedLi.find('h6');
+    var $clickedH6 = $clickedLi.find('a');
     var defaultClass = $clickedSpan.data('default');
     var fillClass = $clickedSpan.data('fill');
       
-    $('#menu_content h6').removeClass('fw-light').not($clickedH6).addClass('fw-light');
+    $('#menu_content a').removeClass('fw-light').not($clickedH6).addClass('fw-light');
       
     $('#menu_content span').each(function() {	
       $(this).addClass($(this).data('default')).removeClass($(this).data('fill'));
