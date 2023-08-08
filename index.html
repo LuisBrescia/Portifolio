@@ -33,23 +33,30 @@
       <!-- ? Tópicos-->
       <ul id="menu_content" class="text-start bg-white list-unstyled position-absolute p-1 mt-1 rounded-1 shadow">
         <li class="rounded-1 py-1 px-2">
-          <span class="text-indigo bi-mortarboard-fill" data-default="bi-mortarboard" data-fill="bi-mortarboard-fill">
-            <a class="d-inline text-especial">&nbsp; Formação</a>
+          <span class="text-indigo bi-person-fill" data-default="bi-person" data-fill="bi-person-fill">
+            <a href="#sobre_mim" class="d-inline text-especial">&nbsp; Sobre mim</a>
           </span>
         </li>
         <li class="rounded-1 py-1 px-2">
-          <span class="text-indigo bi-person" data-default="bi-person" data-fill="bi-person-fill">
-            <a class="d-inline text-especial fw-light">&nbsp; Sobre mim</a>
+          <span class="text-indigo bi-rocket-takeoff" data-default="bi-rocket-takeoff"
+            data-fill="bi-rocket-takeoff-fill">
+            <a href="#projetos" class="d-inline text-especial fw-light">&nbsp; Projetos</a>
           </span>
         </li>
         <li class="rounded-1 py-1 px-2">
-          <span class="text-indigo bi-rocket-takeoff" data-default="bi-rocket-takeoff" data-fill="bi-rocket-takeoff-fill">
-            <a class="d-inline text-especial fw-light">&nbsp; Projetos</a>
+          <span class="text-indigo bi-mortarboard" data-default="bi-mortarboard" data-fill="bi-mortarboard-fill">
+            <a href="#experiencia" class="d-inline text-especial fw-light">&nbsp; Experiência</a>
+          </span>
+        </li>
+        <li class="rounded-1 py-1 px-2">
+          <span class="text-indigo bi-lightning-charge" data-default="bi-lightning-charge"
+            data-fill="bi-lightning-charge-fill">
+            <a href="#habilidades" class="d-inline text-especial fw-light">&nbsp; Habilidades</a>
           </span>
         </li>
         <li class="rounded-1 py-1 px-2">
           <span class="text-indigo bi-send" data-default="bi-send" data-fill="bi-send-fill">
-            <a href="#contatos" class="d-inline text-especial fw-light">&nbsp; Contato</a>
+            <a href="#contato" class="d-inline text-especial fw-light">&nbsp; Contato</a>
           </span>
         </li>
       </ul>
@@ -57,12 +64,13 @@
   </nav>
 
   <main class="container mx-auto d-flex flex-column gap-4 mb-4">
-
-    <img src="/perfil.jpg" class="w-25 bg-especial mx-auto rounded-3 shadow-sm">
+    <div class="text-center">
+      <img src="/perfil.jpg" class="w-25 bg-especial rounded-3 shadow-sm">
+    </div>
 
     <!-- * Apresentação -->
-    <div class="text-center mb-5">
-      <div class="fw-bold fs-bigger text-especial text-nowrap">Olá, sou Luís.</div>
+    <div class="text-center">
+      <div class="fw-bold fs-bigger text-especial text-nowrap mx-auto">Olá, sou Luís.</div>
       <div class="my-3 fs-4 letter-spacing d-flex align-items-center justify-content-center">
         <i class="bi-geo-alt-fill fs-5"></i>&nbsp;Belo Horizonte, Brasil
       </div>
@@ -72,10 +80,15 @@
       </div>
     </div>
 
+    <!-- ! Sobre mim -->
+    <div class="fs-1 text-especial mx-auto bi-person-fill fw-bold my-3" id="sobre_mim">
+      &nbsp;Sobre mim
+    </div>
+
     <!-- ! Projetos -->
-    <!-- <div class="fs-1 text-especial">
-      Projetos
-    </div> -->
+    <div class="fs-1 text-especial mx-auto bi-rocket-takeoff-fill fw-bold my-3" id="projetos">
+      &nbsp;Projetos
+    </div>
 
     <!-- * Event Manager -->
     <section class="interativo shadow-sm bg-especial text-white d-flex 
@@ -109,8 +122,8 @@
     </section>
 
     <!-- * RDC - Material extra -->
-    <section
-      class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
+    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column 
+    flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
       <img src="/projeto-redes-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow d-none d-lg-block"></img>
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
@@ -139,8 +152,8 @@
     </section>
 
     <!-- * Music Maker -->
-    <section
-      class="interativo shadow-sm bg-especial text-white d-flex flex-column flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
+    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column 
+    flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
 
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
@@ -169,35 +182,24 @@
       <img src="/music-maker-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow"></img>
     </section>
 
-    <!-- * Contatos -->
+    <!-- ! Experiência -->
+    <div class="fs-1 text-especial mx-auto bi-lightning-charge-fill fw-bold my-3" id="experiencia">
+      &nbsp;Habilidades
+    </div>
 
-    <!-- <div class="d-flex my-3 justify-content-center gap-3" id="contatos">
+    <!-- ! Experiência -->
+    <div class="fs-1 text-especial mx-auto bi-mortarboard-fill fw-bold my-3" id="habilidades">
+      &nbsp;Experiência
+    </div>
 
-      <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-2 bi-envelope"></i>
-      </button>
-
-      <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-2 bi-linkedin"></i>
-      </button>
-
-      <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-2 bi-whatsapp"></i>
-      </button>
-
-      <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-2 bi-github"></i>
-      </button>
-
-      <button class="interativo bg-white shadow-sm px-3 py-2 border-round">
-        <i class="text-indigo fs-2 bi-phone"></i>
-      </button>
-
-    </div> -->
+    <!-- ! Contato -->
+    <div class="fs-1 text-especial mx-auto bi-send-fill fw-bold my-3" id="contato">
+      &nbsp;Contato
+    </div>
 
   </main>
 
-  <!-- <footer class="bg-especial text-claro py-2">
+  <!-- <footer class="bg-escuro text-white py-2">
     <div class="p-0 m-0 text-center fs-smaller fw-light fs-smaller">
       Copyright © 2023 Footer
     </div>

@@ -44,7 +44,7 @@ section button {
 
 section:hover {
   box-shadow: inherit;
-  transform: scale(1.05);
+  transform: scale(1.025);
   background-color: var(--color-claro);
 }
 
@@ -162,6 +162,7 @@ section:hover {
 }
 
 .text-especial {
+  width: fit-content;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
