@@ -63,4 +63,24 @@ $(document).ready(function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
   });
 
+  // * Redirecionamento de projetos
+  $('#site-event-manager').on('click', function () {
+    window.open('https://event-manager-tiaw-e7211e805cd0.herokuapp.com', '_blank');
+  });
+  $('#site-projeto-redes').on('click', function () {
+    window.open('https://projeto-redes.onrender.com', '_blank');
+  });
+  $('#site-music-maker').on('click', function () {
+    window.open('https://luisbrescia.github.io/DragonMusicMaker/', '_blank');
+  });
+  $('#repo-event-manager').on('click', function () {
+    window.open('https://github.com/LuisBrescia/EventManager', '_blank');
+  }); 
+  $('#repo-projeto-redes').on('click', function () {
+    window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
+  });
+  $('#repo-music-maker').on('click', function () {
+    window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
+  });
+  
 });
