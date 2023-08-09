@@ -199,26 +199,23 @@
     </span> -->
 
     <!-- ! Contato -->
-    <div class="text-center my-3">
-      <div class="fw-bold fs-1 text-especial mx-auto bi-send-fill">&nbsp;Contato</div>
-      <div class="fs-5 fw-light container p-0 mt-3 max-hd">
-        <p class="my-0">
-          Atualmente estou em busca de uma oportunidade como estagiário na área de <strong>desenvolvimento de software</strong>.
-        </p>
-        <p class="text-nowrap my-2">  
-          Gostou de algo? Alguma sugestão de melhoria?
-        </p>
-        <p class="my-0">  
-          Fale comigo:	
+    <div class="text-center my-3" id="contato">
+      <div class="fw-bold fs-1 text-especial mx-auto bi-send-fill mb-2">&nbsp;Contato</div>
+      <div class="fs-5 fw-light container p-0 mb-3 max-hd">
+        <p>
+          <span class="text-nowrap">Atualmente estou em busca de uma</span> <br>
+          <span class="text-nowrap">oportunidade como estagiário na área de</span> <br> 
+          <strong class="text-nowrap">desenvolvimento de software</strong>.
         </p>
       </div>
 
       <!-- * Crie um formulário onde a pessoa coloca o assunto e conteúdo e um email para mim é enviado -->
-      <form class="d-flex flex-column justify-content-center align-items-center gap-2 mt-3 max-hd mx-auto" action="https://formspree.io/f/maylqzqk" method="POST">
+      <form class="d-flex flex-column justify-content-center align-items-center gap-2 mt-3 mx-auto col-12 col-md-8 col-lg-6" action="https://formspree.io/f/maylqzqk" method="POST">
+        <div class="text-especial col-12 fs-4 me-auto fw-bold">Fale comigo:</div>
         <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="nome" placeholder="Nome (Opcional)">
         <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="email" name="email" placeholder="Email (Opcional)">
         <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="assunto" placeholder="Assunto" required>
-        <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo" placeholder="Conteúdo" required></textarea>
+        <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo" placeholder="Gostou de algo? &nbsp;Alguma sugestão de melhoria? &nbsp;Escreva aqui." required></textarea>
         <button class="col-12 border-0 btn btn-default shadow-sm" type="submit">Enviar</button>
       </form>
     </div>

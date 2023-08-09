@@ -26,6 +26,11 @@ img {
 body {
   font-family: 'Lato', sans-serif;
   color: var(--color-escuro);
+  overflow-x: hidden;
+}
+
+textarea {
+  min-height: 64px;
 }
 
 a {
