@@ -342,8 +342,13 @@ footer a:hover {
 
 
 /** Media Querys */
+
 .max-hd {
   max-width: 720px;
+}
+
+.translate-left {
+  transform: translateX(-20px);
 }
 
 /** Texturas HeroPatterns */

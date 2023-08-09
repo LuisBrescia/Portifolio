@@ -82,9 +82,7 @@
     </div>
 
     <!-- ! Projetos -->
-    <div class="fs-1 text-especial mx-auto bi-rocket-takeoff-fill fw-bold my-3" id="projetos">
-      &nbsp;Projetos
-    </div>
+    <div class="fs-1 text-especial mx-auto bi-rocket-takeoff-fill fw-bold my-3 translate-left" id="projetos">&nbsp; Projetos</div>
 
     <!-- * Event Manager -->
     <section class="interativo shadow-sm bg-especial text-white d-flex 
@@ -178,9 +176,12 @@
       <img src="/music-maker-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow"></img>
     </section>
 
-    <!-- !  Habilidades -->
-    <div class="fs-1 text-especial mx-auto bi-mortarboard-fill fw-bold my-3" id="experiencia">
-      &nbsp;Experiência
+    <!-- !  Experiência -->
+    <div class="text-center my-3 translate-left" id="experiencia">
+      <div class="fs-1 fw-bold text-especial mx-auto mb-2 bi-mortarboard-fill">&nbsp; Experiência</div>
+      <div class="fs-5 fw-light container p-0 max-hd">
+        <span class="text-nowrap">Aqui será listado minhas <strong>experiências</strong></span><br>
+      </div>
     </div>
 
     <!-- <div class="d-flex">
@@ -189,18 +190,17 @@
       <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
     </div> -->
 
-    <!-- ! Experiência -->
-    <div class="fs-1 text-especial mx-auto bi-lightning-charge-fill fw-bold my-3" id="habilidades">
-      &nbsp;Habilidades
+    <!-- ! Habilidades -->
+    <div class="text-center my-3" id="habilidades">
+      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left translate-left bi-lightning-charge-fill">&nbsp; Habilidades</div>
+      <div class="fs-5 fw-light container p-0 max-hd">
+        <span class="text-nowrap">Aqui será listado minhas <strong>habilidades</strong></span><br>
+      </div>
     </div>
-
-    <!-- <span class="fs-1 bg-especial text-white rounded-1 px-2">
-      CEFET-MG
-    </span> -->
 
     <!-- ! Contato -->
     <div class="text-center my-3" id="contato">
-      <div class="fw-bold fs-1 text-especial mx-auto bi-send-fill mb-2">&nbsp;Contato</div>
+      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left bi-send-fill">&nbsp; Contato</div>
       <div class="fs-5 fw-light container p-0 mb-4 max-hd">
         <span class="text-nowrap">Atualmente estou em busca de uma</span> <br>
         <span class="text-nowrap">oportunidade como estagiário na área de</span> <br>
@@ -208,7 +208,7 @@
       </div>
 
       <!-- * Crie um formulário onde a pessoa coloca o assunto e conteúdo e um email para mim é enviado -->
-      <form
+      <form id="contatoFormulario" 
         class="d-flex flex-column justify-content-center align-items-center gap-2 my-3 mx-auto col-12 col-md-8 col-lg-6"
         action="https://formspree.io/f/mpzgppqz" method="POST">
         <div class="text-especial col-12 fs-4 me-auto fw-bold">Fale comigo:</div>
@@ -219,7 +219,7 @@
         <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo"
           placeholder="Gostou de algo? &nbsp;Alguma sugestão de melhoria? &nbsp;Escreva aqui." required></textarea>
         <div class="col-12">
-          <button class="w-100 col-12 border-0 btn btn-default shadow-sm rounded-1 py-3" type="submit">
+          <button class="w-100 col-12 border-0 btn btn-default shadow-sm rounded-1 py-3" type="submit" id="enviaFormulario">
             Enviar
           </button>
           <div class="col-12 text-end fs-smaller fw-lighter">Receberei sua mensagem via e-mail</div>
