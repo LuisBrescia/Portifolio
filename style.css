@@ -63,7 +63,7 @@ section:hover {
   pointer-events: none;
 }
 
-#menu_content li:hover {
+#menu_content a:hover {
   background-color: var(--color-claro);
 }
 
@@ -186,7 +186,7 @@ section:hover {
 /** Tamanho de fontes - Personalizados */
 
 .fs-bigger {
-  font-size: 3.8em;
+  font-size: 3.4em;
 }
 
 .fs-big {

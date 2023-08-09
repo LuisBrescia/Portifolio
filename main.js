@@ -25,10 +25,10 @@ $(document).ready(function () {
   });
 
   // * O ícone é alterado quando o usuário o clica
-  $('#menu_content').on('click', 'li', function () {
+  $('#menu_content').on('click', 'a', function () {
     var $clickedLi = $(this);
     var $clickedSpan = $clickedLi.find('span');
-    var $clickedH6 = $clickedLi.find('a');
+    var $clickedH6 = $clickedLi.find('h6');
     var defaultClass = $clickedSpan.data('default');
     var fillClass = $clickedSpan.data('fill');
       
