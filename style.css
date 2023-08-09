@@ -317,6 +317,11 @@ button:active {
   color: var(--color-claro) !important;
 }
 
+/** Media Querys */
+.max-hd {
+  max-width: 720px;
+}
+
 /** Texturas HeroPatterns */
 
 .Death-Star {
