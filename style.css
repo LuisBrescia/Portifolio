@@ -85,8 +85,8 @@ footer a:hover {
 
 #show_menu:checked~#menu_content {
   opacity: 1;
-  pointer-events: auto; 
-  transform: translate(0) scale(1); 
+  pointer-events: auto;
+  transform: translate(0) scale(1);
 }
 
 .toggle {
@@ -326,12 +326,20 @@ footer a:hover {
   color: var(--color-claro) !important;
 }
 
-.btn-default,
-.btn-default:hover,
-.btn-default:active {
+.btn-default {
   background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB) !important;
-  color: var(--color-claro) !important;
+  color: white !important;
+  transition: all 0.3s ease-in-out !important;
 }
+
+.btn-default:hover {
+  filter: saturate(1.5);
+}
+
+.btn-default:active {
+  filter: saturate(2.0);
+}
+
 
 /** Media Querys */
 .max-hd {
