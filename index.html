@@ -202,15 +202,25 @@
     <div class="text-center my-3">
       <div class="fw-bold fs-1 text-especial mx-auto bi-send-fill">&nbsp;Contato</div>
       <div class="fs-5 fw-light container p-0 mt-3 max-hd">
-        <p>
+        <p class="my-0">
           Atualmente estou em busca de uma oportunidade como estagiário na área de <strong>desenvolvimento de software</strong>.
         </p>
-        <p>  
-          Gostou de algo? 
-          Tem alguma sugestão de melhoria?<br>
+        <p class="text-nowrap my-2">  
+          Gostou de algo? Tem alguma sugestão de melhoria?
+        </p>
+        <p class="my-0">  
           Fale comigo:	
         </p>
       </div>
+
+      <!-- * Crie um formulário onde a pessoa coloca o assunto e conteúdo e um email para mim é enviado -->
+      <form class="container d-flex flex-column flex-lg-row justify-content-center gap-2 mt-3" action="https://formspree.io/f/maylqzqk" method="POST">
+        <input class="col-12 col-lg-4 border-0 rounded-1 shadow-sm p-2" type="text" name="nome" placeholder="Nome (Opcional)">
+        <input class="col-12 col-lg-4 border-0 rounded-1 shadow-sm p-2" type="email" name="email" placeholder="Email (Opcional)">
+        <input class="col-12 col-lg-4 border-0 rounded-1 shadow-sm p-2" type="text" name="assunto" placeholder="Assunto" required>
+        <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo" placeholder="Conteúdo" required></textarea>
+        <button class="col-12 col-lg-4 border-0 btn btn-default shadow-sm" type="submit">Enviar</button>
+      </form>
     </div>
 
   </main>

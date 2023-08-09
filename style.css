@@ -225,16 +225,16 @@ section:hover {
 
 /** Botões - Personalizados */
 
-button {
+#menu_portifolio {
   transition: all 0.3s ease-in-out !important;
   border: none;
 }
 
-button:hover {
+#menu_portifolio:hover {
   transform: scale(1.1);
 }
 
-button:active {
+#menu_portifolio:active {
   transform: scale(1.05);
 }
 
