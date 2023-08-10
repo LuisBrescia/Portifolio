@@ -10,7 +10,6 @@
 
 <body class="bg-claro">
   <nav class="container d-flex justify-content-end py-0 pt-3 sticky-top">
-
     <!-- * Botão Altera Tema -->
     <!-- <button class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
 
@@ -61,10 +60,9 @@
         </a>
       </ul>
     </button>
-
   </nav>
 
-  <main class="container d-flex flex-column gap-4">
+  <main class="container d-flex flex-column gap-4 mb-5">
 
     <div class="text-center">
       <img src="/perfil.jpg" class="w-25 bg-especial rounded-3 shadow-sm">
@@ -82,14 +80,15 @@
     </div>
 
     <!-- ! Projetos -->
-    <div class="fs-1 text-especial mx-auto bi-rocket-takeoff-fill fw-bold my-3 translate-left" id="projetos">&nbsp; Projetos</div>
+    <div class="fs-1 text-especial mx-auto bi-rocket-takeoff-fill fw-bold my-3 translate-left" id="projetos">&nbsp;
+      Projetos</div>
 
     <!-- * Event Manager -->
     <section class="interativo shadow-sm bg-especial text-white d-flex 
     flex-column flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
-          <i class="bi-flower1 fs-3 text-white bg-primary shadow-sm px-2 py-1 rounded-1 mb-3"></i>
+          <i class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-1 mb-3"></i>
           <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
           <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
           <p>
@@ -121,7 +120,7 @@
       <img src="/projeto-redes-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow d-none d-lg-block"></img>
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
-          <i class="bi-router fs-3 text-white bg-success shadow-sm px-2 py-1 rounded-1 mb-3"></i>
+          <i class="bi-router fs-3 text-white bg-verde shadow-sm px-2 py-1 rounded-1 mb-3"></i>
           <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
           <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
           <p>
@@ -151,7 +150,7 @@
 
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
-          <i class="bi-music-player fs-3 text-white bg-warning shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
+          <i class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
           <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
           <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
           <p>
@@ -176,50 +175,63 @@
       <img src="/music-maker-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow"></img>
     </section>
 
-    <!-- !  Experiência -->
-    <div class="text-center my-3" id="experiencia">
-      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left bi-mortarboard-fill">&nbsp; Experiência</div>
+  </main>
 
-      <!-- <div class="fs-5 fw-light container p-0 max-hd">
+  <!-- * Section Experiência -->
+  <main class="container-lg text-center mb-5" id="experiencia">
+
+    <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left bi-mortarboard-fill">&nbsp; Experiência</div>
+
+    <!-- <div class="fs-5 fw-light container p-0 max-hd">
         <span class="text-nowrap">Aqui será listado minhas <strong>experiências</strong></span><br>
       </div> -->
 
-      <!-- * Cada experiência será um card-->
-      <div class="d-flex flex-column flex-lg-row justify-content-between mt-4 gap-5 gap-lg-0">
+    <!-- * Cada experiência será um card-->
+    <div class="d-flex flex-column flex-md-row justify-content-between mt-4 gap-5 gap-md-0">
+      <article class="col-12 col-md-4">
+        <div class="fs-3 fw-bold">
+          <i class="bi-patch-check-fill text-verde"></i>
+          &nbsp;CEFET-MG
+        </div>
+        <div class="fs-6 letter-spacing">Técnico em Informática</div>
+        <div class="fs-5 letter-spacing fw-light">2020 - 2022</div>
+        <button class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3">Mais Detalhes</button>
+      </article>
 
-        <article class="col-12 col-lg-4">
-          <div class="fs-3 fw-bold">CEFET-MG</div>
-          <div class="fs-5 letter-spacing">Técnico em Informática</div>
-          <div class="fs-5 letter-spacing fw-light">2020 - 2022</div>
-          <button class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3">Mais Detalhes</button>
-        </article>
-        
-        <article class="col-12 col-lg-4">
-          <div class="fs-3 fw-bold">PUC Minas</div>
-          <div class="fs-5 letter-spacing">Engenharia de Software</div>
-          <div class="fs-5 letter-spacing fw-light">2023 - 2026</div>
-          <button class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3">Mais Detalhes</button>
-        </article>
-        
-        <article class="col-12 col-lg-4">
-          <div class="fs-3 fw-bold">Hackatruck</div>
-          <div class="fs-5 letter-spacing">Curso Extra</div>
-          <div class="fs-5 letter-spacing fw-light">2023</div>
-          <button class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3">Mais Detalhes</button>
-        </article>
+      <article class="col-12 col-md-4">
+        <div class="fs-3 fw-bold">
+          <i class="bi-repeat text-amarelo"></i>
+          &nbsp;PUC Minas
+        </div>
+        <div class="fs-6 letter-spacing">Engenharia de Software</div>
+        <div class="fs-5 letter-spacing fw-light">2023 - 2026</div>
+        <button class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3">Mais Detalhes</button>
+      </article>
 
-      </div>
+      <article class="col-12 col-md-4">
+        <div class="fs-3 fw-bold">
+          <i class="bi-patch-check-fill text-verde"></i>
+          &nbsp;Hackatruck
+        </div>
+        <div class="fs-6 letter-spacing">Qualificação profissional</div>
+        <div class="fs-5 letter-spacing fw-light">2023 - 2023</div>
+        <button class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3">Mais Detalhes</button>
+      </article>
     </div>
 
-    <!-- <div class="d-flex">
+  </main>
+  <!-- <div class="d-flex">
       <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
       <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
       <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
     </div> -->
 
+  <main class="container d-flex flex-column gap-4">
+
     <!-- ! Habilidades -->
     <div class="text-center my-3" id="habilidades">
-      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left translate-left bi-lightning-charge-fill">&nbsp; Habilidades</div>
+      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left translate-left bi-lightning-charge-fill">&nbsp;
+        Habilidades</div>
       <div class="fs-5 fw-light container p-0 max-hd">
         <span class="text-nowrap">Aqui será listado minhas <strong>habilidades</strong></span><br>
       </div>
@@ -235,7 +247,7 @@
       </div>
 
       <!-- * Crie um formulário onde a pessoa coloca o assunto e conteúdo e um email para mim é enviado -->
-      <form id="contatoFormulario" 
+      <form id="contatoFormulario"
         class="d-flex flex-column justify-content-center align-items-center gap-2 my-3 mx-auto col-12 col-md-8 col-lg-6"
         action="https://formspree.io/f/mpzgppqz" method="POST">
         <div class="text-especial col-12 fs-4 me-auto fw-bold">Fale comigo:</div>
@@ -246,7 +258,8 @@
         <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo"
           placeholder="Gostou de algo? &nbsp;Alguma sugestão de melhoria? &nbsp;Escreva aqui." required></textarea>
         <div class="col-12">
-          <button class="w-100 col-12 border-0 btn btn-default shadow-sm rounded-1 py-3 letter-spacing" type="submit" id="enviaFormulario">
+          <button class="w-100 col-12 border-0 btn btn-default shadow-sm rounded-1 py-3 letter-spacing" type="submit"
+            id="enviaFormulario">
             Enviar
           </button>
           <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei sua mensagem via e-mail</div>

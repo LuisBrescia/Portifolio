@@ -4,9 +4,12 @@
   --color-escuro: #0f0f0f;
   --color-cinzento: gray;
   --color-claro: #f8f9fA;
-  --color-azul: #00ddeb;
   --color-indigo: #5b42f3;
   --color-roxo: #8640ff;
+  --color-vermelho: #ff0000;
+  --color-verde: #45b817;
+  --color-azul: #0044ff;
+  --color-amarelo: #fdc714;
 }
 
 html {
@@ -163,6 +166,18 @@ footer a:hover {
   background-color: var(--color-roxo);
 }
 
+.bg-verde {
+  background-color: var(--color-verde);
+}
+
+.bg-azul {
+  background-color: var(--color-azul);
+}
+
+.bg-amarelo {
+  background-color: var(--color-amarelo);
+}
+
 /** Texto - Personalizados */
 
 .text-escuro {
@@ -193,6 +208,18 @@ footer a:hover {
 
 .text-roxo {
   color: var(--color-roxo);
+}
+
+.text-verde {
+  color: var(--color-verde);
+}
+
+.text-azul {
+  color: var(--color-azul);
+}
+
+.text-amarelo {
+  color: var(--color-amarelo);
 }
 
 .letter-spacing {
