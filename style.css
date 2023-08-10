@@ -72,6 +72,27 @@ footer a:hover {
   transform: scale(1.1) !important;
 }
 
+.experiencia-image-collection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 3px solid var(--color-indigo);
+}
+
+.experiencia-image-collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experiencia-image-collection img:first-child {
+  width: 100%;
+}
+
+.experiencia-image-collection img:nth-child(2) {
+  grid-column: 3/4;
+}
+
+
 #menu_content {
   width: 10rem;
   top: 50px;
