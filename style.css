@@ -403,6 +403,12 @@ footer a:hover {
   transform: translateX(0px);
 }
 
+@media screen and (min-width: 768px) {
+  nav {
+    transform: translateX(58px);
+  }
+}
+
 /** Texturas HeroPatterns */
 
 .Death-Star {
