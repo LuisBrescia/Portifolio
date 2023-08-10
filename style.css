@@ -10,6 +10,7 @@
   --color-verde: #45b817;
   --color-azul: #0044ff;
   --color-amarelo: #fdc714;
+  --gradiente-roxo: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
 }
 
 html {
@@ -107,7 +108,7 @@ footer a:hover {
 .bars {
   width: 100%;
   height: 2px;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background-image: var(--gradiente-roxo);
   border-radius: 15px;
 }
 
@@ -147,7 +148,7 @@ footer a:hover {
 }
 
 .bg-especial {
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background-image: var(--gradiente-roxo);
 }
 
 .bg-principal {
@@ -199,7 +200,7 @@ footer a:hover {
   -moz-background-clip: text;
   color: transparent;
   background-color: #5B42F3;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  background-image: var(--gradiente-roxo);
 }
 
 .text-indigo {
@@ -355,19 +356,10 @@ footer a:hover {
 
 .btn-default {
   border: none;
-  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB) !important;
+  background-image: var(--gradiente-roxo) !important;
   color: white !important;
-  transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s !important;
 }
-
-.btn-default:hover {
-  filter: saturate(1.5);
-}
-
-.btn-default:active {
-  filter: saturate(2.0);
-}
-
 
 /** Media Querys */
 
@@ -376,7 +368,7 @@ footer a:hover {
 }
 
 .translate-left {
-  transform: translateX(-10px);
+  transform: translateX(0px);
 }
 
 /** Texturas HeroPatterns */
