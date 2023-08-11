@@ -27,20 +27,14 @@ $(document).ready(function () {
   // * O ícone é alterado quando o usuário o clica
   $('#menu_content').on('click', 'a', function () {
     var $clickedLi = $(this);
-    var $clickedSpan = $clickedLi.find('span');
-    var $clickedH6 = $clickedLi.find('h6');
-    var defaultClass = $clickedSpan.data('default');
-    var fillClass = $clickedSpan.data('fill');
-
-    $('#menu_content h6').removeClass('fw-light').not($clickedH6).addClass('fw-light');
-
-    $('#menu_content span').each(function () {
-      $(this).addClass($(this).data('default')).removeClass($(this).data('fill'));
-    });
-
-    $clickedSpan.addClass(fillClass).removeClass(defaultClass);
+    updateLinkStyles($clickedLi);
   });
 
+  // * Quando o usuário realizar um scroll, pegar o valor do scroll e alterar o menu
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    console.log(scroll);
+  });
 
   // * Quando o usuário clica na página, o menu é fechado 
   $(document).on('click', function (event) {
@@ -56,6 +50,16 @@ $(document).ready(function () {
     $(this).addClass('shadow').removeClass('shadow-sm');
   }, function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
+  });
+
+  $('a.scroll-link').on('click', function (event) {
+    event.preventDefault();
+    var target = $(this.getAttribute('href'));
+    if (target.length) {
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 20 // Ajuste o valor conforme necessário
+      }, 0); // Tempo da animação em milissegundos
+    }
   });
 
   // * Redirecionamento de projetos
@@ -79,3 +83,19 @@ $(document).ready(function () {
   });
 
 });
+
+// * Atualiza barra de menu
+function updateLinkStyles($clickedLi) {
+  var $clickedSpan = $clickedLi.find('span');
+  var $clickedH6 = $clickedLi.find('h6');
+  var defaultClass = $clickedSpan.data('default');
+  var fillClass = $clickedSpan.data('fill');
+
+  $('#menu_content h6').removeClass('fw-light').not($clickedH6).addClass('fw-light');
+
+  $('#menu_content span').each(function () {
+    $(this).addClass($(this).data('default')).removeClass($(this).data('fill'));
+  });
+
+  $clickedSpan.addClass(fillClass).removeClass(defaultClass);
+}
