@@ -8,6 +8,8 @@ import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 // import * as bootsrap from 'bootstrap';
 
+var rolagemManual = false;
+
 $(document).ready(function () {
 
   $('#menu_portifolio').on('click', function () {
@@ -25,15 +27,49 @@ $(document).ready(function () {
   });
 
   // * O ícone é alterado quando o usuário o clica
+  var timeoutID; // Variável para armazenar o ID do timeout
+
   $('#menu_content').on('click', 'a', function () {
-    var $clickedLi = $(this);
-    updateLinkStyles($clickedLi);
+    atualizaLink($(this));
+    
+    if (rolagemManual) {
+      clearTimeout(timeoutID); // Cancela o timeout existente se estiver em andamento
+    }
+    
+    rolagemManual = true;
+    
+    timeoutID = setTimeout(function() {
+      rolagemManual = false; // Define a variável como false após 1000 milissegundos
+    }, 800);
   });
 
   // * Quando o usuário realizar um scroll, pegar o valor do scroll e alterar o menu
   $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
-    console.log(scroll);
+
+    if(rolagemManual) {
+      console.log("retornou"); 
+      return; // Se a rolagem for manual, não alterar o menu
+    } 
+
+    var projetosTop = $('#projetos').offset().top; // Obtém a posição do elemento com ID "projetos"
+    var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
+    var habilidadeTop = $('#habilidades').offset().top; // Obtém a posição do elemento com ID "contato"
+    var contatoTop = $('#contato').offset().top; // Obtém a posição do elemento com ID "contato"
+    var scrollTop = $(window).scrollTop() + 500;
+
+    if (scrollTop <= projetosTop) {
+      atualizaLink($('#menu_content a[href="#"]'));
+    } else if (scrollTop <= experienciaTop) {
+      atualizaLink($('#menu_content a[href="#projetos"]'));
+    } else if (scrollTop <= habilidadeTop) {
+      atualizaLink($('#menu_content a[href="#experiencia"]'));
+    } else if (scrollTop <= contatoTop) {
+      atualizaLink($('#menu_content a[href="#habilidades"]'));
+      console.log("Contato");
+    } else {
+      atualizaLink($('#menu_content a[href="#contato"]'));
+    }
+
   });
 
   // * Quando o usuário clica na página, o menu é fechado 
@@ -58,7 +94,7 @@ $(document).ready(function () {
     if (target.length) {
       $('html, body').stop().animate({
         scrollTop: target.offset().top - 20 // Ajuste o valor conforme necessário
-      }, 0); // Tempo da animação em milissegundos
+      }, 0);
     }
   });
 
@@ -85,7 +121,7 @@ $(document).ready(function () {
 });
 
 // * Atualiza barra de menu
-function updateLinkStyles($clickedLi) {
+function atualizaLink($clickedLi) {
   var $clickedSpan = $clickedLi.find('span');
   var $clickedH6 = $clickedLi.find('h6');
   var defaultClass = $clickedSpan.data('default');
