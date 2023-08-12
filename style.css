@@ -398,7 +398,7 @@ form input:focus, form textarea:focus, form select:focus {
   border: none;
   background-image: var(--gradiente-roxo) !important;
   color: white !important;
-  transition: all 0.2s !important;
+  transition: all 0.2s, letter-spacing 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 article .btn-default:hover {
@@ -407,6 +407,11 @@ article .btn-default:hover {
 
 article .btn-default:active {
   transform: scale(1.0125);
+}
+
+
+form .btn-default:hover {
+  letter-spacing: 3px;
 }
 
 /** Media Querys */
