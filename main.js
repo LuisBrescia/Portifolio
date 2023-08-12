@@ -7,7 +7,6 @@ import './style.css'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 // import * as bootsrap from 'bootstrap';
-import 'https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js';
 
 var rolagemManual = false;
 
