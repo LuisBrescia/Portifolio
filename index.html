@@ -255,7 +255,10 @@
       <!-- * Crie um formulário onde a pessoa coloca o assunto e conteúdo e um email para mim é enviado -->
       <form id="contatoFormulario"
         class="d-flex flex-column justify-content-center align-items-center gap-2 my-3 mx-auto col-12 col-md-8 col-lg-6">
-        <div class="text-especial col-12 fs-4 me-auto fw-bold">Fale comigo:</div>
+        <div class="d-flex col-12 fs-4 fw-bold justify-content-between align-items-end">
+          <span class="text-especial">Fale comigo:</span>
+          <span id="form_response" class="fw-light" style="font-size: smaller;"></span>
+        </div>
         <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="nome" placeholder="Nome (opcional)">
         <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="email" name="email" placeholder="Email" required>
         <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="assunto" placeholder="Assunto"
@@ -267,8 +270,9 @@
             id="enviaFormulario">
             Enviar
           </button>
-          <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei sua mensagem via <a
-              href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a></div>
+          <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei sua mensagem via
+            <a href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a>
+          </div>
         </div>
       </form>
     </div>
@@ -292,6 +296,7 @@
   </footer>
 
   <script type="module" src="/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js"></script>
 </body>
 
 </html>

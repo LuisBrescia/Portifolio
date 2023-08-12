@@ -7,6 +7,7 @@ import './style.css'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 // import * as bootsrap from 'bootstrap';
+import 'https://cdnjs.cloudflare.com/ajax/libs/spin.js/4.1.0/spin.min.js';
 
 var rolagemManual = false;
 
@@ -26,32 +27,44 @@ $(document).ready(function () {
     console.log($('#show_menu').prop('checked'));
   });
 
-  document.getElementById('contatoFormulario').addEventListener('submit', function (event) {
+  $('#contatoFormulario').submit(function (event) {
     event.preventDefault();
-    const nome = document.querySelector('input[name="nome"]').value;
-    const email = document.querySelector('input[name="email"]').value;
-    const assunto = document.querySelector('input[name="assunto"]').value;
-    const conteudo = document.querySelector('textarea[name="conteudo"]').value;
+
+    const nome = $('input[name="nome"]').val();
+    const email = $('input[name="email"]').val();
+    const assunto = $('input[name="assunto"]').val();
+    const conteudo = $('textarea[name="conteudo"]').val();
 
     const data = {
-        nome: nome,
-        email: email,
-        assunto: assunto,
-        conteudo: conteudo
+      nome: nome,
+      email: email,
+      assunto: assunto,
+      conteudo: conteudo
     };
 
     const url = 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec';
-  
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'text/plain;charset=utf-8',
+
+    $('#enviaFormulario').text('Enviando...');
+
+    $.ajax({
+      url: url,
+      type: 'POST',
+      contentType: 'text/plain;charset=utf-8',
+      data: JSON.stringify(data),
+      dataType: 'json',
+      success: function (response) {
+        console.log('Response from server:', response);
+        $('#form_response').text('Email enviado com sucesso!');
+        $('#form_response').addClass('text-verde');
       },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((data) => console.log('data', data))
-      .catch((err) => console.log('err', err));
+      error: function (error) {
+        console.error('Error:', error);
+        $('#form_response').text('Erro ao enviar e-mail. Tente novamente mais tarde.');
+      },
+      complete: function () {
+        $('#enviaFormulario').text('Enviar');
+      }
+    });
   });
 
   // * O ícone é alterado quando o usuário o clica
@@ -59,14 +72,14 @@ $(document).ready(function () {
 
   $('#menu_content').on('click', 'a', function () {
     atualizaLink($(this));
-    
+
     if (rolagemManual) {
       clearTimeout(timeoutID); // Cancela o timeout existente se estiver em andamento
     }
-    
+
     rolagemManual = true;
-    
-    timeoutID = setTimeout(function() {
+
+    timeoutID = setTimeout(function () {
       rolagemManual = false; // Define a variável como false após 1000 milissegundos
     }, 800);
   });
@@ -74,10 +87,10 @@ $(document).ready(function () {
   // * Quando o usuário realizar um scroll, pegar o valor do scroll e alterar o menu
   $(window).scroll(function () {
 
-    if(rolagemManual) {
-      console.log("retornou"); 
+    if (rolagemManual) {
+      console.log("retornou");
       return; // Se a rolagem for manual, não alterar o menu
-    } 
+    }
 
     var projetosTop = $('#projetos').offset().top; // Obtém a posição do elemento com ID "projetos"
     var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
