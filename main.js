@@ -100,7 +100,7 @@ $(document).ready(function () {
     var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
     var habilidadeTop = $('#habilidades').offset().top; // Obtém a posição do elemento com ID "contato"
     var contatoTop = $('#contato').offset().top; // Obtém a posição do elemento com ID "contato"
-    var scrollTop = $(window).scrollTop() + 20;
+    var scrollTop = $(window).scrollTop() + $(window).height() / 2;
 
     if (scrollTop <= projetosTop) {
       atualizaLink($('#menu_content a[href="#"]'));
