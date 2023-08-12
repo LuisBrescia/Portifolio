@@ -63,6 +63,11 @@ $(document).ready(function () {
       },
       complete: function () {
         $('#enviaFormulario').text('Enviar');
+        // Apague o conteúdo dos campos
+        $('input[name="nome"]').val('');
+        $('input[name="email"]').val('');
+        $('input[name="assunto"]').val('');
+        $('textarea[name="conteudo"]').val('');
       }
     });
   });
