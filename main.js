@@ -26,6 +26,34 @@ $(document).ready(function () {
     console.log($('#show_menu').prop('checked'));
   });
 
+  document.getElementById('contatoFormulario').addEventListener('submit', function (event) {
+    event.preventDefault();
+    const nome = document.querySelector('input[name="nome"]').value;
+    const email = document.querySelector('input[name="email"]').value;
+    const assunto = document.querySelector('input[name="assunto"]').value;
+    const conteudo = document.querySelector('textarea[name="conteudo"]').value;
+
+    const data = {
+        nome: nome,
+        email: email,
+        assunto: assunto,
+        conteudo: conteudo
+    };
+
+    const url = 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec';
+  
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'text/plain;charset=utf-8',
+      },
+      body: JSON.stringify(data),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log('data', data))
+      .catch((err) => console.log('err', err));
+  });
+
   // * O ícone é alterado quando o usuário o clica
   var timeoutID; // Variável para armazenar o ID do timeout
 
@@ -88,6 +116,7 @@ $(document).ready(function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
   });
 
+  // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
     var target = $(this.getAttribute('href'));
@@ -98,7 +127,7 @@ $(document).ready(function () {
     }
   });
 
-  // * Redirecionamento de projetos
+  // * Redirecionamento de projetos ONLINE/GITHUB
   $('#site-event-manager').on('click', function () {
     window.open('https://event-manager-tiaw-e7211e805cd0.herokuapp.com', '_blank');
   });
