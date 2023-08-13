@@ -64,10 +64,6 @@ section:hover, #habilidades article:hover {
   mix-blend-mode: lighten;
 } */
 
-strong {
-  font-weight: 900;
-}
-
 footer a {
   color: white;
   transition: all 0.3s ease-in-out !important;
