@@ -64,7 +64,6 @@ $(document).ready(function () {
       },
       complete: function () {
         $('#enviaFormulario').text('Enviar');
-        // Apague o conteúdo dos campos
         $('input[name="assunto"]').val('');
         $('textarea[name="conteudo"]').val('');
         $('#enviaFormulario').css('cursor', 'pointer');

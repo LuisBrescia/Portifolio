@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,7 +8,9 @@
   <title>Luís Brescia</title>
 </head>
 
-<body class="bg-claro">
+<body>
+
+  <!-- ! Navbar -->
   <nav class="container d-flex justify-content-end py-0 pt-3 sticky-top">
     <!-- * Botão Altera Tema -->
     <!-- <button class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
@@ -62,13 +64,12 @@
     </button>
   </nav>
 
-  <main class="container d-flex flex-column gap-4 mb-5">
+  <!-- ! Início -->
+  <main class="container mb-4" id="inicio">
+
+    <img src="/perfil.jpg" class="w-25 shadow-sm rounded-full mx-auto">
 
     <div class="text-center">
-      <img src="/perfil.jpg" class="w-25 shadow-sm rounded-full">
-    </div>
-    <!-- * Apresentação -->
-    <div class="text-cente">
       <div class="fw-bold fs-bigger text-especial text-nowrap mx-auto">Olá, sou Luís</div>
       <div class="my-3 fs-4 letter-spacing d-flex align-items-center justify-content-center">
         <i class="bi-geo-alt-fill fs-5"></i>&nbsp;Belo Horizonte, Brasil
@@ -79,13 +80,17 @@
       </div>
     </div>
 
-    <!-- ! Projetos -->
-    <div class="fs-1 text-especial mx-auto bi-rocket-takeoff-fill fw-bold translate-left" id="projetos">&nbsp; Projetos
-    </div>
+  </main>
+
+  <!-- ! Projetos -->
+  <main class="container" id="projetos">
+
+    <header>
+      <h3 class="fs-1 text-especial bi-rocket-takeoff-fill">&nbsp; Projetos</h3>
+    </header>
 
     <!-- * Event Manager -->
-    <section class="interativo shadow-sm bg-especial text-white d-flex 
-    flex-column flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
+    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
           <i class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-1 mb-3"></i>
@@ -109,15 +114,12 @@
         </div>
 
       </div>
-
-      </div>
-      <img src="/event-manager-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow"></img>
+      <img src="/event-manager-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow"></img>
     </section>
 
     <!-- * RDC - Material extra -->
-    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column 
-    flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
-      <img src="/projeto-redes-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow d-none d-lg-block"></img>
+    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
+      <img src="/projeto-redes-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow d-none d-lg-block"></img>
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
           <i class="bi-router fs-3 text-white bg-verde shadow-sm px-2 py-1 rounded-1 mb-3"></i>
@@ -140,14 +142,11 @@
           </button>
         </div>
       </div>
-      <img src="/projeto-redes-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow d-block d-lg-none"></img>
-
+      <img src="/projeto-redes-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow d-block d-lg-none"></img>
     </section>
 
     <!-- * Music Maker -->
-    <section class="interativo shadow-sm bg-especial text-white d-flex flex-column 
-    flex-lg-row p-4 rounded-1 justify-content-between align-items-stretch">
-
+    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
           <i class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
@@ -171,20 +170,17 @@
         </div>
 
       </div>
-
-      <img src="/music-maker-sm.jpeg" class="col-lg-6 d-flex mt-3 mt-lg-0 rounded-1 shadow"></img>
+      <img src="/music-maker-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow"></img>
     </section>
 
   </main>
 
-  <!-- * Section Experiência -->
-  <main class="container-lg text-center mb-5" id="experiencia">
+  <!-- ! Experiência -->
+  <main class="container-lg" id="experiencia">
 
-    <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left bi-mortarboard-fill">&nbsp; Experiência</div>
-
-    <!-- <div class="fs-5 fw-light container p-0 max-hd">
-        <span class="text-nowrap">Aqui será listado minhas <strong>experiências</strong></span><br>
-      </div> -->
+    <header>
+      <h3 class="fs-1 text-especial bi-mortarboard-fill">&nbsp; Experiência</h3>
+    </header>
 
     <!-- ? Imagem -->
     <div class="experiencia-image-collection mx-auto">
@@ -194,7 +190,7 @@
     </div>
 
     <!-- * Cada experiência será um card-->
-    <div class="d-flex flex-column flex-md-row justify-content-between mt-4 gap-5 gap-md-0">
+    <div class="d-flex flex-column flex-md-row justify-content-between mt-4 gap-5 gap-md-0 text-center">
       <article class="col-12 col-md-4">
         <div class="fs-3 fw-bold">
           <i class="bi-patch-check-fill text-verde"></i>
@@ -227,169 +223,161 @@
     </div>
 
   </main>
-  <!-- <div class="d-flex">
-      <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-      <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-      <img class="col-4" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
-    </div> -->
 
-  <main class="container d-flex flex-column">
+  <!-- ! Habilidades -->
+  <main class="container" id="habilidades">
 
-    <!-- ! Habilidades -->
-    <div class="text-center my-3" id="habilidades">
-      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left translate-left bi-lightning-charge-fill">&nbsp;
-        Habilidades
+    <header>
+      <div class="fs-1 fw-bold text-especial mx-auto mb-2 bi-lightning-charge-fill">&nbsp; Habilidades</div>
+      <div class="fs-5 fw-light text-center">
+        Algumas de minhas <strong>habilidades</strong>
       </div>
-      <div class="fs-5 fw-light container p-0 max-hd mb-3">
-        <span class="text-nowrap">Algumas das minhas <strong>habilidades</strong></span><br>
-      </div>
+    </header>
 
-      <div class="d-flex flex-column flex-lg-row justify-content-between mb-4 gap-4">
-        <!-- ? Habilidade 1 -->
-        <article class="interativo d-flex align-items-center fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">Flutter</h3>
-            <p class="fs-6 fw-light">
-              Tecnologia utilizada para desenvolver meu <strong>TCC</strong> do curso técnico.
-            </p>
-          </div>
-        </article>
-        <!-- ? Habilidade 2 -->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">Swift</h3>
-            <p class="fs-6 fw-light">
-              Utilizei esta linguagem para desenvolver aplicativos IOS durante o <strong>Hackatruck</strong>.
-            </p>
-          </div>
-        </article>
-      </div>
+    <!-- ? Flutter e Swift -->
+    <article class="flex-lg-row">
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"/>
 
-      <div class="d-flex flex-column flex-lg-row justify-content-between gap-4 mb-4">
-        <!-- ? Habilidade 3-->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">Python</h3>
-            <p class="fs-6 fw-light">
-              Com ele criei um questionário corrigido por <strong>Inteligência Artificial</strong>.
-            </p>
-          </div>
-        </article>
-        <!-- ? Habilidade 4 -->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">Java</h3>
-            <p class="fs-6 fw-light">
-              Meus primeiros <strong>algoritmos de estrutura de dados</strong> foram feitos utilizando esta linguagem.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <div class="d-flex flex-column flex-lg-row justify-content-between gap-4 mb-4">
-        <!-- ? Habilidade 5 -->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">Git</h3>
-            <p class="fs-6 fw-light">
-              Para <strong>versionamento de código</strong>, utilizo desde 2020, quando comecei a estudar sobre a área.
-            </p>
-          </div>
-        </article>
-        <!-- ? Habilidade 6 -->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/>
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">C++</h3>
-            <p class="fs-6 fw-light">
-              Linguagem onde aprimorei minhas habilidades de <strong>lógica de programação</strong>.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <div class="d-flex flex-column flex-lg-row justify-content-between gap-4">
-        <!-- ? Habilidade 5 -->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">PostgreSQL</h3>
-            <p class="fs-6 fw-light">
-              Apliquei em meu TCC para <strong>armazenar dados</strong> de forma segura.
-            </p>
-          </div>
-        </article>
-        <!-- ? Habilidade 6 -->
-        <article class="interativo align-items-center d-flex fs-4 col-12 col-lg-6 fw-bold bg-especial text-white rounded-1 shadow-sm">
-          <div class="col-5 p-3">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-          </div>
-          <div class="col p-4 text-start">
-            <h3 class="fs-3 letter-spacing fw-bold">Node.js</h3>
-            <p class="fs-6 fw-light">
-              Uso para criar <strong>servidores</strong>, configurando rotas e conexões com banco de dados.
-            </p>
-          </div>
-        </article>
-      </div>
-      
-    </div>
-
-    <!-- ! Contato -->
-    <div class="text-center my-3" id="contato">
-      <div class="fs-1 fw-bold text-especial mx-auto mb-2 translate-left bi-send-fill">&nbsp; Contato</div>
-      <div class="fs-5 fw-light container p-0 mb-4 max-hd">
-        <span class="text-nowrap">Atualmente estou em busca de uma</span> <br>
-        <span class="text-nowrap">oportunidade como estagiário na área de</span> <br>
-        <strong class="text-nowrap">desenvolvimento de software.</strong>
-      </div>
-
-      <!-- * Crie um formulário onde a pessoa coloca o assunto e conteúdo e um email para mim é enviado -->
-      <form id="contatoFormulario"
-        class="d-flex flex-column justify-content-center align-items-center gap-2 my-3 mx-auto col-12 col-md-8 col-lg-6">
-        <div class="d-flex col-12 fs-4 fw-bold justify-content-between align-items-end">
-          <span class="text-especial">Fale comigo:</span>
-          <span id="form_response" class="fw-light" style="font-size: 16px;"></span>
+        <div class="col pe-3">
+          <h3 class="fs-3">Flutter</h3>
+          <p class="fs-6">
+            Tecnologia utilizada para desenvolver meu <strong>TCC</strong> do curso técnico, app mobile intitulado
+            <strong>Quebra-Galho</strong>.
+          </p>
         </div>
-        <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="nome" placeholder="Nome (opcional)">
-        <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="email" name="email" placeholder="Email" required>
-        <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="assunto" placeholder="Assunto"
-          required>
-        <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo"
-          placeholder="Gostou de algo? &nbsp;Alguma sugestão de melhoria? &nbsp;Escreva aqui." required></textarea>
-        <div class="col-12">
-          <button class="w-100 col-12 border-0 btn btn-default shadow-sm rounded-1 py-3 letter-spacing" type="submit"
-            id="enviaFormulario">
-            Enviar
-          </button>
-          <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei sua mensagem via
-            <a href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a>
-          </div>
+
+      </section>
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg"/>
+
+        <div class="col pe-3">
+          <h3 class="fs-3">Swift</h3>
+          <p class="fs-6">
+            Utilizei esta linguagem para desenvolver aplicativos IOS durante o <strong>Hackatruck</strong>.
+          </p>
         </div>
-      </form>
-    </div>
+
+      </section>
+    </article>
+
+    <!-- ? Python e Java -->
+    <article class="flex-lg-row">
+
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
+        <div class="col pe-3">
+          <h3 class="fs-3">Python</h3>
+          <p class="fs-6">
+            Com ele criei um questionário corrigido por <strong>Inteligência Artificial</strong>.
+          </p>
+        </div>
+      </section>
+
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-plain.svg"/>
+        <div class="col pe-3">
+          <h3 class="fs-3">Java</h3>
+          <p class="fs-6">
+            Meus primeiros <strong>algoritmos de estrutura de dados</strong> foram feitos utilizando esta linguagem.
+          </p>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- ? Git e C++ -->
+    <article class="flex-lg-row">
+
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+        <div class="col pe-3">
+          <h3 class="fs-3">Git</h3>
+          <p class="fs-6">
+            Para <strong>versionamento de código</strong>, utilizo desde 2020, quando comecei a estudar sobre a área.
+          </p>
+        </div>
+      </section>
+
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/>
+        <div class="col pe-3">
+          <h3 class="fs-3">C++</h3>
+          <p class="fs-6">
+            Linguagem onde aprimorei minhas habilidades de <strong>lógica de programação</strong>.
+          </p>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- ? PostgreSQL e Node.js -->
+    <article class="flex-lg-row">
+
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"/>
+        <div class="col pe-3">
+          <h3 class="fs-3">PostgreSQL</h3>
+          <p class="fs-6">
+            Programa utilizado durante as disciplinas de <strong>Banco de Dados</strong> no curso de informática do CEFET-MG.
+          </p>
+        </div>
+      </section>
+
+      <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
+        <img class="col-5 p-3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+        <div class="col pe-3">
+          <h3 class="fs-3">Node</h3>
+          <p class="fs-6">
+            Uso para criar <strong>servidores</strong>, configurando rotas e conexões com banco de dados.
+          </p>
+        </div>
+      </section>
+
+    </article>
 
   </main>
 
+  <!-- ! Contato -->
+  <main class="container" id="contato">
+
+    <header>
+      <h3 class="fs-1 text-especial bi-send-fill">&nbsp; Contato</h3>
+      <p class="fs-5">
+        Atualmente estou em busca de uma <br>
+        oportunidade como estagiário na área de <br>
+        <strong>desenvolvimento de software.</strong>
+      </p>
+    </header>
+
+    <!-- * Formulário para contato-->
+    <form id="contatoFormulario"
+      class="d-flex flex-column justify-content-center align-items-center gap-2 my-3 mx-auto col-12 col-md-8 col-lg-6">
+      <div class="d-flex col-12 fs-4 fw-bold justify-content-between align-items-end">
+        <span class="text-especial">Fale comigo:</span>
+        <span id="form_response" class="fw-light" style="font-size: 16px;"></span>
+      </div>
+      <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="nome" placeholder="Nome (opcional)">
+      <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="email" name="email" placeholder="Email" required>
+      <input class="col-12 border-0 rounded-1 shadow-sm p-2" type="text" name="assunto" placeholder="Assunto" required>
+      <textarea class="col-12 border-0 rounded-1 shadow-sm p-2" name="conteudo"
+        placeholder="Gostou de algo? &nbsp;Alguma sugestão de melhoria? &nbsp;Escreva aqui." required></textarea>
+      <div class="col-12">
+        <button class="w-100 col-12 border-0 btn btn-default shadow-sm rounded-1 py-3 letter-spacing" type="submit"
+          id="enviaFormulario">
+          Enviar
+        </button>
+        <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei sua mensagem via
+          <a href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a>
+        </div>
+      </div>
+    </form>
+
+  </main>
+
+  <!-- * Footer -->
   <footer class="container-fluid my-2">
     <div class="rounded-1 bg-especial text-center shadow-sm py-1 text-white">
       <div class="d-flex justify-content-center gap-5 my-3">
