@@ -56,9 +56,13 @@ section:hover, #habilidades article:hover {
   transform: scale(1.025);
 }
 
-#habilidades img {
-  mix-blend-mode: color-dodge;
+#habilidades article:hover {
+  cursor: pointer;
 }
+
+/* #habilidades img {
+  mix-blend-mode: lighten;
+} */
 
 footer a {
   color: white;
@@ -412,10 +416,6 @@ article .btn-default:hover {
 
 article .btn-default:active {
   transform: scale(1.05);
-}
-
-#habilidades article {
-  min-height: 20vh;
 }
 
 .btn-default:hover, .btn-default:active {

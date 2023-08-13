@@ -44,6 +44,8 @@ $(document).ready(function () {
     const url = 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec';
 
     $('#enviaFormulario').text('Enviando...');
+    // Quando o botão estiver em cima do formulário, o cursor é alterado para "progress"
+    $('#enviaFormulario').css('cursor', 'progress');
 
     $.ajax({
       url: url,
@@ -63,10 +65,9 @@ $(document).ready(function () {
       complete: function () {
         $('#enviaFormulario').text('Enviar');
         // Apague o conteúdo dos campos
-        $('input[name="nome"]').val('');
-        $('input[name="email"]').val('');
         $('input[name="assunto"]').val('');
         $('textarea[name="conteudo"]').val('');
+        $('#enviaFormulario').css('cursor', 'pointer');
       }
     });
   });
