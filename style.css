@@ -541,6 +541,10 @@ section:hover {
   gap: 1em;
 }
 
+#habilidades section img {
+  object-fit: cover;
+}
+
 #teste {
   border: 5px solid transparent; /* Define uma borda inicial transparente */
   border-radius: 20px; /* Define o raio de curvatura para criar a aparência arredondada */
