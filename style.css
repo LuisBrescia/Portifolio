@@ -396,23 +396,57 @@ form input:focus, form textarea:focus, form select:focus {
 
 .btn-default {
   border: none;
-  background-image: var(--gradiente-roxo) !important;
+  background-image: var(--gradiente-roxo) ;
   color: white !important;
-  transition: all 0.2s, letter-spacing 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s ease-out !important;
 }
 
 article .btn-default:hover {
-  transform: scale(1.025);
+  transform: scale(1.1);
 }
 
 article .btn-default:active {
-  transform: scale(1.0125);
+  transform: scale(1.05);
 }
 
+.btn-default:hover, .btn-default:active {
+  border-radius: 4px !important;
+}
 
 form .btn-default:hover {
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
+
+/** Keyframes */
+@keyframes flip-gradient {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  12.5% {
+    filter: hue-rotate(5deg);
+  }
+  25% {
+    filter: hue-rotate(10deg);
+  }
+  37.5% {
+    filter: hue-rotate(5deg);
+  }
+  50% {
+    filter: hue-rotate(0deg);
+  }
+  62.5% {
+    filter: hue-rotate(-5deg);
+  }
+  75% {
+    filter: hue-rotate(-10deg);
+  }
+  87.5% {
+    filter: hue-rotate(-5deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+} 
 
 /** Media Querys */
 
