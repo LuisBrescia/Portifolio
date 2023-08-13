@@ -43,19 +43,17 @@ a {
   color: var(--color-azul);
 }
 
-section {
+section, article {
   transition: all 0.3s ease-in-out !important;
-  box-shadow: none;
 }
 
 section button {
   transform: scale(1) !important;
 }
 
-section:hover {
+section:hover, #habilidades article:hover {
   box-shadow: inherit;
   transform: scale(1.025);
-  background-color: var(--color-claro);
 }
 
 footer a {
@@ -407,6 +405,10 @@ article .btn-default:hover {
 
 article .btn-default:active {
   transform: scale(1.05);
+}
+
+#habilidades article {
+  min-height: 20vh;
 }
 
 .btn-default:hover, .btn-default:active {
