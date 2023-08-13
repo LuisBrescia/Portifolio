@@ -44,11 +44,9 @@ a {
   color: var(--color-azul);
 }
 
-
-
-/* #habilidades img {
-  mix-blend-mode: lighten;
-} */
+#habilidades img {
+  mix-blend-mode: normal;
+}
 
 footer a {
   color: white;
