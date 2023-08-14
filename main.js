@@ -169,8 +169,8 @@ $(document).ready(function () {
         '<li>Serviços do sistema operacional - <span class="text-especial">Protocolos / Segurança</span></li>' + 
         '<li>Projeto de sistemas - <span class="text-especial">Desenvolvimento de Software</span></li>' + 
       '</ul>' +
-      '<span class="fs-small">' +
-        '<strong class="fw-bold">TCC:</strong> Utilizando o aprendizado das matérias acima, foi desenvolvido um aplicativo para celular intitulado "Quebra-Galho",' +
+      '<span>' +
+        '<strong class="fw-bold">TCC:</strong> Utilizando o aprendizado das disciplinas acima, foi desenvolvido um aplicativo para celular intitulado "Quebra-Galho",' +
         '<a href="https://github.com/cefetmg-2022-psi-g2" class="text-especial"> clique aqui</a> para mais detalhes.<br>' +
       '</span>'
     );
@@ -178,12 +178,27 @@ $(document).ready(function () {
   $('#xp_puc').click(function () {
     $('.modal-title').text('PUC Minas');
     $('.modal-body').html(
-    'Estudante do curso de graduação em <span class="text-especial">Engenharia de Software.</span>'
+    'Atualmente, estou cursando o <span class="text-especial">2° período</span> de forma regular.'
     );
   });
   $('#xp_hackatruck').click(function () {
-    $('.modal-title').text('Hackatruck');
-    $('.modal-body').text('Participante do Hackatruck, projeto da IBM.');
+    $('.modal-title').text('Hackatruck MakerSpace');
+    $('.modal-body').html(
+      '<strong>Introdução</strong><br>' +
+      'Projeto de capacitação profissional de estudantes de ' + 
+      'Instituições de Ensino Superior de Tecnologia da Informação.<br><br>' + 
+      '<strong>Habilidades adquiridas:</strong><br>' +
+      '<ul>' +
+        '<li>Desenvolvimento de aplicativos utilizando Swift UI</li>' + 
+        '<li>Programação de ChatBot inteligente Watson</li>' + 
+        '<li>Conhecimento em IOT</li>' + 
+        '<li>Criação de API própria</li>' +
+        '<li>Configuração de rotas utilizando Node Red</li>' + 
+      '</ul>' +
+      'Junto de um grupo, desenvolvemos um aplicativo para IOS que auxilia pessoas na execução de exercícios físicos, ' +
+      '<a href="https://github.com/LuisBrescia/Hackatruck-Academia>" class="text-especial">clique aqui</a> para mais detalhes.'
+
+    );
   });
 
   // * Redirecionamento de projetos ONLINE/GITHUB
