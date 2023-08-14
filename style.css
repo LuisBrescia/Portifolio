@@ -297,10 +297,6 @@ form input:focus, form textarea:focus, form select:focus {
   border-color: var(--color-claro);
 }
 
-.rounded-full {
-  border-radius: 100em;
-}
-
 /** Botões - Personalizados */
 
 #menu_portifolio {
@@ -554,11 +550,4 @@ section:hover {
 
 #habilidades section img {
   object-fit: cover
-}
-
-#teste {
-  border: 5px solid transparent; /* Define uma borda inicial transparente */
-  border-radius: 20px; /* Define o raio de curvatura para criar a aparência arredondada */
-  border-image: var(--gradiente-roxo) 4; /* Define a imagem da borda e a largura da faixa */
-  border-image-slice: 4; /* Define como a imagem da borda é fatiada */
 }
