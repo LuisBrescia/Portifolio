@@ -6,7 +6,7 @@ import './style.css';
 // import { setupCounter } from './JS/counter.js'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import * as bootsrap from 'bootstrap';
+// import * as bootsrap from 'bootstrap';
 
 var rolagemManual = false;
 
@@ -145,18 +145,7 @@ $(document).ready(function () {
   });
 
   // * Comportamento do modal
-  $('#xp_cefet').click(function () {
-    $('.modal-title').text('CEFET-MG');
-    $('.modal-body').text('Estudante do curso técnico em informática integrado ao ensino médio.');
-  });
-  $('#xp_puc').click(function () {
-    $('.modal-title').text('Puc Minas');
-    $('.modal-body').text('Estudante do curso de graduação em Engenharia de Software.');
-  });
-  $('#xp_hackatruck').click(function () {
-    $('.modal-title').text('Hackatruck');
-    $('.modal-body').text('Participante do Hackatruck, projeto da IBM.');
-  });
+
 
   // * Redirecionamento de projetos ONLINE/GITHUB
   $('#site-event-manager').on('click', function () {
