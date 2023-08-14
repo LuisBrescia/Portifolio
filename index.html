@@ -198,7 +198,8 @@
         </div>
         <div class="fs-6 letter-spacing">Técnico em Informática</div>
         <div class="fs-5 letter-spacing fw-light">2020 - 2022</div>
-        <button id="xp_cefet" class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2">Mais
+        <button id="xp_cefet" class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
           Detalhes</button>
       </article>
 
@@ -209,7 +210,8 @@
         </div>
         <div class="fs-6 letter-spacing">Engenharia de Software</div>
         <div class="fs-5 letter-spacing fw-light">2023 - 2026</div>
-        <button id="xp_puc" class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2">Mais
+        <button id="xp_puc" class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
           Detalhes</button>
       </article>
 
@@ -220,7 +222,8 @@
         </div>
         <div class="fs-6 letter-spacing">Qualificação profissional</div>
         <div class="fs-5 letter-spacing fw-light">2023 - 2023</div>
-        <button id="xp_hackatruck" class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2">Mais
+        <button id="xp_hackatruck" class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
+        data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
           Detalhes</button>
       </article>
     </div>
@@ -405,7 +408,17 @@
   </footer>
 
   <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-1">
 
+        <div class="modal-header border-0 shadow-sm bg-white rounded-1 py-2">
+          <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn border-0" data-bs-dismiss="modal"><i class="fs-4 bi-x-lg text-especial"></i></button>
+        </div>
+        <div class="modal-body fw-light fs-5"></div>
+    </div>
+  </div>
 
   <script type="module" src="./main.js"></script>
 </body>
