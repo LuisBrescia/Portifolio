@@ -155,7 +155,7 @@ $(document).ready(function () {
   });
   $('#xp_hackatruck').click(function () {
     $('.modal-title').text('Hackatruck');
-    $('.modal').text('Participante do Hackatruck, projeto da IBM.');
+    $('.modal-body').text('Participante do Hackatruck, projeto da IBM.');
   });
 
   // * Redirecionamento de projetos ONLINE/GITHUB
