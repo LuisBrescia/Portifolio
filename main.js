@@ -150,25 +150,29 @@ $(document).ready(function () {
     $('.modal-body').html(
       '<strong>1° Ano: (2020)</strong><br>' + 
       '<ul>' +
-        '<li>Algorítmos e lógica de programação</li>' + 
-        '<li>Programação para web</li>' +  
-        '<li>Fundamentos da informática</li>' + 
+        '<li>Algorítmos e lógica de programação - <span class="text-especial">C / C++</span></li>' + 
+        '<li>Programação para web - <span class="text-especial">HTML / CSS / Javascript</span></li>' +  
+        '<li>Fundamentos da informática - <span class="text-especial">Básico da computação</span></li>' + 
       '</ul>' +
       '<strong>2° Ano: (2021)</strong><br>' + 
       '<ul>' +
-        '<li>Linguagem de programação 1</li>' + 
-        '<li>Aplicações para web</li>' +  
-        '<li>Organização de computadores</li>' + 
+        '<li>Linguagem de programação 1 - <span class="text-especial">Java</span></li>' + 
+        '<li>Aplicações para web - <span class="text-especial">PHP / Servlets</span></li>' +  
+        '<li>Organização de computadores - <span class="text-especial">Computação avançada</span></li>' + 
       '</ul>' +
       '<strong>3° Ano: (2022)</strong><br>' +
       '<ul>' +
-        '<li>Linguagem de programação 2</li>' + 
-        '<li>Banco de dados</li>' + 
-        '<li>Tecnologias emergentes em informática</li>' + 
-        '<li>Redes de Computadores</li>' +  
-        '<li>Serviços do sistema operacional</li>' + 
-        '<li>Projeto de sistemas</li>' + 
-      '</ul>' 
+        '<li>Linguagem de programação 2 - <span class="text-especial">Criação de microsseviços</span></li>' + 
+        '<li>Banco de dados - <span class="text-especial">PostgreSQL</span></li>' + 
+        '<li>Tecnologias emergentes em informática - <span class="text-especial">C++ avançado</span></li>' + 
+        '<li>Redes de Computadores - <span class="text-especial">Funcionamento / Quantificação</span></li>' +  
+        '<li>Serviços do sistema operacional - <span class="text-especial">Protocolos / Segurança</span></li>' + 
+        '<li>Projeto de sistemas - <span class="text-especial">Desenvolvimento de Software</span></li>' + 
+      '</ul>' +
+      '<span class="fs-small">' +
+        '<strong class="fw-bold">TCC:</strong> Utilizando o aprendizado das matérias acima, foi desenvolvido um aplicativo para celular intitulado "Quebra-Galho",' +
+        '<a href="https://github.com/cefetmg-2022-psi-g2" class="text-especial"> clique aqui</a> para mais detalhes.<br>' +
+      '</span>'
     );
   });
   $('#xp_puc').click(function () {
