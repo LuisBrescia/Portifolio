@@ -552,7 +552,7 @@ section:hover {
 
 #habilidades section h3 {
   font-weight: 700;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 #habilidades section p {
@@ -571,7 +571,11 @@ section:hover {
 
 /*: Meu próprio modal */
 
+.modal-header button {
+  color: #3e4249;
+}
+
 .modal-header button:hover, .modal-header button:active {
-  transform: scale(1.1);
+  color: var(--color-escuro);
 }
 

@@ -147,11 +147,35 @@ $(document).ready(function () {
   // * Comportamento do modal
   $('#xp_cefet').click(function () {
     $('.modal-title').text('CEFET-MG');
-    $('.modal-body').text('Estudante do curso técnico em informática integrado ao ensino médio.');
+    $('.modal-body').html(
+      '<strong>1° Ano: (2020)</strong><br>' + 
+      '<ul>' +
+        '<li>Algorítmos e lógica de programação</li>' + 
+        '<li>Programação para web</li>' +  
+        '<li>Fundamentos da informática</li>' + 
+      '</ul>' +
+      '<strong>2° Ano: (2021)</strong><br>' + 
+      '<ul>' +
+        '<li>Linguagem de programação 1</li>' + 
+        '<li>Aplicações para web</li>' +  
+        '<li>Organização de computadores</li>' + 
+      '</ul>' +
+      '<strong>3° Ano: (2022)</strong><br>' +
+      '<ul>' +
+        '<li>Linguagem de programação 2</li>' + 
+        '<li>Banco de dados</li>' + 
+        '<li>Tecnologias emergentes em informática</li>' + 
+        '<li>Redes de Computadores</li>' +  
+        '<li>Serviços do sistema operacional</li>' + 
+        '<li>Projeto de sistemas</li>' + 
+      '</ul>' 
+    );
   });
   $('#xp_puc').click(function () {
-    $('.modal-title').text('Puc Minas');
-    $('.modal-body').text('Estudante do curso de graduação em Engenharia de Software.');
+    $('.modal-title').text('PUC Minas');
+    $('.modal-body').html(
+    'Estudante do curso de graduação em <span class="text-especial">Engenharia de Software.</span>'
+    );
   });
   $('#xp_hackatruck').click(function () {
     $('.modal-title').text('Hackatruck');
