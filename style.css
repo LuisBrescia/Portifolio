@@ -454,6 +454,18 @@ form .btn-default:hover {
 
 @media screen and (min-width: 576px) {
   nav {
+    transform: translateX(30px);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    transform: translateX(45px);
+  }
+}
+
+@media screen and (min-width: 630px) {
+  nav {
     transform: translateX(58px);
   }
 }
@@ -476,6 +488,10 @@ form .btn-default:hover {
 
 /*: Organização nova */
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 header h3 {
   margin: 0 auto;
   font-weight: 700;
@@ -491,9 +507,6 @@ main {
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
-}
-
-#habilidades, #projetos {
   gap: 1em;
 }
 
