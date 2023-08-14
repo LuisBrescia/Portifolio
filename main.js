@@ -1,12 +1,12 @@
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './style.css'
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './JS/counter.js'
 import $ from 'jquery';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'
-// import * as bootsrap from 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import * as bootsrap from 'bootstrap';
 
 var rolagemManual = false;
 
@@ -43,9 +43,10 @@ $(document).ready(function () {
 
     const url = 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec';
 
-    $('#enviaFormulario').text('Enviando...');
     // Quando o botão estiver em cima do formulário, o cursor é alterado para "progress"
     $('#enviaFormulario').css('cursor', 'progress');
+    // Coloca uma animação chamada "pulse" no botão
+    $('#enviaFormulario').css('animation', 'pulse 1s infinite');
 
     $.ajax({
       url: url,
@@ -66,14 +67,13 @@ $(document).ready(function () {
         $('#enviaFormulario').text('Enviar');
         $('input[name="assunto"]').val('');
         $('textarea[name="conteudo"]').val('');
-        $('#enviaFormulario').css('cursor', 'pointer');
+        $('#enviaFormulario').css({'cursor': 'pointer', 'animation': 'none'});
       }
     });
   });
 
   // * O ícone é alterado quando o usuário o clica
   var timeoutID; // Variável para armazenar o ID do timeout
-
   $('#menu_content').on('click', 'a', function () {
     atualizaLink($(this));
 
@@ -142,6 +142,20 @@ $(document).ready(function () {
         scrollTop: target.offset().top - 20 // Ajuste o valor conforme necessário
       }, 0);
     }
+  });
+
+  // * Comportamento do modal
+  $('#xp_cefet').click(function () {
+    $('.modal-title').text('CEFET-MG');
+    $('.modal-body').text('Estudante do curso técnico em informática integrado ao ensino médio.');
+  });
+  $('#xp_puc').click(function () {
+    $('.modal-title').text('Puc Minas');
+    $('.modal-body').text('Estudante do curso de graduação em Engenharia de Software.');
+  });
+  $('#xp_hackatruck').click(function () {
+    $('.modal-title').text('Hackatruck');
+    $('.modal').text('Participante do Hackatruck, projeto da IBM.');
   });
 
   // * Redirecionamento de projetos ONLINE/GITHUB
