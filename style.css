@@ -571,11 +571,7 @@ section:hover {
 
 /*: Meu próprio modal */
 
-.modal-header button {
-  color: var(--color-indigo);
+.modal-header button:hover, .modal-header button:active {
+  transform: scale(1.1);
 }
 
-.modal-header button:hover, .modal-header button:active {
-  color: var(--color-indigo);
-  filter: brightness(1.8) hue-rotate(-45deg);
-}
