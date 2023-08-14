@@ -9,6 +9,7 @@
   --color-vermelho: #ff0000;
   --color-verde: #45b817;
   --color-azul: #0044ff;
+  --color-azul-claro: #00ddeb;
   --color-amarelo: #fdc714;
   --gradiente-roxo: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
 }
@@ -243,6 +244,10 @@ form input:focus, form textarea:focus, form select:focus {
 
 .text-azul {
   color: var(--color-azul);
+}
+
+.text-azul-claro {
+  color: var(--color-azul-claro);
 }
 
 .text-amarelo {
@@ -565,3 +570,12 @@ section:hover {
 }
 
 /*: Meu próprio modal */
+
+.modal-header button {
+  color: var(--color-indigo);
+}
+
+.modal-header button:hover, .modal-header button:active {
+  color: var(--color-indigo);
+  filter: brightness(1.8) hue-rotate(-45deg);
+}
