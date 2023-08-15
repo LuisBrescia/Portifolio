@@ -178,13 +178,29 @@ $(document).ready(function () {
   $('#xp_puc').click(function () {
     $('.modal-title').text('PUC Minas');
     $('.modal-body').html(
-    'Atualmente, estou cursando o <span class="text-especial">2° período</span> de forma regular.'
+    '<i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">1° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-repeat text-amarelo"></i>&nbsp; <span class="fw-normal">2° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">3° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">4° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">5° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">6° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">7° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br>' +
+    '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">8° Período</span>' +  
+    '&nbsp; <i class="bi-info-circle text-especial"></i> <br><br>' +
+    'Atualmente, curso o <span class="text-especial">2° período</span> de forma regular.'
     );
   });
   $('#xp_hackatruck').click(function () {
-    $('.modal-title').text('Hackatruck MakerSpace');
+    $('.modal-title').text('Hackatruck');
     $('.modal-body').html(
-      '<strong>Introdução</strong><br>' +
+      '<strong>Introdução:</strong><br>' +
       'Projeto de capacitação profissional de estudantes de ' + 
       'Instituições de Ensino Superior de Tecnologia da Informação.<br><br>' + 
       '<strong>Habilidades adquiridas:</strong><br>' +
@@ -195,7 +211,7 @@ $(document).ready(function () {
         '<li>Criação de API própria</li>' +
         '<li>Configuração de rotas utilizando Node Red</li>' + 
       '</ul>' +
-      'Junto de um grupo, desenvolvemos um aplicativo para IOS que auxilia pessoas na execução de exercícios físicos, ' +
+      'Junto de um grupo, desenvolvi um aplicativo para IOS que auxilia pessoas na execução de exercícios físicos, ' +
       '<a href="https://github.com/LuisBrescia/Hackatruck-Academia>" class="text-especial">clique aqui</a> para mais detalhes.'
 
     );

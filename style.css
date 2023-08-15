@@ -6,7 +6,7 @@
   --color-claro: #f8f9fA;
   --color-indigo: #5b42f3;
   --color-roxo: #8640ff;
-  --color-vermelho: #ff0000;
+  --color-vermelho: #ff0044;
   --color-verde: #45b817;
   --color-azul: #0044ff;
   --color-azul-claro: #00ddeb;
@@ -252,6 +252,10 @@ form input:focus, form textarea:focus, form select:focus {
 
 .text-amarelo {
   color: var(--color-amarelo);
+}
+
+.text-vermelho {
+  color: var(--color-vermelho);
 }
 
 .text-justify {
