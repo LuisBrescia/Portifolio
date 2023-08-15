@@ -47,7 +47,7 @@ a {
 
 #habilidades img {
   mix-blend-mode: normal;
-  filter: drop-shadow(0px 0px 1.5px rgba(0, 0, 0, 1));
+  filter: drop-shadow(0px 0px .8px rgba(0, 0, 0, 1));
 }
 
 footer a {
