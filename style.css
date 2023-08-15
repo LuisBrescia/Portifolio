@@ -47,7 +47,7 @@ a {
 
 #habilidades img {
   mix-blend-mode: normal;
-  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+  filter: drop-shadow(0px 0px 1px var(--color-escuro));
 }
 
 footer a {
@@ -414,7 +414,7 @@ article .btn-default:active {
 }
 
 form .btn-default:hover {
-  letter-spacing: 4px;
+  transform: scale(1.025);
 }
 
 /** Keyframes */
@@ -450,13 +450,13 @@ form .btn-default:hover {
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
-  }
-  50% {
     transform: scale(1.025);
   }
-  100% {
+  50% {
     transform: scale(1);
+  }
+  100% {
+    transform: scale(1.025);
   }
 }
 
@@ -594,13 +594,4 @@ section:hover {
 
 .modal-header button:hover, .modal-header button:active {
   color: var(--color-escuro);
-}
-
-#preloader {
-  background: var(--color-claro) url(/preloader.gif) no-repeat center center;
-  background-size: 25%;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 9999;
 }

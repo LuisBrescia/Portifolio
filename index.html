@@ -10,17 +10,17 @@
 
 <body>
 
-  <!-- ! Navbar -->
+  <div class="loader">
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__bar"></div>
+    <div class="loader__ball"></div>
+  </div>
+
+  <!-- * Navbar -->
   <nav class="container d-flex justify-content-end py-0 pt-3 sticky-top">
-    <!-- * Botão Altera Tema -->
-    <!-- <button class="border-0 px-3 py-2 btn bg-white rounded-5 shadow">
-
-      <label class="toggle" for="altera_tema">
-        <div id="sol" class="text-especial fs-4 bi-brightness-high-fill"></div>
-      </label>
-
-    </button> -->
-
     <!-- * Botão Menu -->
     <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-white rounded-5 shadow" for="show_menu">
       <input id="show_menu" class="d-none" type="checkbox">
@@ -64,7 +64,7 @@
     </button>
   </nav>
 
-  <!-- ! Início -->
+  <!-- * Início -->
   <main class="container mb-4" id="inicio">
 
     <img src="/perfil.jpg" class="w-25 shadow-sm rounded-circle mx-auto">
@@ -82,7 +82,7 @@
 
   </main>
 
-  <!-- ! Projetos -->
+  <!-- * Projetos -->
   <main class="container" id="projetos">
 
     <header>
@@ -175,7 +175,7 @@
 
   </main>
 
-  <!-- ! Experiência -->
+  <!-- * Experiência -->
   <main class="container-lg" id="experiencia">
 
     <header>
@@ -230,7 +230,7 @@
 
   </main>
 
-  <!-- ! Habilidades -->
+  <!-- * Habilidades -->
   <main class="container" id="habilidades">
 
     <header>
@@ -274,7 +274,6 @@
     <article class="flex-lg-row">
 
       <section class="interativo fs-4 col-12 col-lg-6 bg-especial shadow-sm">
-
         <img class="col-3 p-2 rounded-1 m-2 m-md-3 shadow"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
         <div class="col p-2 m-2 m-md-3">
@@ -354,7 +353,7 @@
 
   </main>
 
-  <!-- ! Contato -->
+  <!-- * Contato -->
   <main class="container" id="contato">
 
     <header>
@@ -408,7 +407,7 @@
     </div>
   </footer>
 
-  <!-- Modal -->
+  <!-- * Modal [Mais detalhes - Experiências] -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content rounded-1">
@@ -420,8 +419,9 @@
         <div class="modal-body fw-light fs-6"></div>
       </div>
     </div>
+  </div>
 
-    <script type="module" src="./main.js"></script>
+  <script type="module" src="./main.js"></script>
 
 </body>
 
