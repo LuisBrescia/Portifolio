@@ -453,7 +453,7 @@ form .btn-default:hover {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.025);
   }
   100% {
     transform: scale(1);
