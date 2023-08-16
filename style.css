@@ -274,7 +274,7 @@ form input:focus, form textarea:focus, form select:focus {
 /** Tamanho de fontes - Personalizados */
 
 .fs-bigger {
-  font-size: 4em;
+  font-size: 3.4em;
 }
 
 .fs-big {
@@ -460,40 +460,6 @@ form .btn-default:hover {
   }
 }
 
-/** Media Querys */
-
-.max-hd {
-  max-width: 720px;
-}
-
-.translate-left {
-  transform: translateX(0px);
-}
-
-@media screen and (min-width: 576px) {
-  nav {
-    transform: translateX(30px);
-  }
-}
-
-@media screen and (min-width: 600px) {
-  nav {
-    transform: translateX(45px);
-  }
-}
-
-@media screen and (min-width: 630px) {
-  nav {
-    transform: translateX(58px);
-  }
-}
-
-@media screen and (max-width: 1060px) and (min-width: 992px) {
-  nav {
-    transform: translateX(0); /* Define o valor apropriado para evitar a transformação */
-  }
-}
-
 /** Texturas HeroPatterns */
 
 .Death-Star {
@@ -524,6 +490,10 @@ form .btn-default:hover {
 
 #inicio {
   min-height: 50vh;
+}
+
+#texto_inicio {
+  text-align: justify;
 }
 
 header h3 {
@@ -598,4 +568,64 @@ section:hover {
 
 .modal-header button:hover, .modal-header button:active {
   color: var(--color-escuro);
+}
+
+.particle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.zoomed {
+  transform: scale(1.5); /* Aplique a escala de 1.5 (zoom em 150%) */
+}
+
+.particle-1 { background-color: #e74c3c; left: 0%; }
+.particle-2 { background-color: #2ecc71; left: 20%; }
+.particle-3 { background-color: #f39c12; left: 40%; }
+.particle-4 { background-color: #9b59b6; left: 60%; }
+.particle-5 { background-color: #1abc9c; left: 80%; }
+.particle-6 { background-color: #3498db; left: 100%; }
+
+
+/** Media Querys */
+
+.max-hd {
+  max-width: 720px;
+}
+
+.translate-left {
+  transform: translateX(0px);
+}
+
+@media screen and (min-width: 576px) {
+  nav {
+    transform: translateX(30px);
+  }
+  .fs-bigger {
+    font-size: 4em;
+  }
+  #texto_inicio {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    transform: translateX(45px);
+  }
+}
+
+@media screen and (min-width: 630px) {
+  nav {
+    transform: translateX(58px);
+  }
+}
+
+@media screen and (max-width: 1060px) and (min-width: 992px) {
+  nav {
+    transform: translateX(0); /* Define o valor apropriado para evitar a transformação */
+  }
 }
