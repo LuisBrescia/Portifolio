@@ -2,6 +2,7 @@
 	position: fixed;
  	border-radius: 4px;
     z-index: -9999;
+    transform: scale(2);
 }
 
 @for $i from 1 through 30 {
