@@ -635,21 +635,21 @@ section:hover {
 /** A partir de MD */
 @media screen and (min-width: 768px) {
   .particle-container {
-    transform: translate(-360px, -250px);
+    transform: translate(-400px, -280px);
   }
 }
 
 /** A partir de LG */
 @media screen and (min-width: 992px) {
   .particle-container {
-    transform: translate(-460px, -250px);
+    transform: translate(-500px, -280px);
   }
 }
 
 /** A partir de XL */
 @media screen and (min-width: 1200px) {
   .particle-container {
-    transform: translate(-600px, -250px);
+    transform: translate(-600px, -280px);
   }
 }
 
