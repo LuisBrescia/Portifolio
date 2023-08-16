@@ -594,7 +594,7 @@ section:hover {
 .particle-6 { background-color: #3498db; transform: rotate(45deg); left: 100%; } */
 
 .particle-container {
-  transform: translate(-180px, -200px);
+  transform: translate(-200px, -300px);
 }
 
 /** Media Querys */
@@ -607,6 +607,8 @@ section:hover {
   transform: translateX(0px);
 }
 
+/** A partir de SM */
+
 @media screen and (min-width: 576px) {
   nav {
     transform: translateX(30px);
@@ -617,6 +619,9 @@ section:hover {
   #texto_inicio {
     text-align: center;
     font-size: 20px;
+  }
+  .particle-container {
+    transform: translate(-400px, -300px);
   }
 }
 
