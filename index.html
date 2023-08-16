@@ -77,8 +77,7 @@
   <div class="particle"></div>
 
   <!-- * Início -->
-  <main class="container mb-3 justify-content-center align-items-center"
-    id="inicio">
+  <main class="container mb-3 justify-content-center align-items-center" id="inicio">
 
     <!-- <img src="/perfil.jpg" class="w-25 shadow-sm rounded-circle mx-auto"> -->
 
@@ -94,100 +93,102 @@
   </main>
 
   <!-- * Projetos -->
-  <main class="container bg-claro" id="projetos">
+  <main class="container" id="projetos">
 
     <header>
       <h3 class="fs-1 text-especial bi-rocket-takeoff-fill mb-2">&nbsp; Projetos</h3>
     </header>
+    <main class="bg-claro m-0 p-0">
 
-    <!-- * Event Manager -->
-    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
-      <div class="col-lg-5 d-flex flex-column justify-content-between">
-        <div>
-          <i class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-1 mb-3"></i>
-          <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
-          <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
-          <p>
-            Site com intuito de auxiliar o planejamento de um evento.
-            Contém diversas funcionalidades de <strong>alta complexidade </strong>
-            programadas em <strong>javascript</strong>,
-            sendo possível criar relações entre elementos abstratos de diferentes listas.
-          </p>
+      <!-- * Event Manager -->
+      <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
+        <div class="col-lg-5 d-flex flex-column justify-content-between">
+          <div>
+            <i class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-1 mb-3"></i>
+            <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
+            <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
+            <p>
+              Site com intuito de auxiliar o planejamento de um evento.
+              Contém diversas funcionalidades de <strong>alta complexidade </strong>
+              programadas em <strong>javascript</strong>,
+              sendo possível criar relações entre elementos abstratos de diferentes listas.
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button class="col border-0 btn btn-claro shadow-sm" id="repo-event-manager">
+              Github <i class="ms-1 bi-github"></i>
+            </button>
+            <button class="col border-0 btn btn-claro shadow-sm" id="site-event-manager">
+              Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+            </button>
+          </div>
+
         </div>
+        <img src="/event-manager-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow"></img>
+      </section>
 
-        <div class="d-flex gap-2">
-          <button class="col border-0 btn btn-claro shadow-sm" id="repo-event-manager">
-            Github <i class="ms-1 bi-github"></i>
-          </button>
-          <button class="col border-0 btn btn-claro shadow-sm" id="site-event-manager">
-            Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
-          </button>
+      <!-- * RDC - Material extra -->
+      <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
+        <img src="/projeto-redes-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow d-none d-lg-block"></img>
+        <div class="col-lg-5 d-flex flex-column justify-content-between">
+          <div>
+            <i class="bi-router fs-3 text-white bg-verde shadow-sm px-2 py-1 rounded-1 mb-3"></i>
+            <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
+            <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
+            <p>
+              Desenvolvido como projeto de extensão para ajudar alunos a reter o conteúdo da matéria
+              <strong>Redes de Computadores</strong> lecionada no CEFET-MG,
+              contém diversas atividades variadas,
+              incluindo um questionário corrigido por Inteligência Artificial utilizando a <strong>API OpenAI.</strong>
+            </p>
+          </div>
+
+          <div class="d-flex gap-2">
+            <button class="col border-0 btn btn-claro shadow-sm" id="repo-projeto-redes">
+              Github <i class="ms-1 bi-github"></i>
+            </button>
+            <button class="col border-0 btn btn-claro shadow-sm" id="site-projeto-redes">
+              Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+            </button>
+          </div>
         </div>
+        <img src="/projeto-redes-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow d-block d-lg-none"></img>
+      </section>
 
-      </div>
-      <img src="/event-manager-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow"></img>
-    </section>
+      <!-- * Music Maker -->
+      <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
+        <div class="col-lg-5 d-flex flex-column justify-content-between">
+          <div>
+            <i class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
+            <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
+            <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
+            <p>
+              Meu primeiro projeto, <strong>desenvolvido em 2020,</strong> nele é possível juntar faixas de áudio,
+              criando uma música com diversos instrumentos. Após um loop
+              ser selecionado para entrar na faixa, ele aguarda o tempo certo para entrar.
+              Foi utilizada a biblioteca <strong>Tone.js</strong>
+            </p>
+          </div>
 
-    <!-- * RDC - Material extra -->
-    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
-      <img src="/projeto-redes-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow d-none d-lg-block"></img>
-      <div class="col-lg-5 d-flex flex-column justify-content-between">
-        <div>
-          <i class="bi-router fs-3 text-white bg-verde shadow-sm px-2 py-1 rounded-1 mb-3"></i>
-          <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
-          <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
-          <p>
-            Desenvolvido como projeto de extensão para ajudar alunos a reter o conteúdo da matéria
-            <strong>Redes de Computadores</strong> lecionada no CEFET-MG,
-            contém diversas atividades variadas,
-            incluindo um questionário corrigido por Inteligência Artificial utilizando a <strong>API OpenAI.</strong>
-          </p>
+          <div class="d-flex gap-2">
+            <button class="col border-0 btn btn-claro shadow-sm" id="repo-music-maker">
+              Github <i class="ms-1 bi-github"></i>
+            </button>
+            <button class="col border-0 btn btn-claro shadow-sm" id="site-music-maker">
+              Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+            </button>
+          </div>
+
         </div>
+        <img src="/music-maker-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow"></img>
+      </section>
 
-        <div class="d-flex gap-2">
-          <button class="col border-0 btn btn-claro shadow-sm" id="repo-projeto-redes">
-            Github <i class="ms-1 bi-github"></i>
-          </button>
-          <button class="col border-0 btn btn-claro shadow-sm" id="site-projeto-redes">
-            Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
-          </button>
-        </div>
-      </div>
-      <img src="/projeto-redes-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow d-block d-lg-none"></img>
-    </section>
-
-    <!-- * Music Maker -->
-    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
-      <div class="col-lg-5 d-flex flex-column justify-content-between">
-        <div>
-          <i class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
-          <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
-          <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
-          <p>
-            Meu primeiro projeto, <strong>desenvolvido em 2020,</strong> nele é possível juntar faixas de áudio,
-            criando uma música com diversos instrumentos. Após um loop
-            ser selecionado para entrar na faixa, ele aguarda o tempo certo para entrar.
-            Foi utilizada a biblioteca <strong>Tone.js</strong>
-          </p>
-        </div>
-
-        <div class="d-flex gap-2">
-          <button class="col border-0 btn btn-claro shadow-sm" id="repo-music-maker">
-            Github <i class="ms-1 bi-github"></i>
-          </button>
-          <button class="col border-0 btn btn-claro shadow-sm" id="site-music-maker">
-            Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
-          </button>
-        </div>
-
-      </div>
-      <img src="/music-maker-sm.jpeg" class="col-lg-6 mt-3 mt-lg-0 rounded-1 shadow"></img>
-    </section>
-
+    </main>
   </main>
 
   <!-- * Experiência -->
-  <main class="container-lg bg-claro" id="experiencia">
+  <main class="container-lg" id="experiencia">
 
     <header>
       <h3 class="fs-1 text-especial bi-mortarboard-fill">&nbsp; Experiência</h3>
@@ -201,7 +202,7 @@
     </div>
 
     <!-- * Cada experiência será um card-->
-    <div class="d-flex flex-column flex-md-row justify-content-between gap-4 gap-md-0 text-center">
+    <div class="bg-claro d-flex flex-column flex-md-row justify-content-between gap-4 gap-md-0 text-center">
       <article class="col-12 col-md-4">
         <div class="fs-3 fw-bold">
           <i class="bi-patch-check-fill text-verde"></i>
@@ -242,16 +243,16 @@
   </main>
 
   <!-- * Habilidades -->
-  <main class="container bg-claro" id="habilidades">
+  <main class="container" id="habilidades">
 
     <header>
       <h3 class="fs-1 text-especial mb-2 bi-lightning-charge-fill">&nbsp; Habilidades</h3>
-      <p class="fs-5">
+      <p class="fs-5 bg-claro">
         Algumas de minhas <strong>habilidades</strong>
       </p>
     </header>
 
-    <article class="flex-lg-row">
+    <article class="flex-lg-row bg-claro">
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
 
         <img class="col-3 p-1 ps-3 p-sm-3"
@@ -280,7 +281,7 @@
       </section>
     </article>
 
-    <article class="flex-lg-row">
+    <article class="flex-lg-row bg-claro">
 
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
         <img class="col-3 p-1 ps-3 p-sm-3"
@@ -306,7 +307,7 @@
 
     </article>
 
-    <article class="flex-lg-row">
+    <article class="flex-lg-row bg-claro">
 
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
         <img class="col-3 p-1 ps-3 p-sm-3"
@@ -332,7 +333,7 @@
 
     </article>
 
-    <article class="flex-lg-row">
+    <article class="flex-lg-row bg-claro">
 
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
         <img class="col-3 p-1 ps-3 p-sm-3"
@@ -361,11 +362,11 @@
   </main>
 
   <!-- * Contato -->
-  <main class="container bg-claro" id="contato">
+  <main class="container" id="contato">
 
     <header>
       <h3 class="fs-1 text-especial bi-send-fill mb-2">&nbsp; Contato</h3>
-      <p class="fs-5">
+      <p class="fs-5 bg-claro mx-auto" style="width: fit-content;">
         Atualmente estou em busca de uma <br>
         oportunidade como estagiário na área de <br>
         <strong>desenvolvimento de software.</strong>
@@ -374,7 +375,7 @@
 
     <!-- * Formulário para contato-->
     <form id="contatoFormulario"
-      class="d-flex flex-column justify-content-center align-items-center gap-2 mx-auto col-12 col-md-8 col-lg-6">
+      class="bg-claro d-flex flex-column justify-content-center align-items-center gap-2 mx-auto col-12 col-md-8 col-lg-6">
       <div class="d-flex col-12 fs-4 fw-bold justify-content-between align-items-end">
         <span class="text-especial">Fale comigo:</span>
         <span id="form_response" class="fw-light" style="font-size: 16px;"></span>
