@@ -593,6 +593,9 @@ section:hover {
 .particle-5 { background-color: #1abc9c; transform: rotate(45deg); left: 80%; }
 .particle-6 { background-color: #3498db; transform: rotate(45deg); left: 100%; } */
 
+.particle-container {
+  transform: translate(-180px, -200px);
+}
 
 /** Media Querys */
 
@@ -626,6 +629,34 @@ section:hover {
 @media screen and (min-width: 630px) {
   nav {
     transform: translateX(58px);
+  }
+}
+
+/** A partir de MD */
+@media screen and (min-width: 768px) {
+  .particle-container {
+    transform: translate(-360px, -250px);
+  }
+}
+
+/** A partir de LG */
+@media screen and (min-width: 992px) {
+  .particle-container {
+    transform: translate(-460px, -250px);
+  }
+}
+
+/** A partir de XL */
+@media screen and (min-width: 1200px) {
+  .particle-container {
+    transform: translate(-600px, -250px);
+  }
+}
+
+/** A partir de XXL */
+@media screen and (min-width: 1400px) {
+  .particle-container {
+    transform: translate(-900px, -250px);
   }
 }
 
