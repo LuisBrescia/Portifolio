@@ -263,7 +263,7 @@ $(document).ready(function () {
   $('#repo-music-maker').on('click', function () {
     window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
   });
-
+  
 });
 
 // * Atualiza barra de menu
