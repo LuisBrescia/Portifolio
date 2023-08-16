@@ -274,7 +274,7 @@ form input:focus, form textarea:focus, form select:focus {
 /** Tamanho de fontes - Personalizados */
 
 .fs-bigger {
-  font-size: 3.4em;
+  font-size: 4em;
 }
 
 .fs-big {
@@ -520,6 +520,10 @@ form .btn-default:hover {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+#inicio {
+  min-height: 50vh;
 }
 
 header h3 {
