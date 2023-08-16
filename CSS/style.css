@@ -642,7 +642,7 @@ section:hover {
 /** A partir de LG */
 @media screen and (min-width: 992px) {
   .particle-container {
-    transform: translate(-500px, -280px);
+    transform: translate(-600px, -380px);
   }
 }
 
