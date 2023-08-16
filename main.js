@@ -129,13 +129,17 @@ $(document).ready(function () {
       atualizaLink($('#menu_content a[href="#"]'));
     } else if (scrollTop <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
+      $('#projetos').addClass('active');
     } else if (scrollTop <= habilidadeTop) {
       atualizaLink($('#menu_content a[href="#experiencia"]'));
+      $('#experiencia ').addClass('active');
     } else if (scrollTop <= contatoTop) {
       atualizaLink($('#menu_content a[href="#habilidades"]'));
+      $('#habilidades').addClass('active');
       console.log("Contato");
     } else {
       atualizaLink($('#menu_content a[href="#contato"]'));
+      $('#contato').addClass('active');
     }
 
   });
