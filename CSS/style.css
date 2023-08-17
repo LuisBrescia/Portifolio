@@ -673,19 +673,21 @@ section:hover {
 
 .section {
   opacity: 0;
-
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out !important ;
 }
 
-/* .section par */
-.section:nth-child(even) {
+.section:not(footer) {
+  transform: translateY(100px);
+}
+
+/* .section:nth-child(even) {
   transform: translateX(50px);
 }
 .section:nth-child(odd) {
   transform: translateX(-50px);
-}
+} */
 
 .section.active {
-  transform: translateX(0);
+  transform: translateY(0);
   opacity: 1;
 }
