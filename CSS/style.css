@@ -49,6 +49,7 @@ a {
   mix-blend-mode: normal;
   filter: grayscale(100%); 
   mix-blend-mode: lighten;
+  transition: mix-blend-mode 0s !important;
 }
 
 #habilidades #javaIcone {
@@ -585,27 +586,6 @@ section:hover {
   color: var(--color-escuro);
 }
 
-/* .particle-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.particle {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 4px;
-  opacity: 1;
-}
-
-.particle-1 { background-color: #e74c3c; transform: rotate(45deg); left: 0%; }
-.particle-2 { background-color: #2ecc71; transform: rotate(45deg); left: 20%; }
-.particle-3 { background-color: #f39c12; transform: rotate(45deg); left: 40%; }
-.particle-4 { background-color: #9b59b6; transform: rotate(45deg); left: 60%; }
-.particle-5 { background-color: #1abc9c; transform: rotate(45deg); left: 80%; }
-.particle-6 { background-color: #3498db; transform: rotate(45deg); left: 100%; } */
 
 .particle-container {
   transform: translate(-200px, -300px);

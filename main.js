@@ -118,6 +118,12 @@ $(document).ready(function () {
       return; // Se a rolagem for manual, não alterar o menu
     }
 
+    // Conforme a opagina vai descendo, o border-radius de .particle vai diminuindo
+    $('.particle').css('border-radius', (100 - ($(window).scrollTop() / 20)) - 50 + '%');
+    // Vai aumentar também o filtro de plux, só que em pixels
+    $('.particle').css('filter', 'blur(' + ($(window).scrollTop() / 200) + 'px)');
+    console.log(($(window).scrollTop() / 30));
+
     var projetosTop = $('#projetos').offset().top; // Obtém a posição do elemento com ID "projetos"
     var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
     var habilidadeTop = $('#habilidades').offset().top; // Obtém a posição do elemento com ID "contato"
@@ -188,6 +194,7 @@ $(document).ready(function () {
   // * Se o usuário clicar em um href='#'
   $('a[href="#"]').on('click', function (event) {
     $('.section').removeClass('active');
+    $('.particle').css('border-radius', '50%');
   });
 
   // * Comportamento do modal
