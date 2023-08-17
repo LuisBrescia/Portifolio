@@ -182,7 +182,10 @@ $(document).ready(function () {
     $('.section').addClass('active');
 
     var target = $(this.getAttribute('href'));
-   
+    $('.particle').css({
+      'border-radius': '4px',
+      'filter': 'blur(2px)'
+    });
 
     if (target.length) {
       $('html, body').stop().animate({
