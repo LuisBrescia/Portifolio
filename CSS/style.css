@@ -678,7 +678,7 @@ section:hover {
 }
 
 .section:not(footer) {
-  transform: translateY(50px);
+  transform: translateY(25px);
 }
 
 /* .section:nth-child(even) {
