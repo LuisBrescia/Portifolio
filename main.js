@@ -123,23 +123,36 @@ $(document).ready(function () {
     var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
     var habilidadeTop = $('#habilidades').offset().top; // Obtém a posição do elemento com ID "contato"
     var contatoTop = $('#contato').offset().top; // Obtém a posição do elemento com ID "contato"
-    var scrollTop = $(window).scrollTop() + $(window).height() / 2;
+    var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2;
+    var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.5;
 
-    if (scrollTop <= projetosTop) {
+    if (scrollTopParaLink <= projetosTop) {
       atualizaLink($('#menu_content a[href="#"]'));
-    } else if (scrollTop <= experienciaTop) {
+    } else if (scrollTopParaLink <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
-      $('#projetos').addClass('active');
-    } else if (scrollTop <= habilidadeTop) {
+    } else if (scrollTopParaLink <= habilidadeTop) {
       atualizaLink($('#menu_content a[href="#experiencia"]'));
-      $('#experiencia ').addClass('active');
-    } else if (scrollTop <= contatoTop) {
+    } else if (scrollTopParaLink <= contatoTop) {
       atualizaLink($('#menu_content a[href="#habilidades"]'));
-      $('#habilidades').addClass('active');
       console.log("Contato");
     } else {
       atualizaLink($('#menu_content a[href="#contato"]'));
+    }
+
+    if (scrollTopParaExibir <= experienciaTop) {
+      $('#projetos').addClass('active');
+    } else if (scrollTopParaExibir <= habilidadeTop) {
+      $('#experiencia ').addClass('active');
+    } else if (scrollTopParaExibir <= contatoTop) {
+      $('#habilidades').addClass('active');
+      console.log("Contato");
+    } else {
       $('#contato').addClass('active');
+    }
+
+    // Se não tiver mais como rolar a página, o menu é alterado para o último item
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 40) {
+      $('#footer').addClass('active');
     }
 
   });
@@ -163,6 +176,7 @@ $(document).ready(function () {
   // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
+    $('.section').addClass('active');
     var target = $(this.getAttribute('href'));
     if (target.length) {
       $('html, body').stop().animate({
