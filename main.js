@@ -126,19 +126,6 @@ $(document).ready(function () {
     var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2;
     var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.5;
 
-    if (scrollTopParaLink <= projetosTop) {
-      atualizaLink($('#menu_content a[href="#"]'));
-    } else if (scrollTopParaLink <= experienciaTop) {
-      atualizaLink($('#menu_content a[href="#projetos"]'));
-    } else if (scrollTopParaLink <= habilidadeTop) {
-      atualizaLink($('#menu_content a[href="#experiencia"]'));
-    } else if (scrollTopParaLink <= contatoTop) {
-      atualizaLink($('#menu_content a[href="#habilidades"]'));
-      console.log("Contato");
-    } else {
-      atualizaLink($('#menu_content a[href="#contato"]'));
-    }
-
     if (scrollTopParaExibir <= experienciaTop) {
       $('#projetos').addClass('active');
     } else if (scrollTopParaExibir <= habilidadeTop) {
@@ -150,12 +137,24 @@ $(document).ready(function () {
       $('#contato').addClass('active');
     }
 
-    // Se não tiver mais como rolar a página, o menu é alterado para o último item
-    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 123) {
-      $('#footer').addClass('active');
-    } else if ($(window).scrollTop() <= 0) {
+    if (scrollTopParaLink <= projetosTop) {
+      atualizaLink($('#menu_content a[href="#"]'));
       $('.section').removeClass('active');
+    } else if (scrollTopParaLink <= experienciaTop) {
+      atualizaLink($('#menu_content a[href="#projetos"]'));
+    } else if (scrollTopParaLink <= habilidadeTop) {
+      atualizaLink($('#menu_content a[href="#experiencia"]'));
+    } else if (scrollTopParaLink <= contatoTop) {
+      atualizaLink($('#menu_content a[href="#habilidades"]'));
+      console.log("Contato");
+    } else {
+      atualizaLink($('#menu_content a[href="#contato"]'));
     }
+
+    // Se não tiver mais como rolar a página, o menu é alterado para o último item
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 150) {
+      $('#footer').addClass('active');
+    } 
   });
 
   // * Quando o usuário clica na página, o menu é fechado 
