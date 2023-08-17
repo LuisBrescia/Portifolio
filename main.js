@@ -151,10 +151,11 @@ $(document).ready(function () {
     }
 
     // Se não tiver mais como rolar a página, o menu é alterado para o último item
-    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 40) {
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 123) {
       $('#footer').addClass('active');
+    } else if ($(window).scrollTop() <= 0) {
+      $('.section').removeClass('active');
     }
-
   });
 
   // * Quando o usuário clica na página, o menu é fechado 
