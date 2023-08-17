@@ -508,8 +508,8 @@ header p {
 }
 
 main {
-  margin-bottom: 3rem;
-  margin-top: 3rem;
+  margin-bottom: 6rem;
+  margin-top: none;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -673,10 +673,19 @@ section:hover {
 
 .section {
   opacity: 0;
-  transform: translateY(20px)!important;
+
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out !important ;
 }
+
+/* .section par */
+.section:nth-child(even) {
+  transform: translateX(50px);
+}
+.section:nth-child(odd) {
+  transform: translateX(-50px);
+}
+
 .section.active {
+  transform: translateX(0);
   opacity: 1;
-  transform: translateY(0) !important;
 }

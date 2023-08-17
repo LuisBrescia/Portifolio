@@ -115,7 +115,6 @@ $(document).ready(function () {
     // $('.particle-container').css('transform', 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + scale + ')');
 
     if (rolagemManual) {
-      console.log("retornou");
       return; // Se a rolagem for manual, não alterar o menu
     }
 
@@ -132,7 +131,6 @@ $(document).ready(function () {
       $('#experiencia ').addClass('active');
     } else if (scrollTopParaExibir <= contatoTop) {
       $('#habilidades').addClass('active');
-      console.log("Contato");
     } else {
       $('#contato').addClass('active');
     }
@@ -146,13 +144,12 @@ $(document).ready(function () {
       atualizaLink($('#menu_content a[href="#experiencia"]'));
     } else if (scrollTopParaLink <= contatoTop) {
       atualizaLink($('#menu_content a[href="#habilidades"]'));
-      console.log("Contato");
     } else {
       atualizaLink($('#menu_content a[href="#contato"]'));
     }
 
     // Se não tiver mais como rolar a página, o menu é alterado para o último item
-    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 150) {
+    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
       $('#footer').addClass('active');
     } 
   });
@@ -176,13 +173,27 @@ $(document).ready(function () {
   // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
+
     $('.section').addClass('active');
+
     var target = $(this.getAttribute('href'));
+
+    if (this.getAttribute('href') == '#') {
+      console.log('Topo da página');
+      $('html, body').stop().animate({
+        scrollTop: 0
+      }, 0);
+    }
+
     if (target.length) {
       $('html, body').stop().animate({
         scrollTop: target.offset().top - 20 // Ajuste o valor conforme necessário
       }, 0);
     }
+  });
+  // * Se o usuário clicar em um href='#'
+  $('a[href="#"]').on('click', function (event) {
+    $('.section').removeClass('active');
   });
 
   // * Comportamento do modal
