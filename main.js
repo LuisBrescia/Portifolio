@@ -123,7 +123,7 @@ $(document).ready(function () {
     var habilidadeTop = $('#habilidades').offset().top; // Obtém a posição do elemento com ID "contato"
     var contatoTop = $('#contato').offset().top; // Obtém a posição do elemento com ID "contato"
     var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2;
-    var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.5;
+    var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2;
 
     if (scrollTopParaExibir <= experienciaTop) {
       $('#projetos').addClass('active');
@@ -177,13 +177,7 @@ $(document).ready(function () {
     $('.section').addClass('active');
 
     var target = $(this.getAttribute('href'));
-
-    if (this.getAttribute('href') == '#') {
-      console.log('Topo da página');
-      $('html, body').stop().animate({
-        scrollTop: 0
-      }, 0);
-    }
+   
 
     if (target.length) {
       $('html, body').stop().animate({
