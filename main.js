@@ -332,17 +332,16 @@ $(document).ready(function () {
     '/projeto-redes-questionario.png'
   ];
   
-  let currentEventManagerIndex = 0;
-  let currentProjetoRedesIndex = 0;
-  const eventManagerCarousel= document.getElementById('event-manager-carousel');
-  const projetoRedesCarousel= document.getElementById('projeto-redes-carousel');
+  let currentEventManager = 0;
+  let currentProjetoRedes = 0;
   
   function changeImage() {
-    eventManagerCarousel.src = eventManagerSources[currentEventManagerIndex];
-    currentEventManagerIndex = (currentEventManagerIndex + 1) % eventManagerSources.length;
-    projetoRedesCarousel.src = projetoRedesSources[currentProjetoRedesIndex];
-    currentProjetoRedesIndex = (currentProjetoRedesIndex + 1) % projetoRedesSources.length;
+    $('#event-manager-carousel').attr('src', eventManagerSources[currentEventManager]);
+    $('#projeto-redes-carousel').attr('src', projetoRedesSources[currentProjetoRedes]);
+    currentEventManager = (currentEventManager + 1) % eventManagerSources.length;
+    currentProjetoRedes = (currentProjetoRedes + 1) % projetoRedesSources.length;
   }
+  
   setInterval(changeImage, 2000);
   
 });
