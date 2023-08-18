@@ -490,6 +490,28 @@ form .btn-default:hover {
   }
 }
 
+@keyframes floatingLetters {
+  0%, 100% {
+    transform: translateY(0) scale(0.975);
+  }
+  50% {
+    transform: translateY(-1px) scale(1);
+  }
+}
+
+@keyframes blurryface {
+  0% {
+    filter: blur(1px);
+    transform: scale(0.975);
+  }
+  20%, 90%  {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(1px);
+  }
+}
+
 /** Texturas HeroPatterns */
 
 .Death-Star {
@@ -561,6 +583,14 @@ section:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: stretch; 
+}
+
+#projetos section img {
+  filter: blur(1px);
+}
+
+.blur-animation {
+  animation: blurryface 3s infinite ease-in-out;
 }
 
 #habilidades section {
@@ -698,15 +728,6 @@ section:hover {
   /* animation: sectionTransition 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s 1 both; */
   transform: translateY(0);
   opacity: 1;
-}
-
-@keyframes floatingLetters {
-  0%, 100% {
-    transform: translateY(0) scale(0.975);
-  }
-  50% {
-    transform: translateY(-1px) scale(1);
-  }
 }
 
 header h3 {

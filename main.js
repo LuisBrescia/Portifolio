@@ -168,7 +168,7 @@ $(document).ready(function () {
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
 
-    var idClicado =  String(this.getAttribute('href'));
+    var idClicado = String(this.getAttribute('href'));
 
     // Se o id clicado for #experiencia
     if (idClicado == '#experiencia') {
@@ -331,19 +331,21 @@ $(document).ready(function () {
     '/projeto-redes-darkmode.png',
     '/projeto-redes-questionario.png'
   ];
-  
+
   let currentEventManager = 0;
   let currentProjetoRedes = 0;
-  
+
   function changeImage() {
+
+    $('#event-manager-carousel, #projeto-redes-carousel, #music-maker-carousel').addClass('blur-animation');
     $('#event-manager-carousel').attr('src', eventManagerSources[currentEventManager]);
     $('#projeto-redes-carousel').attr('src', projetoRedesSources[currentProjetoRedes]);
     currentEventManager = (currentEventManager + 1) % eventManagerSources.length;
     currentProjetoRedes = (currentProjetoRedes + 1) % projetoRedesSources.length;
   }
-  
+
   setInterval(changeImage, 3000);
-  
+
 });
 
 // * Atualiza barra de menu
