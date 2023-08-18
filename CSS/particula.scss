@@ -29,7 +29,7 @@
         opacity: random(100)/100;
         height: $size;
         width: $size;
-        animation-delay: -$i * .2s;
+        animation-delay: -$i * .1s;
         transform: translate3d((random(100) * 100vw / 90), (random(100) * 100vh / 90), (random(100) * 1px));
     }
 }

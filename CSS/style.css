@@ -706,10 +706,14 @@ section:hover {
     transform: translateY(0) scale(0.975);
   }
   50% {
-    transform: translateY(-1px) scale(1); /* Ajuste conforme necessário */
+    transform: translateY(-1px) scale(1);
   }
 }
 
 header h3 {
-  animation: floatingLetters 2s infinite ease-in-out; /* Ajuste conforme necessário */
+  animation: floatingLetters 2s infinite ease-in-out;
+}
+
+#meuNome {
+  animation: floatingLetters 2s infinite ease-in-out;
 }
