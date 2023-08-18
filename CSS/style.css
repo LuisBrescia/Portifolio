@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900&family=Pacifico:wght@400&display=swap');
 
 :root {
   --color-escuro: #0f0f0f;
@@ -119,7 +118,7 @@ form input:focus, form textarea:focus, form select:focus {
 #menu_content {
   width: 10rem;
   top: 50px;
-  right: 0;
+  right: 5px;
   z-index: 1000;
   transition: all 0.2s ease-in-out;
   opacity: 0;
