@@ -342,7 +342,7 @@ $(document).ready(function () {
     currentProjetoRedes = (currentProjetoRedes + 1) % projetoRedesSources.length;
   }
   
-  setInterval(changeImage, 2000);
+  setInterval(changeImage, 3000);
   
 });
 
