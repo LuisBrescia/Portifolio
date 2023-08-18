@@ -463,6 +463,17 @@ form .btn-default:hover {
   }
 } 
 
+@keyframes sectionTransition {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(1.025);
@@ -667,21 +678,15 @@ section:hover {
 
 .section {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important ;
+  transition: opacity 0.5s ease-in-out, transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
 }
 
 .section:not(footer) {
   transform: translateY(25px);
 }
 
-/* .section:nth-child(even) {
-  transform: translateX(50px);
-}
-.section:nth-child(odd) {
-  transform: translateX(-50px);
-} */
-
 .section.active {
+  /* animation: sectionTransition 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s 1 both; */
   transform: translateY(0);
   opacity: 1;
 }
@@ -689,4 +694,19 @@ section:hover {
 .section.deactive {
   transform: translateY(-50px);
   opacity: 0;
+}
+
+@keyframes floatingLetters {
+  0%, 100% {
+    letter-spacing: 1px;
+    transform: translateY(0) scale(0.95);
+  }
+  50% {
+    letter-spacing: 2px;
+    transform: translateY(-2px) scale(1); /* Ajuste conforme necessário */
+  }
+}
+
+header h3 {
+  animation: floatingLetters 2s infinite ease; /* Ajuste conforme necessário */
 }

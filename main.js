@@ -145,10 +145,13 @@ $(document).ready(function () {
       $('.section').removeClass('active');
     } else if (scrollTopParaLink <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
+      // $('#experiencia ').removeClass('active');
     } else if (scrollTopParaLink <= habilidadeTop) {
       atualizaLink($('#menu_content a[href="#experiencia"]'));
+      // $('#habilidades ').removeClass('active');
     } else if (scrollTopParaLink <= contatoTop) {
       atualizaLink($('#menu_content a[href="#habilidades"]'));
+      // $('#contato ').removeClass('active');
     } else {
       atualizaLink($('#menu_content a[href="#contato"]'));
     }
@@ -156,7 +159,55 @@ $(document).ready(function () {
     // Se não tiver mais como rolar a página, o menu é alterado para o último item
     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
       $('#footer').addClass('active');
-    } 
+    } else {
+      $('#footer').removeClass('active');
+    }
+  });
+
+  // * Personaliza o scroll da página
+  $('a.scroll-link').on('click', function (event) {
+    event.preventDefault();
+
+    var idClicado =  String(this.getAttribute('href'));
+
+    // Se o id clicado for #experiencia
+    if (idClicado == '#experiencia') {
+      idClicado = '#projetos, #experiencia';
+    } else if (idClicado == '#habilidades') {
+      idClicado = '#projetos, #experiencia, #habilidades';
+    } else if (idClicado == '#contato') {
+      idClicado = '#projetos, #experiencia, #habilidades, #contato, #footer';
+    }
+
+    console.log(idClicado);
+
+    $(idClicado).addClass('opacity-100');
+    $(idClicado).removeClass('active');
+
+    var target = $(this.getAttribute('href'));
+    $('.particle').css({
+      'border-radius': '4px',
+      'filter': 'blur(2px)'
+    });
+
+    if (target.length) {
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 45 // Ajuste o valor conforme necessário
+      }, 0);
+
+      setTimeout(function () {
+        $(idClicado).addClass('active');
+        $(idClicado).removeClass('opacity-100');
+      }, 300);
+    }
+  });
+  // * Se o usuário clicar em um href='#'
+  $('a[href="#"]').on('click', function (event) {
+    $('.section').removeClass('active');
+    $('.particle').css({
+      'border-radius': '50%',
+      'filter': 'blur(0px)'
+    });
   });
 
   // * Quando o usuário clica na página, o menu é fechado 
@@ -173,33 +224,6 @@ $(document).ready(function () {
     $(this).addClass('shadow').removeClass('shadow-sm');
   }, function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
-  });
-
-  // * Personaliza o scroll da página
-  $('a.scroll-link').on('click', function (event) {
-    event.preventDefault();
-
-    $('.section').addClass('active');
-
-    var target = $(this.getAttribute('href'));
-    $('.particle').css({
-      'border-radius': '4px',
-      'filter': 'blur(2px)'
-    });
-
-    if (target.length) {
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top - 45 // Ajuste o valor conforme necessário
-      }, 0);
-    }
-  });
-  // * Se o usuário clicar em um href='#'
-  $('a[href="#"]').on('click', function (event) {
-    $('.section').removeClass('active');
-    $('.particle').css({
-      'border-radius': '50%',
-      'filter': 'blur(0px)'
-    });
   });
 
   // * Comportamento do modal
@@ -294,7 +318,7 @@ $(document).ready(function () {
   $('#repo-music-maker').on('click', function () {
     window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
   });
-  
+
 });
 
 // * Atualiza barra de menu
