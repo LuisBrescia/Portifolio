@@ -698,15 +698,13 @@ section:hover {
 
 @keyframes floatingLetters {
   0%, 100% {
-    letter-spacing: 1px;
-    transform: translateY(0) scale(0.95);
+    transform: translateY(0) scale(0.975);
   }
   50% {
-    letter-spacing: 2px;
-    transform: translateY(-2px) scale(1); /* Ajuste conforme necessário */
+    transform: translateY(-1px) scale(1); /* Ajuste conforme necessário */
   }
 }
 
 header h3 {
-  animation: floatingLetters 2s infinite ease; /* Ajuste conforme necessário */
+  animation: floatingLetters 2s infinite ease-in-out; /* Ajuste conforme necessário */
 }
