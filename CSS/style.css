@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico:wght@200;300;400;500;600;700;900&display=swap');
 
 :root {
   --color-escuro: #0f0f0f;
@@ -310,6 +311,10 @@ form input:focus, form textarea:focus, form select:focus {
 
 .fw-bolder {
   font-weight: 900;
+}
+
+.font-alternative {
+  font-family: 'Pacifico', sans-serif;
 }
 
 /** Border - Personalizados */
@@ -685,15 +690,15 @@ section:hover {
   transform: translateY(25px);
 }
 
+.section.deactive {
+  transform: translateY(-25px);
+  opacity: 0;
+}
+
 .section.active {
   /* animation: sectionTransition 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s 1 both; */
   transform: translateY(0);
   opacity: 1;
-}
-
-.section.deactive {
-  transform: translateY(-50px);
-  opacity: 0;
 }
 
 @keyframes floatingLetters {
