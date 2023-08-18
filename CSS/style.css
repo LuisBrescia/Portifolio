@@ -501,14 +501,10 @@ form .btn-default:hover {
 
 @keyframes blurryface {
   0% {
-    filter: blur(1px);
-    transform: scale(0.975);
+    transform: scale(0.5);
   }
-  20%, 90%  {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(1px);
+  10% {
+    transform: scale(0.95);
   }
 }
 
@@ -586,11 +582,11 @@ section:hover {
 }
 
 #projetos section img {
-  filter: blur(1px);
+  object-fit: cover;
 }
 
 .blur-animation {
-  animation: blurryface 3s infinite ease-in-out;
+  animation: blurryface 3s infinite ease-out;
 }
 
 #habilidades section {
