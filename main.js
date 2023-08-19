@@ -131,6 +131,7 @@ $(document).ready(function () {
     var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2;
 
     if (scrollTopParaExibir <= experienciaTop) {
+      $('#role_para_baixo').addClass('d-none');
       $('#projetos').addClass('active');
     } else if (scrollTopParaExibir <= habilidadeTop) {
       $('#experiencia ').addClass('active');
@@ -143,6 +144,7 @@ $(document).ready(function () {
     if (scrollTopParaLink <= projetosTop) {
       atualizaLink($('#menu_content a[href="#"]'));
       $('.section').removeClass('active');
+      $('#role_para_baixo').removeClass('d-none');
     } else if (scrollTopParaLink <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
       // $('#experiencia ').removeClass('active');
@@ -169,6 +171,8 @@ $(document).ready(function () {
     event.preventDefault();
 
     var idClicado = String(this.getAttribute('href'));
+
+    $('#role_para_baixo').addClass('d-none');
 
     // Se o id clicado for #experiencia
     if (idClicado == '#experiencia') {
@@ -204,6 +208,7 @@ $(document).ready(function () {
   // * Se o usuário clicar em um href='#'
   $('a[href="#"]').on('click', function (event) {
     $('.section').removeClass('active');
+    $('#role_para_baixo').removeClass('d-none');
     $('.particle').css({
       'border-radius': '50%',
       'filter': 'blur(0px)'

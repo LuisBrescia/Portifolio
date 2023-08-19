@@ -319,11 +319,11 @@ form input:focus, form textarea:focus, form select:focus {
 /** Border - Personalizados */
 
 .border-escuro {
-  border-color: var(--color-escuro);
+  border-color: var(--color-escuro) !important;
 }
 
 .border-claro {
-  border-color: var(--color-claro);
+  border-color: var(--color-claro) !important;
 }
 
 /** Botões - Personalizados */
@@ -719,4 +719,38 @@ header h3 {
 
 #meuNome {
   animation: floatingLetters 2s infinite ease-in-out;
+}
+
+#role_para_baixo {
+  font-size: 2.5em;
+  animation: pulse_down 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateY(-25px);
+}
+
+@keyframes pulse_down {
+  0% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse_up {
+  0% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
 }
