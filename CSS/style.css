@@ -499,17 +499,6 @@ form .btn-default:hover {
   }
 }
 
-/* @keyframes blurryface {
-  0% {
-    transform: scale(0.8);
-    opacity: .5;
-  }
-  10% {
-    transform: scale(1);
-    opacity: 1;
-  }
-} */
-
 /** Texturas HeroPatterns */
 
 .Death-Star {
@@ -585,10 +574,6 @@ section:hover {
 
 #projetos section img {
   object-fit: cover;
-}
-
-.blur-animation {
-  animation: blurryface 3s infinite ease-out;
 }
 
 #habilidades section {

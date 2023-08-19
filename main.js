@@ -319,33 +319,6 @@ $(document).ready(function () {
     window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
   });
 
-  // * Altera a imagem do carousel
-
-  const eventManagerSources = [
-    '/event-manager-listas-participantes.png',
-    '/event-manager-listas-insumos.png',
-    '/event-manager-sm.jpeg'
-  ];
-  const projetoRedesSources = [
-    '/projeto-redes-lightmode.png',
-    '/projeto-redes-darkmode.png',
-    '/projeto-redes-questionario.png'
-  ];
-
-  let currentEventManager = 0;
-  let currentProjetoRedes = 0;
-
-  function changeImage() {
-
-    $('#event-manager-carousel, #projeto-redes-carousel, #music-maker-carousel').addClass('blur-animation');
-    $('#event-manager-carousel').attr('src', eventManagerSources[currentEventManager]);
-    $('#projeto-redes-carousel').attr('src', projetoRedesSources[currentProjetoRedes]);
-    currentEventManager = (currentEventManager + 1) % eventManagerSources.length;
-    currentProjetoRedes = (currentProjetoRedes + 1) % projetoRedesSources.length;
-  }
-
-  setInterval(changeImage, 3000);
-
 });
 
 // * Atualiza barra de menu
