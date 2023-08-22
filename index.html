@@ -8,12 +8,20 @@
   <title>Luís Brescia</title>
 </head>
 
-<body>
+<body class="Pattern-claro">
 
   <!-- * Navbar -->
-  <nav class="container d-flex justify-content-end py-0 pt-3 sticky-top">
+  <nav class="container d-flex justify-content-between py-0 pt-3 sticky-top" data-bs-theme="dark">
+
+    <!-- * Botão para alterar tema -->
+    <button id="altera_tema" class="border-0 px-3 py-2 btn bg-branco rounded-5 shadow d-flex justify-content-center align-items-center">
+      <!-- <i class="bi-moon-stars-fill text-especial" data-default="bi-moon" data-fill="bi-moon-fill"></i> -->
+      <!-- <i class="bi-brightness-high-fill text-indigo fs-5"></i> -->
+      <span class="fw-bold fs-small text-especial">Light</span>
+    </button>
+
     <!-- * Botão Menu -->
-    <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-white rounded-5 shadow" for="show_menu">
+    <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-branco rounded-5 shadow" for="show_menu">
       <input id="show_menu" class="d-none" type="checkbox">
 
       <label class="toggle" for="show_menu">
@@ -99,10 +107,10 @@
     </header>
 
     <!-- * Event Manager -->
-    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
+    <section class="interativo shadow-sm bg-especial flex-lg-row p-4 text-white">
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
-          <i class="bi-flower1 fs-3 text-branco bg-azul shadow-sm px-2 py-1 rounded-1 mb-3"></i>
+          <i class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-1 mb-3"></i>
           <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
           <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto da faculdade</div>
           <p>
@@ -124,7 +132,7 @@
 
       </div>
 
-      <div id="carouselEventManager" class="overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-1 shadow" data-bs-ride="carousel">
+      <div id="carouselEventManager" class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-1 shadow" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/event-manager-listas-participantes.png" class="d-block w-100">
@@ -150,11 +158,11 @@
     </section>
 
     <!-- * RDC - Material extra -->
-    <section class="interativo shadow-sm bg-especial flex-lg-row-reverse p-4">
+    <section class="interativo shadow-sm bg-especial flex-lg-row-reverse p-4 text-white">
       
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
-          <i class="bi-router fs-3 text-branco bg-verde shadow-sm px-2 py-1 rounded-1 mb-3"></i>
+          <i class="bi-router fs-3 bg-verde shadow-sm px-2 py-1 rounded-1 mb-3"></i>
           <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
           <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto de extensão</div>
           <p>
@@ -175,7 +183,7 @@
         </div>
       </div>
 
-      <div id="carouselProjetoRedes" class="overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-1 shadow" data-bs-ride="carousel">
+      <div id="carouselProjetoRedes" class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-1 shadow" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/projeto-redes-lightmode.png" class="d-block w-100">
@@ -195,10 +203,10 @@
     </section>
 
     <!-- * Music Maker -->
-    <section class="interativo shadow-sm bg-especial flex-lg-row p-4">
+    <section class="interativo shadow-sm bg-especial flex-lg-row p-4 text-white">
       <div class="col-lg-5 d-flex flex-column justify-content-between">
         <div>
-          <i class="bi-music-player fs-3 text-branco bg-amarelo shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
+          <i class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-1 mb-3 ms-auto"></i>
           <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
           <div class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto pessoal</div>
           <p>
@@ -219,7 +227,7 @@
         </div>
 
       </div>
-      <div id="carouselProjetoRedes" class="overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-1 shadow" data-bs-ride="carousel">
+      <div id="carouselProjetoRedes" class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-1 shadow" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="/music-maker-sm.jpeg" class="d-block w-100">
@@ -293,20 +301,20 @@
 
     <header>
       <h3 class="fs-1 text-especial mb-2 bi-lightning-charge-fill">&nbsp; Habilidades</h3>
-      <p class="fs-5 bg-claro">
+      <p class="fs-5">
         Algumas de minhas <strong>habilidades</strong>
       </p>
     </header>
 
-    <article class="flex-lg-row bg-claro">
+    <article class="flex-lg-row">
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
 
         <img class="col-3 p-1 ps-3 p-sm-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
 
         <div class="col p-3">
-          <h3 class="fs-3">Flutter</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">Flutter</h3>
+          <p class="fs-6 m-0 text-white">
             Tecnologia utilizada para desenvolver meu <strong>TCC</strong> do curso técnico.
           </p>
         </div>
@@ -318,8 +326,8 @@
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
 
         <div class="col p-3">
-          <h3 class="fs-3">Swift</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">Swift</h3>
+          <p class="fs-6 m-0 text-white">
             Utilizei esta linguagem para desenvolver aplicativos IOS durante o <strong>Hackatruck</strong>.
           </p>
         </div>
@@ -327,14 +335,14 @@
       </section>
     </article>
 
-    <article class="flex-lg-row bg-claro">
+    <article class="flex-lg-row">
 
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
         <img id="javaIcone" class="col-3 p-1 ps-3 p-sm-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
         <div class="col p-3">
-          <h3 class="fs-3">Java</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">Java</h3>
+          <p class="fs-6 m-0 text-white">
             Meus primeiros <strong>algoritmos de estrutura de dados</strong> foram feitos com esta linguagem.
           </p>
         </div>
@@ -344,8 +352,8 @@
         <img class="col-3 p-1 ps-3 p-sm-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
         <div class="col p-3">
-          <h3 class="fs-3">Python</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">Python</h3>
+          <p class="fs-6 m-0 text-white">
             Com ele criei um questionário corrigido por <strong>Inteligência Artificial</strong>.
           </p>
         </div>
@@ -353,14 +361,14 @@
 
     </article>
 
-    <article class="flex-lg-row bg-claro">
+    <article class="flex-lg-row">
 
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
         <img class="col-3 p-1 ps-3 p-sm-3" id="gitIcone"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
         <div class="col p-3">
-          <h3 class="fs-3">Git</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">Git</h3>
+          <p class="fs-6 m-0 text-white">
             Para <strong>versionamento de código</strong>, utilizo desde que comecei na área.
           </p>
         </div>
@@ -370,8 +378,8 @@
         <img class="col-3 p-1 ps-3 p-sm-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
         <div class="col p-3">
-          <h3 class="fs-3">C++</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">C++</h3>
+          <p class="fs-6 m-0 text-white">
             Linguagem onde aprimorei minhas habilidades em <strong>lógica de programação</strong>.
           </p>
         </div>
@@ -379,14 +387,14 @@
 
     </article>
 
-    <article class="flex-lg-row bg-claro">
+    <article class="flex-lg-row">
 
       <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
         <img class="col-3 p-1 ps-3 p-sm-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
         <div class="col p-3">
-          <h3 class="fs-3">PostgreSQL</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">PostgreSQL</h3>
+          <p class="fs-6 m-0 text-white">
             Programa utilizado durante as disciplinas de <strong>Banco de Dados</strong> no curso de informática.
           </p>
         </div>
@@ -396,8 +404,8 @@
         <img class="col-3 p-1 ps-3 p-sm-3"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
         <div class="col p-3">
-          <h3 class="fs-3">Node</h3>
-          <p class="fs-6 m-0">
+          <h3 class="fs-3 text-white">Node</h3>
+          <p class="fs-6 m-0 text-white">
             Uso para criar <strong>servidores</strong>, configurando rotas e conexões com banco de dados.
           </p>
         </div>
@@ -446,7 +454,7 @@
 
   <!-- * Footer -->
   <footer class="container my-2 section" id="footer">
-    <div class="rounded-1 bg-especial text-center shadow-sm py-1 text-branco">
+    <div class="rounded-1 bg-especial text-center shadow-sm py-1 text-white">
       <div class="d-flex justify-content-center gap-5 my-3">
         <a target="_blank" href="https://github.com/LuisBrescia"
           class="interativo shadow-sm px-2 rounded-3 fs-2 bi-github"></a>
@@ -455,7 +463,7 @@
         <a target="_blank" href="https://wa.me/5531981061459"
           class="interativo shadow-sm px-2 rounded-3 fs-2 bi-whatsapp"></a>
       </div>
-      <div class="fw-light fs-smaller my-3 text-branco">
+      <div class="fw-light fs-smaller my-3">
         Copyright © 2023 Luís Brescia. All rights reserved.
       </div>
     </div>
@@ -464,10 +472,10 @@
   <!-- * Modal [Mais detalhes - Experiências] -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content rounded-1">
+      <div class="modal-content rounded-1 bg-branco">
 
         <div class="modal-header border-0 shadow-sm bg-branco rounded-1 py-0">
-          <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing" id="exampleModalLabel">Modal title</h1>
+          <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing" id="exampleModalLabel">Modal title</h3>
             <button type="button" class="btn border-0 p-0" data-bs-dismiss="modal"><i class="fs-1 bi-x"></i></button>
         </div>
         <div class="modal-body fw-light fs-6"></div>

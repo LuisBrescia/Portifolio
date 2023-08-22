@@ -69,7 +69,7 @@ $(document).ready(function () {
   });
 
   // * O ícone é alterado quando o usuário o clica
-  var timeoutID; 
+  var timeoutID;
   $('#menu_content').on('click', 'a', function () {
     atualizaLink($(this));
 
@@ -91,17 +91,23 @@ $(document).ready(function () {
       return; // Se a rolagem for manual, não alterar o menu
     }
 
-    var scroll = $(window).scrollTop();
-    var scale = 1 + (scroll / 500);
-    $('#floatElements').css('transform', 'scale(' + scale + ')');
+    // Quero também diminuir a opacidade de #float elements
+    var opacidade = 1 - ($(window).scrollTop() / 500);
+    var scale = 1 + ($(window).scrollTop() / 500);
+    
+    $('#floatElements').css({
+      'transform': 'scale(' + scale + ')',
+      'opacity': opacidade,
+
+    });
     $('.floatElement').css({
       'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
     });
 
-    var projetosTop = $('#projetos').offset().top; 
-    var experienciaTop = $('#experiencia').offset().top; 
-    var habilidadeTop = $('#habilidades').offset().top; 
-    var contatoTop = $('#contato').offset().top; 
+    var projetosTop = $('#projetos').offset().top;
+    var experienciaTop = $('#experiencia').offset().top;
+    var habilidadeTop = $('#habilidades').offset().top;
+    var contatoTop = $('#contato').offset().top;
     var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2;
     var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2;
 
@@ -110,6 +116,7 @@ $(document).ready(function () {
       $('#projetos').addClass('active');
     } else if (scrollTopParaExibir <= habilidadeTop) {
       $('#experiencia ').addClass('active');
+      $('#floatElements').addClass('d-none');
     } else if (scrollTopParaExibir <= contatoTop) {
       $('#habilidades').addClass('active');
     } else {
@@ -122,10 +129,9 @@ $(document).ready(function () {
       $('#role_para_baixo').addClass('pulse-down');
     } else if (scrollTopParaLink <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
-      // $('#experiencia ').removeClass('active');
+      $('#floatElements').removeClass('d-none');
     } else if (scrollTopParaLink <= habilidadeTop) {
       atualizaLink($('#menu_content a[href="#experiencia"]'));
-      // $('#habilidades ').removeClass('active');
     } else if (scrollTopParaLink <= contatoTop) {
       atualizaLink($('#menu_content a[href="#habilidades"]'));
       // $('#contato ').removeClass('active');
@@ -163,14 +169,6 @@ $(document).ready(function () {
     $(idClicado).removeClass('active');
 
     var target = $(this.getAttribute('href'));
-    // $('.particle').css({
-    //   'border-radius': '4px',
-    //   'filter': 'blur(2px)'
-    // });
-    $('#floatElements').css('transform', 'scale(1.5)');
-    $('.floatElement').css({
-      'filter': 'blur(2px)'
-    });
 
     if (target.length) {
       $('html, body').stop().animate({
@@ -185,13 +183,13 @@ $(document).ready(function () {
   });
   // * Se o usuário clicar em um href='#'
   $('a[href="#"]').on('click', function (event) {
+    $('#floatElements').removeClass('d-none');
     $('.section').removeClass('active');
     $('#role_para_baixo').addClass('pulse-down');
-    // $('.particle').css({
-    //   'border-radius': '50%',
-    //   'filter': 'blur(0px)'
-    // });
-    $('#floatElements').css('transform', 'scale(1)');
+    $('#floatElements').css({
+      'transform': 'scale(1)',
+      'opacity' : 1
+    });
     $('.floatElement').css({
       'filter': 'blur(0px)'
     });
@@ -204,6 +202,39 @@ $(document).ready(function () {
       showMenuCheckbox.checked = false;
       $('#menu_portifolio').removeClass('big');
     }
+  });
+
+  $('#altera_tema').on('click', function () {
+    if ($('#altera_tema span').text() == 'Light') {
+      $('#altera_tema span').text('Dark');
+     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');    
+     document.documentElement.style.setProperty('--color-indigo', '#0093E9');    
+      // linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+      // linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      // linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+      // linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%)
+    } else {
+      $('#altera_tema span').text('Light');
+      document.documentElement.style.setProperty('--color-indigo', '#5b42f3');    
+      document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
+      $('modal-body').removeClass('bg-branco');
+    }
+
+    $('nav button').toggleClass('border-0 border')
+    $('body').toggleClass('Pattern-claro Pattern-escuro');
+
+    var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
+    var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');
+
+    var colorBranco = getComputedStyle(document.documentElement).getPropertyValue('--color-branco');
+    var colorPreto = getComputedStyle(document.documentElement).getPropertyValue('--color-preto');
+
+    document.documentElement.style.setProperty('--color-branco', colorPreto);
+    document.documentElement.style.setProperty('--color-preto', colorBranco);
+    
+    document.documentElement.style.setProperty('--color-claro', colorEscuro);
+    document.documentElement.style.setProperty('--color-escuro', colorClaro);
+   
   });
 
   // * Quando o mouse passa por cima de um projeto, este projeto ganha uma sobra maior
@@ -303,7 +334,7 @@ $(document).ready(function () {
     window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
   });
   $('#repo-music-maker').on('click', function () {
-    window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
+    window.open('https://github.com/LuisBrescia/DragonMusicMaker', '_blank');
   });
 });
 
