@@ -89,39 +89,27 @@ $(document).ready(function () {
     }, 800);
   });
 
+
   // * Quando o usuário realizar um scroll, pegar o valor do scroll e alterar o menu
   $(window).scroll(function () {
-
-    // var scale = 1 + ($(window).scrollTop() / 1000); // Ajuste o divisor conforme necessário
-    // var translateX, translateY;
-
-    // if ($(window).width() >= 1400) {
-    //   translateX = -900 - ($(window).scrollTop() / 5);
-    //   translateY = -250 - ($(window).scrollTop() / 5);
-    // } else if ($(window).width() >= 1200) {
-    //   translateX = -600 - ($(window).scrollTop() / 5);
-    //   translateY = -280 - ($(window).scrollTop() / 5);
-    // } else if ($(window).width() >= 992) {
-    //   translateX = -500 - ($(window).scrollTop() / 5);
-    //   translateY = -280 - ($(window).scrollTop() / 5);
-    // } else if ($(window).width() >= 768) {
-    //   translateX = -400 - ($(window).scrollTop() / 5);
-    //   translateY = -280 - ($(window).scrollTop() / 5);
-    // } else {
-    //   translateX = -180;
-    //   translateY = -200;
-    // }
-
-    // $('.particle-container').css('transform', 'translate(' + translateX + 'px, ' + translateY + 'px) scale(' + scale + ')');
 
     if (rolagemManual) {
       return; // Se a rolagem for manual, não alterar o menu
     }
 
-    $('.particle').css({
-      'border-radius': (100 - ($(window).scrollTop() / 20)) - 50 + '%',
+    // $('.particle').css({
+    //   'border-radius': (100 - ($(window).scrollTop() / 20)) - 50 + '%',
+    //   'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
+    // });
+
+    // Desejo que #floatElements aumente seu transform scale conforme o usuário rola a página para baixo
+    var scroll = $(window).scrollTop();
+    var scale = 1 + (scroll / 1000);
+    $('#floatElements').css('transform', 'scale(' + scale + ')');
+    $('.floatElement').css({
       'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
     });
+
 
     var projetosTop = $('#projetos').offset().top; // Obtém a posição do elemento com ID "projetos"
     var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
@@ -189,8 +177,12 @@ $(document).ready(function () {
     $(idClicado).removeClass('active');
 
     var target = $(this.getAttribute('href'));
-    $('.particle').css({
-      'border-radius': '4px',
+    // $('.particle').css({
+    //   'border-radius': '4px',
+    //   'filter': 'blur(2px)'
+    // });
+    $('#floatElements').css('transform', 'scale(1.5)');
+    $('.floatElement').css({
       'filter': 'blur(2px)'
     });
 
@@ -209,8 +201,12 @@ $(document).ready(function () {
   $('a[href="#"]').on('click', function (event) {
     $('.section').removeClass('active');
     $('#role_para_baixo').removeClass('d-none');
-    $('.particle').css({
-      'border-radius': '50%',
+    // $('.particle').css({
+    //   'border-radius': '50%',
+    //   'filter': 'blur(0px)'
+    // });
+    $('#floatElements').css('transform', 'scale(1)');
+    $('.floatElement').css({
       'filter': 'blur(0px)'
     });
   });
