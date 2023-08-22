@@ -25,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100vw;
 }
 
 * {
@@ -61,8 +62,9 @@ a {
   position: absolute;
   width: 100%;
   height: 100%;
+  transform: scale(1.1);
   animation: float 3s ease-in-out infinite;
-  transition: all .5s;
+  transition: all .1s ease;
   z-index: -1;
 }
 

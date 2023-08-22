@@ -91,9 +91,8 @@ $(document).ready(function () {
       return; // Se a rolagem for manual, não alterar o menu
     }
 
-    // Desejo que #floatElements aumente seu transform scale conforme o usuário rola a página para baixo
     var scroll = $(window).scrollTop();
-    var scale = 1 + (scroll / 1000);
+    var scale = 1 + (scroll / 500);
     $('#floatElements').css('transform', 'scale(' + scale + ')');
     $('.floatElement').css({
       'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
@@ -141,6 +140,25 @@ $(document).ready(function () {
     }
   });
 
+  $('#role_para_baixo').on('click', function () {
+    var target = $('#projetos');
+    $('#role_para_baixo').removeClass('pulse-down');
+    $('#floatElements').css('transform', 'scale(1.5)');
+    $('.floatElement').css({
+      'filter': 'blur(2px)'
+    });
+
+    if (target.length) {
+      $('html, body').stop().animate({
+        scrollTop: target.offset().top - 45 // Ajuste o valor conforme necessário
+      }, 0);
+
+      setTimeout(function () {
+        $('#projetos').addClass('active');
+        $('#projetos').removeClass('opacity-100');
+      }, 300);
+    }
+  });
   // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
@@ -192,7 +210,7 @@ $(document).ready(function () {
     //   'border-radius': '50%',
     //   'filter': 'blur(0px)'
     // });
-    $('#floatElements').css('transform', 'scale(1)');
+    $('#floatElements').css('transform', 'scale(1.1)');
     $('.floatElement').css({
       'filter': 'blur(0px)'
     });
