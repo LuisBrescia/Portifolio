@@ -94,7 +94,7 @@ $(document).ready(function () {
     // Quero também diminuir a opacidade de #float elements
     var opacidade = 1 - ($(window).scrollTop() / 500);
     var scale = 1 + ($(window).scrollTop() / 500);
-    
+
     $('#floatElements').css({
       'transform': 'scale(' + scale + ')',
       'opacity': opacidade,
@@ -112,7 +112,9 @@ $(document).ready(function () {
     var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2;
 
     if (scrollTopParaExibir <= experienciaTop) {
+      // $('#role_para_baixo i, #role_para_baixo span').addClass('fade-out');
       $('#role_para_baixo').removeClass('pulse-down');
+      $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
       $('#projetos').addClass('active');
     } else if (scrollTopParaExibir <= habilidadeTop) {
       $('#experiencia ').addClass('active');
@@ -126,7 +128,9 @@ $(document).ready(function () {
     if (scrollTopParaLink <= projetosTop) {
       atualizaLink($('#menu_content a[href="#"]'));
       $('.section').removeClass('active');
+      // $('#role_para_baixo i, #role_para_baixo span').removeClass('fade-out');
       $('#role_para_baixo').addClass('pulse-down');
+      $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
     } else if (scrollTopParaLink <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
       $('#floatElements').removeClass('d-none');
@@ -152,7 +156,9 @@ $(document).ready(function () {
 
     var idClicado = String(this.getAttribute('href'));
 
+    // $('#role_para_baixo i, #role_para_baixo span').addClass('fade-out');
     $('#role_para_baixo').removeClass('pulse-down');
+    $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
 
     // Se o id clicado for #experiencia
     if (idClicado == '#experiencia') {
@@ -185,10 +191,12 @@ $(document).ready(function () {
   $('a[href="#"]').on('click', function (event) {
     $('#floatElements').removeClass('d-none');
     $('.section').removeClass('active');
+    // $('#role_para_baixo i, #role_para_baixo span').removeClass('fade-out');
     $('#role_para_baixo').addClass('pulse-down');
+    $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
     $('#floatElements').css({
       'transform': 'scale(1)',
-      'opacity' : 1
+      'opacity': 1
     });
     $('.floatElement').css({
       'filter': 'blur(0px)'
@@ -207,8 +215,8 @@ $(document).ready(function () {
   $('#altera_tema').on('click', function () {
     if ($('#altera_tema span').text() == 'Light') {
       $('#altera_tema span').text('Dark');
-     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');    
-     document.documentElement.style.setProperty('--color-indigo', '#0093E9');    
+      document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
+      document.documentElement.style.setProperty('--color-indigo', '#0093E9');
       // linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
       // linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
       // linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
@@ -216,13 +224,13 @@ $(document).ready(function () {
       $('#habilidades img').css('mix-blend-mode', 'color-dodge');
     } else {
       $('#altera_tema span').text('Light');
-      document.documentElement.style.setProperty('--color-indigo', '#5b42f3');    
+      document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
       $('#habilidades img').css('mix-blend-mode', 'lighten');
       $('modal-body').removeClass('bg-branco');
     }
 
-    $('nav button').toggleClass('border-0 border')
+    $('nav button').toggleClass('outline')
     $('body').toggleClass('Pattern-claro Pattern-escuro');
 
     var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
@@ -233,10 +241,10 @@ $(document).ready(function () {
 
     document.documentElement.style.setProperty('--color-branco', colorPreto);
     document.documentElement.style.setProperty('--color-preto', colorBranco);
-    
+
     document.documentElement.style.setProperty('--color-claro', colorEscuro);
     document.documentElement.style.setProperty('--color-escuro', colorClaro);
-   
+
   });
 
   // * Quando o mouse passa por cima de um projeto, este projeto ganha uma sobra maior
