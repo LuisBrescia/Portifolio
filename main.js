@@ -213,10 +213,12 @@ $(document).ready(function () {
       // linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
       // linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
       // linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%)
+      $('#habilidades img').css('mix-blend-mode', 'color-dodge');
     } else {
       $('#altera_tema span').text('Light');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');    
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
+      $('#habilidades img').css('mix-blend-mode', 'lighten');
       $('modal-body').removeClass('bg-branco');
     }
 
