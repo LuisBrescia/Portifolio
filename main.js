@@ -1,10 +1,6 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/style.css';
-import './CSS/particula.css';
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './JS/counter.js'
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import * as bootsrap from 'bootstrap';
@@ -27,6 +23,7 @@ $(document).ready(function () {
     console.log($('#show_menu').prop('checked'));
   });
 
+  // * Envio do formuçátio
   $('#contatoFormulario').submit(function (event) {
     event.preventDefault();
 
@@ -44,9 +41,7 @@ $(document).ready(function () {
 
     const url = 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec';
 
-    // Quando o botão estiver em cima do formulário, o cursor é alterado para "progress"
     $('#enviaFormulario').css('cursor', 'progress');
-    // Coloca uma animação chamada "pulse" no botão
     $('#enviaFormulario').css('animation', 'pulse 1s infinite');
 
     $.ajax({
@@ -74,7 +69,7 @@ $(document).ready(function () {
   });
 
   // * O ícone é alterado quando o usuário o clica
-  var timeoutID; // Variável para armazenar o ID do timeout
+  var timeoutID; 
   $('#menu_content').on('click', 'a', function () {
     atualizaLink($(this));
 
@@ -89,18 +84,12 @@ $(document).ready(function () {
     }, 800);
   });
 
-
   // * Quando o usuário realizar um scroll, pegar o valor do scroll e alterar o menu
   $(window).scroll(function () {
 
     if (rolagemManual) {
       return; // Se a rolagem for manual, não alterar o menu
     }
-
-    // $('.particle').css({
-    //   'border-radius': (100 - ($(window).scrollTop() / 20)) - 50 + '%',
-    //   'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
-    // });
 
     // Desejo que #floatElements aumente seu transform scale conforme o usuário rola a página para baixo
     var scroll = $(window).scrollTop();
@@ -109,7 +98,6 @@ $(document).ready(function () {
     $('.floatElement').css({
       'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
     });
-
 
     var projetosTop = $('#projetos').offset().top; // Obtém a posição do elemento com ID "projetos"
     var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
@@ -146,7 +134,6 @@ $(document).ready(function () {
       atualizaLink($('#menu_content a[href="#contato"]'));
     }
 
-    // Se não tiver mais como rolar a página, o menu é alterado para o último item
     if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
       $('#footer').addClass('active');
     } else {
@@ -319,7 +306,6 @@ $(document).ready(function () {
   $('#repo-music-maker').on('click', function () {
     window.open('https://github.com/LuisBrescia/ProjetoRedes', '_blank');
   });
-
 });
 
 // * Atualiza barra de menu
