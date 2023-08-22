@@ -98,10 +98,10 @@ $(document).ready(function () {
       'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
     });
 
-    var projetosTop = $('#projetos').offset().top; // Obtém a posição do elemento com ID "projetos"
-    var experienciaTop = $('#experiencia').offset().top; // Obtém a posição do elemento com ID "experiencia"
-    var habilidadeTop = $('#habilidades').offset().top; // Obtém a posição do elemento com ID "contato"
-    var contatoTop = $('#contato').offset().top; // Obtém a posição do elemento com ID "contato"
+    var projetosTop = $('#projetos').offset().top; 
+    var experienciaTop = $('#experiencia').offset().top; 
+    var habilidadeTop = $('#habilidades').offset().top; 
+    var contatoTop = $('#contato').offset().top; 
     var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2;
     var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2;
 
@@ -140,25 +140,6 @@ $(document).ready(function () {
     }
   });
 
-  $('#role_para_baixo').on('click', function () {
-    var target = $('#projetos');
-    $('#role_para_baixo').removeClass('pulse-down');
-    $('#floatElements').css('transform', 'scale(1.5)');
-    $('.floatElement').css({
-      'filter': 'blur(2px)'
-    });
-
-    if (target.length) {
-      $('html, body').stop().animate({
-        scrollTop: target.offset().top - 45 // Ajuste o valor conforme necessário
-      }, 0);
-
-      setTimeout(function () {
-        $('#projetos').addClass('active');
-        $('#projetos').removeClass('opacity-100');
-      }, 300);
-    }
-  });
   // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
@@ -210,7 +191,7 @@ $(document).ready(function () {
     //   'border-radius': '50%',
     //   'filter': 'blur(0px)'
     // });
-    $('#floatElements').css('transform', 'scale(1.1)');
+    $('#floatElements').css('transform', 'scale(1)');
     $('.floatElement').css({
       'filter': 'blur(0px)'
     });
