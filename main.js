@@ -199,8 +199,6 @@ $(document).ready(function () {
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
       document.documentElement.style.setProperty('--color-indigo', '#0093E9');
       $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
-      $('.shadow').addClass('shadow-dark');
-      $('.shadow-lg').addClass('shadow-lg-dark');
       $('form').attr('data-bs-theme', 'dark');
     } else {
       $('#altera_tema span').text('Light');
@@ -208,11 +206,12 @@ $(document).ready(function () {
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
       $('modal-body').removeClass('bg-branco');
       $('.shadow-sm').removeClass('shadow-sm-dark');
-      $('.shadow').removeClass('shadow-dark');
-      $('.shadow-lg').removeClass('shadow-lg-dark');
       $('form').attr('data-bs-theme', 'light');
     }
 
+    $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
+    $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
+    $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
     $('body').toggleClass('Pattern-claro Pattern-escuro');
 
     var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
@@ -361,7 +360,7 @@ function scrollDown_fadeOut() {
   $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
 }
 
-// linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-// linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-// linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+// linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)
+// linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)
+// linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% )
 // linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%)
