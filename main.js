@@ -115,6 +115,7 @@ $(document).ready(function () {
       // $('#role_para_baixo i, #role_para_baixo span').addClass('fade-out');
       $('#role_para_baixo').removeClass('pulse-down');
       $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
+      $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(-10px)')
       $('#projetos').addClass('active');
     } else if (scrollTopParaExibir <= habilidadeTop) {
       $('#experiencia ').addClass('active');
@@ -131,6 +132,7 @@ $(document).ready(function () {
       // $('#role_para_baixo i, #role_para_baixo span').removeClass('fade-out');
       $('#role_para_baixo').addClass('pulse-down');
       $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
+      $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(0)')
     } else if (scrollTopParaLink <= experienciaTop) {
       atualizaLink($('#menu_content a[href="#projetos"]'));
       $('#floatElements').removeClass('d-none');
@@ -159,6 +161,7 @@ $(document).ready(function () {
     // $('#role_para_baixo i, #role_para_baixo span').addClass('fade-out');
     $('#role_para_baixo').removeClass('pulse-down');
     $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
+    $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(-10px)')
 
     // Se o id clicado for #experiencia
     if (idClicado == '#experiencia') {
@@ -194,6 +197,7 @@ $(document).ready(function () {
     // $('#role_para_baixo i, #role_para_baixo span').removeClass('fade-out');
     $('#role_para_baixo').addClass('pulse-down');
     $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
+    $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(0)')
     $('#floatElements').css({
       'transform': 'scale(1)',
       'opacity': 1
