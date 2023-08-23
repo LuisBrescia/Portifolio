@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import * as bootsrap from 'bootstrap';
 
 var timeoutID; // ? Para rolagem de tela
+var alteraPattern; // ? Para alterar o padrão de fundo
 var rolagemManual = false; // ? True enquando o usuário estiver scrollando
 
 $(document).ready(function () {
@@ -195,12 +196,24 @@ $(document).ready(function () {
   // * Botão de alterar tema
   $('#altera_tema').on('click', function () {
 
+    // Se o timeout alteraPattern estiver ativo, cancela-o
+    if (alteraPattern) {
+      clearTimeout(alteraPattern);
+    }
+
     if ($('#altera_tema span').text() == 'Light') {
       $('#altera_tema span').text('Dark');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
       document.documentElement.style.setProperty('--color-indigo', '#0093E9');
       $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'dark');
+
+      $('body').addClass('Pattern-escuro');
+
+      alteraPattern = setTimeout(function () {
+        $('body').addClass('Pattern-escuro').removeClass('Pattern-claro');
+      } , 1000);
+
     } else {
       $('#altera_tema span').text('Light');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
@@ -208,12 +221,15 @@ $(document).ready(function () {
       $('modal-body').removeClass('bg-branco');
       $('.shadow-sm').removeClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'light');
+
+      $('body').addClass('Pattern-claro').removeClass('Pattern-escuro');
+
     }
 
     $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
     $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
     $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
-    $('body').toggleClass('Pattern-claro Pattern-escuro');
+    $('nav button').toggleClass('textura-light textura-dark');
 
     var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
     var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');
