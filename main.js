@@ -195,12 +195,6 @@ $(document).ready(function () {
   // * Botão de alterar tema
   $('#altera_tema').on('click', function () {
 
-    $('*').css('transition', 'all .5s ease-in-out');
-
-    setTimeout(function () {
-      $('*').css('transition', 'none');
-    }, 500);
-
     if ($('#altera_tema span').text() == 'Light') {
       $('#altera_tema span').text('Dark');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
