@@ -198,14 +198,22 @@ $(document).ready(function () {
       $('#altera_tema span').text('Dark');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
       document.documentElement.style.setProperty('--color-indigo', '#0093E9');
+      $('.shadow-sm').addClass('shadow-sm-dark');
+      $('.shadow').addClass('shadow-dark');
+      $('.shadow-lg').addClass('shadow-lg-dark');
+      $('form').attr('data-bs-theme', 'dark');
     } else {
       $('#altera_tema span').text('Light');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
       $('modal-body').removeClass('bg-branco');
+      $('.shadow-sm').removeClass('shadow-sm-dark');
+      $('.shadow').removeClass('shadow-dark');
+      $('.shadow-lg').removeClass('shadow-lg-dark');
+      $('form').attr('data-bs-theme', 'light');
     }
 
-    $('nav button, #projetos section, #habilidades section').toggleClass('outline')
+    $('shadow-sm, shadow').addClass('outline');
     $('body').toggleClass('Pattern-claro Pattern-escuro');
 
     var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
@@ -227,6 +235,12 @@ $(document).ready(function () {
     $(this).addClass('shadow').removeClass('shadow-sm');
   }, function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
+  });
+
+  $('.interativo.shadow-sm-dark').hover(function () {
+    $(this).addClass('shadow-dark').removeClass('shadow-sm-dark');
+  }, function () {
+    $(this).addClass('shadow-sm-dark').removeClass('shadow-dark');
   });
 
   // * Comportamento do modal
