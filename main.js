@@ -5,47 +5,35 @@ import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import * as bootsrap from 'bootstrap';
 
-var rolagemManual = false;
+var timeoutID; // ? Para rolagem de tela
+var rolagemManual = false; // ? True enquando o usuário estiver scrollando
 
 $(document).ready(function () {
 
   $('#menu_portifolio').on('click', function () {
-
     if ($(event.target).closest('#menu_content').length) { return; }
-
-    if (!$('#show_menu').prop('checked')) {
-      $('#menu_portifolio').addClass('big');
-    } else {
-      $('#menu_portifolio').removeClass('big');
-    }
-
+    $('#show_menu').prop('checked') ? $('#menu_portifolio').removeClass('big') : $('#menu_portifolio').addClass('big');
     $('#show_menu').prop('checked', !$('#show_menu').prop('checked'));
-    console.log($('#show_menu').prop('checked'));
   });
 
-  // * Envio do formuçátio
+  // * Envio do formulátio
   $('#contatoFormulario').submit(function (event) {
     event.preventDefault();
 
-    const nome = $('input[name="nome"]').val();
-    const email = $('input[name="email"]').val();
-    const assunto = $('input[name="assunto"]').val();
-    const conteudo = $('textarea[name="conteudo"]').val();
-
     const data = {
-      nome: nome,
-      email: email,
-      assunto: assunto,
-      conteudo: conteudo
+      nome: $('input[name="nome"]').val(),
+      email: $('input[name="email"]').val(),
+      assunto: $('input[name="assunto"]').val(),
+      conteudo: $('textarea[name="conteudo"]').val()
     };
 
-    const url = 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec';
-
-    $('#enviaFormulario').css('cursor', 'progress');
-    $('#enviaFormulario').css('animation', 'pulse 1s infinite');
+    $('#enviaFormulario').css({
+      'cursor': 'progress',
+      'animation': 'pulse 1s infinite'
+    });
 
     $.ajax({
-      url: url,
+      url: 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec',
       type: 'POST',
       contentType: 'text/plain;charset=utf-8',
       data: JSON.stringify(data),
@@ -53,7 +41,6 @@ $(document).ready(function () {
       success: function (response) {
         console.log('Response from server:', response);
         $('#form_response').text('Email enviado com sucesso!');
-        $('#form_response').addClass('text-verde');
       },
       error: function (error) {
         console.error('Error:', error);
@@ -61,143 +48,133 @@ $(document).ready(function () {
       },
       complete: function () {
         $('#enviaFormulario').text('Enviar');
-        $('input[name="assunto"]').val('');
-        $('textarea[name="conteudo"]').val('');
+        $('input[name="assunto"], textarea[name="conteudo"]').val('');
         $('#enviaFormulario').css({ 'cursor': 'pointer', 'animation': 'none' });
       }
     });
   });
 
   // * O ícone é alterado quando o usuário o clica
-  var timeoutID;
   $('#menu_content').on('click', 'a', function () {
     atualizaLink($(this));
-
     if (rolagemManual) {
-      clearTimeout(timeoutID); // Cancela o timeout existente se estiver em andamento
+      clearTimeout(timeoutID);
     }
-
     rolagemManual = true;
-
     timeoutID = setTimeout(function () {
-      rolagemManual = false; // Define a variável como false após 1000 milissegundos
+      rolagemManual = false;
     }, 800);
   });
 
   // * Quando o usuário realizar um scroll, pegar o valor do scroll e alterar o menu
   $(window).scroll(function () {
 
-    if (rolagemManual) {
-      return; // Se a rolagem for manual, não alterar o menu
-    }
-
-    // Quero também diminuir a opacidade de #float elements
-    var opacidade = 1 - ($(window).scrollTop() / 500);
-    var scale = 1 + ($(window).scrollTop() / 500);
+    if (rolagemManual) { return; }
 
     $('#floatElements').css({
-      'transform': 'scale(' + scale + ')',
-      'opacity': opacidade,
-
+      'transform': 'scale(' + (1 + ($(window).scrollTop() / 500)) + ')',
+      'opacity': 1 - ($(window).scrollTop() / 500)
     });
     $('.floatElement').css({
       'filter': 'blur(' + ($(window).scrollTop() / 200) + 'px)'
     });
 
-    var projetosTop = $('#projetos').offset().top;
-    var experienciaTop = $('#experiencia').offset().top;
-    var habilidadeTop = $('#habilidades').offset().top;
-    var contatoTop = $('#contato').offset().top;
-    var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2;
-    var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2;
+    var scrollTopParaLink = $(window).scrollTop() + $(window).height() / 2; // ? Quando uma determinada seção será ativa no menu
+    var scrollTopParaExibir = $(window).scrollTop() + $(window).height() / 1.2; // ? Quando uma determinada seção será exibida na tela
 
-    if (scrollTopParaExibir <= experienciaTop) {
-      // $('#role_para_baixo i, #role_para_baixo span').addClass('fade-out');
-      $('#role_para_baixo').removeClass('pulse-down');
-      $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
-      $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(-10px)')
-      $('#projetos').addClass('active');
-    } else if (scrollTopParaExibir <= habilidadeTop) {
-      $('#experiencia ').addClass('active');
-      $('#floatElements').addClass('d-none');
-    } else if (scrollTopParaExibir <= contatoTop) {
-      $('#habilidades').addClass('active');
-    } else {
-      $('#contato').addClass('active');
+    switch (true) {
+      case scrollTopParaExibir <= $('#experiencia').offset().top:
+        if (scrollTopParaLink <= $('#projetos').offset().top) {break;}
+        $('#projetos').addClass('active');
+        scrollDown_fadeOut();
+        break;
+
+      case scrollTopParaExibir <= $('#habilidades').offset().top:
+        $('#experiencia').addClass('active');
+        $('#floatElements').addClass('d-none');
+        break;
+
+      case scrollTopParaExibir <= $('#contato').offset().top:
+        $('#habilidades').addClass('active');
+        break;
+
+      default:
+        $('#contato').addClass('active');
+        break;
     }
 
-    if (scrollTopParaLink <= projetosTop) {
-      atualizaLink($('#menu_content a[href="#"]'));
-      $('.section').removeClass('active');
-      // $('#role_para_baixo i, #role_para_baixo span').removeClass('fade-out');
-      $('#role_para_baixo').addClass('pulse-down');
-      $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
-      $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(0)')
-    } else if (scrollTopParaLink <= experienciaTop) {
-      atualizaLink($('#menu_content a[href="#projetos"]'));
-      $('#floatElements').removeClass('d-none');
-    } else if (scrollTopParaLink <= habilidadeTop) {
-      atualizaLink($('#menu_content a[href="#experiencia"]'));
-    } else if (scrollTopParaLink <= contatoTop) {
-      atualizaLink($('#menu_content a[href="#habilidades"]'));
-      // $('#contato ').removeClass('active');
-    } else {
-      atualizaLink($('#menu_content a[href="#contato"]'));
+    switch (true) {
+      case scrollTopParaLink <= $('#projetos').offset().top:
+        atualizaLink($('#menu_content a[href="#"]'));
+        scrollDown_fadeIn();
+        $('.section').removeClass('active');
+        break;
+
+      case scrollTopParaLink <= $('#experiencia').offset().top:
+        atualizaLink($('#menu_content a[href="#projetos"]'));
+        $('#floatElements').removeClass('d-none');
+        break;
+
+      case scrollTopParaLink <= $('#habilidades').offset().top:
+        atualizaLink($('#menu_content a[href="#experiencia"]'));
+        break;
+
+      case scrollTopParaLink <= $('#contato').offset().top:
+        atualizaLink($('#menu_content a[href="#habilidades"]'));
+        break;
+
+      default:
+        atualizaLink($('#menu_content a[href="#contato"]'));
+        break;
     }
 
-    if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
-      $('#footer').addClass('active');
-    } else {
-      $('#footer').removeClass('active');
-    }
+    $(window).scrollTop() + $(window).height() >= $(document).height() - 100 ? 
+    $('#footer').addClass('active') : $('#footer').removeClass('active');
+  });
+
+  $('#role_para_baixo').on('click', function () {
+    scrollDown_fadeOut();
+    $('html, body').stop().animate({
+      scrollTop: $('#projetos').offset().top - 45
+    }, 0);
   });
 
   // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
+    
+    scrollDown_fadeOut();
 
     var idClicado = String(this.getAttribute('href'));
 
-    // $('#role_para_baixo i, #role_para_baixo span').addClass('fade-out');
-    $('#role_para_baixo').removeClass('pulse-down');
-    $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
-    $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(-10px)')
+    const idMapping = {
+      '#experiencia': '#projetos, #experiencia',
+      '#habilidades': '#projetos, #experiencia, #habilidades',
+      '#contato': '#projetos, #experiencia, #habilidades, #contato, #footer'
+    };
+    
+    idClicado = idMapping[idClicado] || idClicado;
 
-    // Se o id clicado for #experiencia
-    if (idClicado == '#experiencia') {
-      idClicado = '#projetos, #experiencia';
-    } else if (idClicado == '#habilidades') {
-      idClicado = '#projetos, #experiencia, #habilidades';
-    } else if (idClicado == '#contato') {
-      idClicado = '#projetos, #experiencia, #habilidades, #contato, #footer';
-    }
-
-    console.log(idClicado);
-
-    $(idClicado).addClass('opacity-100');
-    $(idClicado).removeClass('active');
+    $(idClicado).addClass('opacity-100').removeClass('active');
 
     var target = $(this.getAttribute('href'));
 
     if (target.length) {
       $('html, body').stop().animate({
-        scrollTop: target.offset().top - 45 // Ajuste o valor conforme necessário
+        scrollTop: target.offset().top - 45 
       }, 0);
 
       setTimeout(function () {
-        $(idClicado).addClass('active');
-        $(idClicado).removeClass('opacity-100');
+        $(idClicado).addClass('active').removeClass('opacity-100');
       }, 300);
     }
   });
-  // * Se o usuário clicar em um href='#'
-  $('a[href="#"]').on('click', function (event) {
-    $('#floatElements').removeClass('d-none');
-    $('.section').removeClass('active');
-    // $('#role_para_baixo i, #role_para_baixo span').removeClass('fade-out');
-    $('#role_para_baixo').addClass('pulse-down');
-    $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
-    $('#role_para_baixo i, #role_para_baixo span').css('transform', 'translateY(0)')
+
+  // * Se o usuário clicar em um href='#' levando para o ínicio
+  $('a[href="#"]').on('click', function () {
+    scrollDown_fadeIn(); // ? Exibe o ícone de rolagem
+    $('.section').removeClass('active'); // ? Remove a classe active de todas as seções
+    $('#floatElements').removeClass('d-none'); // ? Exibe os elementos flutuantes com seus atributos padrões
     $('#floatElements').css({
       'transform': 'scale(1)',
       'opacity': 1
@@ -210,31 +187,25 @@ $(document).ready(function () {
   // * Quando o usuário clica na página, o menu é fechado 
   $(document).on('click', function (event) {
     if (!$(event.target).closest('#menu_portifolio').length) {
-      const showMenuCheckbox = document.getElementById('show_menu');
-      showMenuCheckbox.checked = false;
+      document.getElementById('show_menu').checked = false;
       $('#menu_portifolio').removeClass('big');
     }
   });
 
+  // * Botão de alterar tema
   $('#altera_tema').on('click', function () {
     if ($('#altera_tema span').text() == 'Light') {
       $('#altera_tema span').text('Dark');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
       document.documentElement.style.setProperty('--color-indigo', '#0093E9');
-      // linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
-      // linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-      // linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
-      // linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%)
-      // $('#habilidades img').css('mix-blend-mode', 'color-dodge');
     } else {
       $('#altera_tema span').text('Light');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
-      // $('#habilidades img').css('mix-blend-mode', 'lighten');
       $('modal-body').removeClass('bg-branco');
     }
 
-    $('nav button, #projetos section').toggleClass('outline')
+    $('nav button, #projetos section, #habilidades section').toggleClass('outline')
     $('body').toggleClass('Pattern-claro Pattern-escuro');
 
     var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
@@ -367,3 +338,17 @@ function atualizaLink($clickedLi) {
 
   $clickedSpan.addClass(fillClass).removeClass(defaultClass);
 }
+// * Funções para exibir e esconder ícone de rolagem
+function scrollDown_fadeIn() {
+  $('#role_para_baixo').addClass('pulse-down');
+  $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
+}
+function scrollDown_fadeOut() {
+  $('#role_para_baixo').removeClass('pulse-down');
+  $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
+}
+
+// linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+// linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+// linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+// linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%)

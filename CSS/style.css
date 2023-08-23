@@ -762,13 +762,13 @@ header h3,
   font-size: 2.5em;
   opacity: 1;
   transition: all 1s;
+  cursor: pointer;
 }
 
 #role_para_baixo i,
 #role_para_baixo span {
   transition: all .5s ease-in-out;
 }
-
 
 .pulse-down {
   animation: pulse_down 2s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -812,7 +812,7 @@ header h3,
 
 @keyframes pulse_down {
   0% {
-    transform: translateY(-5px);
+    transform: translateY(0);
     opacity: 0;
   }
 
@@ -821,7 +821,7 @@ header h3,
   }
 
   100% {
-    transform: translateY(20px);
+    transform: translateY(25px);
     opacity: 0;
   }
 }
@@ -899,5 +899,6 @@ header h3,
 }
 
 .outline {
-  outline: 2px dotted #6C757D !important;
+  box-shadow: 0 0 1px 1px #212529 !important;
 }
+
