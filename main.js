@@ -204,8 +204,8 @@ $(document).ready(function () {
       $('form').attr('data-bs-theme', 'dark');
     } else {
       $('#altera_tema span').text('Light');
-      document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
+      document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
       $('modal-body').removeClass('bg-branco');
       $('.shadow-sm').removeClass('shadow-sm-dark');
       $('.shadow').removeClass('shadow-dark');

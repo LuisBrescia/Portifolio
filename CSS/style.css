@@ -483,8 +483,8 @@ nav button:active {
 }
 
 .btn-claro {
-  background-color: var(--color-branco);
-  color: var(--color-escuro);
+  background-color: #ffffff;
+  color: #0f0f0f;
   letter-spacing: 1px;
   font-weight: 100;
   overflow: hidden;
@@ -514,7 +514,7 @@ nav button:active {
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: var(--color-escuro);
+  background-color: #0f0f0f;
   border-radius: 50%;
   display: none;
   transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -522,20 +522,20 @@ nav button:active {
 }
 
 .btn-claro:hover {
-  background-color: var(--color-claro);
-  color: var(--color-branco);
-  border: 1px solid var(--color-escuro);
+  background-color: #ffffff;
+  color: white;
+  border: 1px solid #0f0f0f;
 }
 
 .btn-claro:hover:before {
   top: -35%;
-  background-color: var(--color-escuro);
+  background-color: #0f0f0f;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .btn-claro:hover:after {
   top: -45%;
-  background-color: var(--color-escuro);
+  background-color: #0f0f0f;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
@@ -906,13 +906,13 @@ header h3,
 }
 
 .shadow-sm-dark {
-  box-shadow: 0 .125rem .25rem #495057 !important;
+  box-shadow: 0 .125rem .25rem #f5f8f933 !important;
 }
 
 .shadow-dark {
-  box-shadow: 0 .5rem 1rem #495057bb !important;
+  box-shadow: 0 .5rem 1rem #f5f8f933 !important;
 }
 
 .shadow-lg-dark {
-  box-shadow: 0 1rem 3rem #495057bb !important;
+  box-shadow: 0 1rem 3rem #f5f8f933 !important;
 }
