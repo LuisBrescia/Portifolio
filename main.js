@@ -198,7 +198,7 @@ $(document).ready(function () {
       $('#altera_tema span').text('Dark');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
       document.documentElement.style.setProperty('--color-indigo', '#0093E9');
-      $('.shadow-sm').addClass('shadow-sm-dark');
+      $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
       $('.shadow').addClass('shadow-dark');
       $('.shadow-lg').addClass('shadow-lg-dark');
       $('form').attr('data-bs-theme', 'dark');
@@ -213,7 +213,6 @@ $(document).ready(function () {
       $('form').attr('data-bs-theme', 'light');
     }
 
-    $('shadow-sm, shadow').addClass('outline');
     $('body').toggleClass('Pattern-claro Pattern-escuro');
 
     var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
