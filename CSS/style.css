@@ -25,11 +25,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: 
-  background-color .5s ease, 
-  color .5s ease, 
-  border-color .5s ease, 
-  box-shadow .5s ease;
 }
 
 img {
@@ -475,7 +470,7 @@ form select:focus {
 /** Botões - Personalizados */
 
 nav button {
-  transition: transform .3s ease-in-out;
+  transition: transform .3s ease-in-out !important;
   border: none;
   width: 52px;
   height: 51px;
