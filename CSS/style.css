@@ -475,7 +475,7 @@ form select:focus {
 /** Botões - Personalizados */
 
 nav button {
-  transition: transform .3s ease-in-out !important;
+  transition: transform .3s ease-in-out;
   border: none;
   width: 52px;
   height: 51px;
