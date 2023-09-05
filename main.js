@@ -362,7 +362,7 @@ function alteraTema(tema) {
   $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
   $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
   $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
-  $('nav button, .circle').toggleClass('textura-light textura-dark');
+  $('nav button').toggleClass('textura-light'); // : Textura black removida
 
   var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
   var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');
