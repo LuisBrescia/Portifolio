@@ -45,6 +45,11 @@ body {
   background-color: var(--color-claro);
 }
 
+nav {
+  position: sticky;
+  top: 0;
+}
+
 textarea {
   min-height: 64px;
   max-height: 128px;
@@ -65,7 +70,6 @@ a {
   transform: scale(1);
   animation: float 3s ease-in-out infinite;
   z-index: -1;
-  overflow: hidden;
 }
 
 .floatElement {

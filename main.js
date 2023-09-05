@@ -13,10 +13,6 @@ var temaOS = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' 
 
 $(document).ready(function () {
 
-  if (temaOS == 'dark') {
-    alteraTema('light');
-  }
-
   $('#menu_portifolio').on('click', function () {
     if ($(event.target).closest('#menu_content').length) { return; }
     $('#show_menu').prop('checked') ? $('#menu_portifolio').removeClass('big') : $('#menu_portifolio').addClass('big');
@@ -312,6 +308,13 @@ $(document).ready(function () {
   $('#repo-music-maker').on('click', function () {
     window.open('https://github.com/LuisBrescia/DragonMusicMaker', '_blank');
   });
+
+  setTimeout(() => {
+    if (temaOS == 'dark') {
+      alteraTema('light');
+    }
+    console.log(temaOS);
+  }, 300);
 });
 
 // * Atualiza barra de menu
