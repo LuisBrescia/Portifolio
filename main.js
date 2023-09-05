@@ -6,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import * as bootsrap from 'bootstrap';
 
 var timeoutID; // ? Para rolagem de tela
-var alteraPattern; // ? Para alterar o padrão de fundo
 var rolagemManual = false; // ? True enquando o usuário estiver scrollando
 
 // * Pego o tema do SO do usuário
@@ -358,10 +357,12 @@ function alteraTema(tema) {
     $('body').addClass('Pattern-escuro');
   }
 
+  $('#altera_tema').toggleClass('light-mode dark-mode');
+  
   $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
   $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
   $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
-  $('nav button').toggleClass('textura-light textura-dark');
+  $('nav button, .circle').toggleClass('textura-light textura-dark');
 
   var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
   var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');

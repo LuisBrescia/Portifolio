@@ -246,8 +246,6 @@ form select:focus {
   transform: scale(1.1) !important;
 }
 
-
-
 #menu_content {
   width: 10rem;
   top: 50px;
@@ -311,6 +309,90 @@ form select:focus {
 
 #show_menu:checked+.toggle {
   transform: rotate(180deg);
+}
+
+#alteraTema {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.stripe {
+  width: 6px;
+  height: 2px;
+  background-image: var(--gradiente-roxo);
+  border-radius: 15px;
+  transition: all 0.5s ease;
+  position: absolute;
+  z-index: 15;
+}
+
+/*: Cardiais*/
+.light-mode #stripe1 {
+  transform: translateX(-12px);
+}
+.light-mode #stripe2 {
+  transform: translateX(12px);
+}
+.light-mode #stripe3 {
+  transform: translateY(12px) rotate(90deg);
+}
+.light-mode #stripe4 {
+  transform: translateY(-12px) rotate(90deg);
+}
+
+/*: Diagonais*/
+.light-mode #stripe5 {
+  transform: translateX(9px) translateY(9px) rotate(45deg);
+  width: 4.5px;
+}
+.light-mode #stripe6 {
+  transform: translateX(-9px) translateY(9px) rotate(125deg);
+  width: 4.5px;
+}
+.light-mode #stripe7 {
+  transform: translateX(9px) translateY(-9px) rotate(125deg);
+  width: 4.5px;
+}
+.light-mode #stripe8 {
+  transform: translateX(-9px) translateY(-9px) rotate(45deg);
+  width: 4.5px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-indigo);
+  border-radius: 100%;
+  transition: transform 0.5s ease;
+  position: absolute;
+  z-index: 15;
+}
+
+#circle1 {
+  background-image: var(--gradiente-roxo);
+}
+#circle2 {
+  background-color: var(--color-branco);
+}
+
+.light-mode #circle1 {
+  transform: translateX(0px) scale(0.5);
+}
+.light-mode #circle2 {
+  transform: translateX(0px) scale(0);
+}
+
+.dark-mode #circle1 {
+  transform: translate(1px, -1px);
+}
+.dark-mode #circle2 {
+  width: 20px;
+  height: 20px;
+  transform: translate(7px, -5px);
+  z-index: 16;
 }
 
 /** BG - Personalizados */
@@ -895,6 +977,8 @@ header h3,
     background-position: -200% center;
   }
 }
+
+
 
 /*: Diamantes*/
 .Pattern-claro {
