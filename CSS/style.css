@@ -43,7 +43,6 @@ body {
   font-family: 'Lato', sans-serif;
   color: var(--color-escuro);
   background-color: var(--color-claro);
-  overflow-x: hidden;
 }
 
 textarea {
@@ -66,6 +65,7 @@ a {
   transform: scale(1);
   animation: float 3s ease-in-out infinite;
   z-index: -1;
+  overflow: hidden;
 }
 
 .floatElement {
