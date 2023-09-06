@@ -198,7 +198,7 @@ $(document).ready(function () {
   // * Botão de alterar tema
   $('#altera_tema').on('click', function () {
 
-    let tema = $('#altera_tema span').text() == 'Dark' ? 'dark' : 'light';
+    let tema = $('#altera_tema span').text() == 'dark' ? 'dark' : 'light';
     alteraTema(tema);
 
   });
@@ -311,6 +311,11 @@ $(document).ready(function () {
 
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
     const newColorScheme = event.matches ? "dark" : "light";
+
+    if (newColorScheme == $('#altera_tema span').text()) {
+      return;
+    }
+
     if (newColorScheme == 'dark') {
       alteraTema('light');
     } else {
@@ -354,7 +359,7 @@ function scrollDown_fadeOut() {
 // ? Altera o tema da página
 function alteraTema(tema) {
   if (tema == 'dark') {
-    $('#altera_tema span').text('Light');
+    $('#altera_tema span').text('light');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
     document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
     $('modal-body').removeClass('bg-branco');
@@ -362,7 +367,7 @@ function alteraTema(tema) {
     $('form').attr('data-bs-theme', 'light');
     $('body').addClass('Pattern-claro').removeClass('Pattern-escuro');
   } else {
-    $('#altera_tema span').text('Dark');
+    $('#altera_tema span').text('dark');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
     document.documentElement.style.setProperty('--color-indigo', '#0093E9');
     $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
