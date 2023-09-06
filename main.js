@@ -87,7 +87,7 @@ $(document).ready(function () {
 
     switch (true) {
       case scrollTopParaExibir <= $('#experiencia').offset().top:
-        if (scrollTopParaLink <= $('#projetos').offset().top) {break;}
+        if (scrollTopParaLink <= $('#projetos').offset().top) { break; }
         $('#projetos').addClass('active');
         scrollDown_fadeOut();
         break;
@@ -131,8 +131,8 @@ $(document).ready(function () {
         break;
     }
 
-    $(window).scrollTop() + $(window).height() >= $(document).height() - 100 ? 
-    $('#footer').addClass('active') : $('#footer').removeClass('active');
+    $(window).scrollTop() + $(window).height() >= $(document).height() - 100 ?
+      $('#footer').addClass('active') : $('#footer').removeClass('active');
   });
 
   $('#role_para_baixo').on('click', function () {
@@ -145,7 +145,7 @@ $(document).ready(function () {
   // * Personaliza o scroll da página
   $('a.scroll-link').on('click', function (event) {
     event.preventDefault();
-    
+
     scrollDown_fadeOut();
 
     var idClicado = String(this.getAttribute('href'));
@@ -155,7 +155,7 @@ $(document).ready(function () {
       '#habilidades': '#projetos, #experiencia, #habilidades',
       '#contato': '#projetos, #experiencia, #habilidades, #contato, #footer'
     };
-    
+
     idClicado = idMapping[idClicado] || idClicado;
 
     $(idClicado).addClass('opacity-100').removeClass('active');
@@ -164,7 +164,7 @@ $(document).ready(function () {
 
     if (target.length) {
       $('html, body').stop().animate({
-        scrollTop: target.offset().top - 45 
+        scrollTop: target.offset().top - 45
       }, 0);
 
       setTimeout(function () {
@@ -309,6 +309,16 @@ $(document).ready(function () {
     window.open('https://github.com/LuisBrescia/DragonMusicMaker', '_blank');
   });
 
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    const newColorScheme = event.matches ? "dark" : "light";
+    if (newColorScheme == 'dark') {
+      alteraTema('light');
+    } else {
+      alteraTema('dark');
+    }
+    console.log('Tela sistema alterado');
+  });
+
   setTimeout(() => {
     if (temaOS == 'dark') {
       alteraTema('light');
@@ -361,7 +371,7 @@ function alteraTema(tema) {
   }
 
   $('#altera_tema').toggleClass('light-mode dark-mode');
-  
+
   $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
   $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
   $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
