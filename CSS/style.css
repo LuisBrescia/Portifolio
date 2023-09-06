@@ -65,9 +65,9 @@ a {
   min-height: 50vh;
 }
 
-/* #inicioContainer {
+#inicioContainer {
   overflow: hidden;
-} */
+}
 
 /* ::-webkit-scrollbar {
   display: none;
