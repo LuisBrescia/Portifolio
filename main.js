@@ -368,7 +368,7 @@ function alteraTema(tema) {
     $('body').addClass('Pattern-claro').removeClass('Pattern-escuro');
   } else {
     $('#altera_tema span').text('dark');
-    document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)');
+    document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #38bdf8 0%, #2dd4bf 50%, #34d399)');
     document.documentElement.style.setProperty('--color-indigo', '#0093E9');
     $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'dark');
