@@ -27,7 +27,7 @@ html {
   box-sizing: border-box;
 }
 
-*:not(.toggle) {
+*:not(.toggle, .fade) {
   transition: 
   background-color .5s ease, 
   color .5s ease, 
