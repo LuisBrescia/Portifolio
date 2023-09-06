@@ -693,6 +693,8 @@ form .btn-default:hover {
 
 #inicio {
   min-height: 50vh;
+  overflow: hidden;
+  overflow-clip-margin: 2em;
 }
 
 #texto_inicio {
