@@ -43,6 +43,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: var(--color-escuro);
   background-color: var(--color-claro);
+  overflow-x: hidden;
 }
 
 nav {
@@ -64,9 +65,9 @@ a {
   min-height: 50vh;
 }
 
-#inicioContainer {
+/* #inicioContainer {
   overflow: hidden;
-}
+} */
 
 /* ::-webkit-scrollbar {
   display: none;
