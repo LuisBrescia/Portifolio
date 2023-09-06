@@ -60,6 +60,18 @@ a {
   color: var(--color-azul);
 }
 
+#inicio {
+  min-height: 50vh;
+}
+
+#inicioContainer {
+  overflow: hidden;
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
 /*: Elementos flutuantes seção inicial */
 
 #floatElements {
@@ -687,18 +699,6 @@ form .btn-default:hover {
 
 /*: Organização nova */
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-#inicio {
-  min-height: 50vh;
-}
-
-#inicioContainer {
-  overflow: hidden;
-}
-
 #texto_inicio {
   text-align: center;
 }
@@ -807,8 +807,11 @@ section:hover {
 }
 
 /** A partir de MD */
-/* @media screen and (min-width: 768px) {
-} */
+@media screen and (min-width: 768px) {
+  #inicioContainer {
+    overflow: visible;
+  }
+} 
 
 /** A partir de LG */
 /* @media screen and (min-width: 992px) {
