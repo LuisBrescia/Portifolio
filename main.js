@@ -43,11 +43,13 @@ $(document).ready(function () {
       dataType: 'json',
       success: function (response) {
         console.log('Response from server:', response);
+        $('#form_response').addClass('text-verde').removeClass('text-vermelho');
         $('#form_response').text('Email enviado com sucesso!');
       },
       error: function (error) {
         console.error('Error:', error);
-        $('#form_response').text('Erro ao enviar e-mail. Tente novamente mais tarde.');
+        $('#form_response').addClass('text-vermelho').removeClass('text-verde');
+        $('#form_response').text('Erro ao enviar e-mail.');
       },
       complete: function () {
         $('#enviaFormulario').text('Enviar');

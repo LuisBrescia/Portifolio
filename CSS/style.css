@@ -598,6 +598,11 @@ nav button:active {
   font-weight: 100;
   overflow: hidden;
   transform: scale(1) !important;
+  border-color: white !important;
+}
+
+.btn-claro i {
+  transition: all 0s;
 }
 
 .btn-claro:before {
@@ -623,7 +628,7 @@ nav button:active {
   top: 180%;
   width: 160%;
   height: 190%;
-  background-color: #151819;
+  background-color: #0f0f0f;
   border-radius: 50%;
   display: none;
   transition: all 0.2s cubic-bezier(0.55, 0, 0.1, 1);
@@ -633,18 +638,18 @@ nav button:active {
 .btn-claro:hover {
   background-color: #ffffff;
   color: white;
-  border: 1px solid #151819;
+  border: 1px solid #0f0f0f;
 }
 
 .btn-claro:hover:before {
   top: -35%;
-  background-color: #151819;
+  background-color: #0f0f0f;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
 .btn-claro:hover:after {
   top: -45%;
-  background-color: #151819;
+  background-color: #0f0f0f;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
