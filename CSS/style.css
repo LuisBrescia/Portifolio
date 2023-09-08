@@ -715,12 +715,6 @@ nav button:active {
 }
 
 .btn-default:hover::before {
-  -webkit-animation: sh02 1s linear infinite;
-  -moz-animation: sh02 1s linear infinite;
-  animation: sh02 1s linear infinite;
-}
-
-form .btn-default:hover::before {
   -webkit-animation: sh02 2s linear infinite;
   -moz-animation: sh02 2s linear infinite;
   animation: sh02 2s linear infinite;
@@ -772,16 +766,16 @@ form .btn-default:hover::before {
     left: 0%;
   }
 
-  25% {
+  12.5% {
     opacity: .8;
   }
 
-  50% {
+  25% {
     opacity: 0;
     left: 100%;
   }
 
-  51% {
+  26% {
     opacity: 0;
     left: 0%;
   }
