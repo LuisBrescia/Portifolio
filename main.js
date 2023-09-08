@@ -371,7 +371,7 @@ function alteraTema(tema) {
   } else {
     $('#altera_tema span').text('dark');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #38bdf8 0%, #2dd4bf 50%, #34d399)');
-    document.documentElement.style.setProperty('--color-indigo', '#0093E9');
+    document.documentElement.style.setProperty('--color-indigo', '#2dd4bf');
     $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'dark');
     $('body').addClass('Pattern-escuro');

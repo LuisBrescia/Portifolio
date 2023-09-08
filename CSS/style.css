@@ -698,27 +698,95 @@ nav button:active {
 
 .btn-default {
   border: none;
-  background-image: var(--gradiente-roxo);
+  background: var(--gradiente-roxo);
   color: white !important;
-  transition: all 0.4s ease-out !important;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  transition: all .2s ease-in;
 }
 
-article .btn-default:hover {
-  transform: scale(1.1);
+.btn-default:hover {
+  background: var(--gradiente-roxo);
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
-article .btn-default:active {
-  transform: scale(1.05);
+.btn-default:hover::before {
+  -webkit-animation: sh02 1s linear infinite;
+  -moz-animation: sh02 1s linear infinite;
+  animation: sh02 1s linear infinite;
 }
 
-.btn-default:hover,
-.btn-default:active {
-  border-radius: 4px !important;
+form .btn-default:hover::before {
+  -webkit-animation: sh02 2s linear infinite;
+  -moz-animation: sh02 2s linear infinite;
+  animation: sh02 2s linear infinite;
 }
 
-form .btn-default:hover {
+.btn-default::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #f5f8f9;
+  box-shadow: 0 0 50px 30px #f5f8f9;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+.btn-default::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #f5f8f9;
+  box-shadow: 0 0 50px 18px #f5f8f9;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+#experiencia .btn-default:hover {
   transform: scale(1.025);
 }
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  25% {
+    opacity: .8;
+  }
+
+  50% {
+    opacity: 0;
+    left: 100%;
+  }
+
+  51% {
+    opacity: 0;
+    left: 0%;
+  }
+}
+
 
 /** Texturas HeroPatterns */
 
@@ -1022,8 +1090,6 @@ header h3,
     background-position: -200% center;
   }
 }
-
-
 
 /*: Diamantes*/
 .Pattern-claro {
