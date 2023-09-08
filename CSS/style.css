@@ -756,10 +756,6 @@ main {
   gap: 1em;
 }
 
-#experiencia {
-  margin-bottom: 5.5rem;
-}
-
 section {
   transition: transform 0.3s ease-in-out !important;
   border-radius: 5px;
