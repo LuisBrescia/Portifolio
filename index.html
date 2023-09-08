@@ -308,13 +308,17 @@
       </header>
 
       <!-- ? Imagem -->
-      <div class="experiencia-image-collection mx-auto mb-3">
-        <img class="rounded-1 shadow" src="/tambasa.jpeg" alt="Almoço tambasa">
-        <img class="rounded-1 shadow" src="/tambasa2.jpeg"
-          alt="Certificado no Hackatruck">
-        <img class="rounded-1 shadow-lg" src="/hackatruck.jpeg"
-          alt="Tambasa com prancheta">
+      <div id="experiencia-image-collection" class="d-none d-md-grid align-items-center mb-5">
+        <img class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa.jpeg" alt="Almoço tambasa">
+        <img class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa2.jpeg" alt="Certificado no Hackatruck">
+        <img class="w-100 object-fit-cover rounded-2 shadow-lg" src="/hackatruck.jpeg" alt="Tambasa com prancheta">
       </div>
+
+      <div id="experiencia-image-collection-mobile" class="d-grid d-md-none align-items-center mb-5 mt-2">
+        <img id="tambasa-almoco" class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa.jpeg" alt="Almoço tambasa">
+        <img id="tambasa-prancheta" class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa2.jpeg" alt="Tambasa com prancheta">
+        <img id="hackatruck" class="w-100 object-fit-cover rounded-2 shadow-lg" src="/hackatruck.jpeg" alt="Certificado no Hackatruck">
+      </div> 
 
       <!-- * Cada experiência será um card-->
       <div class="d-flex flex-column flex-md-row justify-content-between gap-4 gap-md-0 text-center">
@@ -327,9 +331,9 @@
           <div class="fs-6 letter-spacing">Técnico em Informática</div>
           <div class="fs-5 letter-spacing fw-light">2020 - 2022</div>
           <button id="xp_cefet"
-            class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
-            Detalhes</button>
+            class="fs-smaller btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Mais Detalhes</button>
         </article>
 
         <article class="col-12 col-md-4 mb-5">
@@ -340,12 +344,12 @@
           <div class="fs-6 letter-spacing">Engenharia de Software</div>
           <div class="fs-5 letter-spacing fw-light">2023 - 2026</div>
           <button id="xp_puc"
-            class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
-            Detalhes</button>
+            class="fs-smaller btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Mais Detalhes</button>
         </article>
 
-        <article class="col-12 col-md-4 mb-5">
+        <article class="col-12 col-md-4">
           <div class="fs-3 fw-bold">
             <i class="bi-patch-check-fill text-verde"></i>
             &nbsp;Hackatruck
@@ -353,9 +357,9 @@
           <div class="fs-6 letter-spacing">Qualificação profissional</div>
           <div class="fs-5 letter-spacing fw-light">2023 - 2023</div>
           <button id="xp_hackatruck"
-            class="btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
-            Detalhes</button>
+            class="fs-smaller btn btn-default rounded-5 shadow-sm letter-spacing mt-3 px-3 py-2"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Mais Detalhes</button>
         </article>
       </div>
 
