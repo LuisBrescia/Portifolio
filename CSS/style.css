@@ -37,6 +37,7 @@ body {
   background-color: var(--color-claro);
   overflow-x: hidden;
   transition: background-color 0.5s ease-out;
+  filter: saturate(150%);
 }
 
 nav {

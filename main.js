@@ -369,7 +369,7 @@ function alteraTema(tema) {
 
   setTimeout(function () {
     $('#app').css({
-      'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(150%)',
+      'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(100%)',
       'transition': 'filter .8s ease-out'
     });
   }, 200);
