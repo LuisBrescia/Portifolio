@@ -2,7 +2,7 @@
 
 :root {
   --color-escuro: #151819;
-  --color-cinzento: #dee2e6;
+  --color-cinzento: #d0d3d7;
   --color-branco: #ffffff;
   --color-preto: #0f0f0f;
   --color-claro: #f5f8f9;
@@ -1114,25 +1114,45 @@ header h3,
   height: 100%;
 }
 
+.linha-horizontal {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background: linear-gradient(90deg, transparent 40%, var(--color-cinzento), transparent 90%);
+  background-size: 200%;
+  animation: background-pan 3s linear infinite;
+  opacity: 1;
+}
+
 .form__group {
   position: relative;
   padding: 20px 0 0;
   width: 100%;
 }
 
+.form__field:focus .linha-horizontal {
+  display: none;
+}
+
+.form__group .linha-horizontal {
+  position: absolute;
+  top: 71%;
+  z-index: 3;
+}
+
 .form__field {
   font-family: inherit;
   width: 100%;
   border: none;
-  border-bottom: 2px solid var(--color-cinzento);
-  border-image: linear-gradient(90deg, var(--color-cinzento), var(--color-claro));
-  border-width: 2px;
-  border-image-slice: 1;
+  border-top-right-radius: .5rem;
+  border-top-left-radius: .5rem;
+  border-bottom: 2px solid transparent;
   outline: 0;
   font-size: 1rem;
   transition: border-color 0.2s;
-  background: transparent !important;
+  background: transparent;
   color: var(--color-escuro);
+  z-index: 4;
 }
 
 .form__field::placeholder {
@@ -1154,7 +1174,7 @@ header h3,
 
 .form__field:focus ~ .form__label {
   position: absolute;
-  top: 0;
+  top: -1px;
   display: block;
   transition: 0.2s;
   font-size: 1rem;
@@ -1174,10 +1194,27 @@ header h3,
 
 .form__label {
   position: absolute;
-  top: 0;
+  top: -1px;
   display: block;
   transition: 0.2s;
-  font-size: 16px;
+  font-size: 1rem;
   pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, var(--color-cinzento) 50%, transparent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  width: fit-content;
+  white-space: nowrap;
+  background-size: 200%;
+  animation: background-pan 3s linear infinite;
   color: var(--color-cinzento);
+}
+
+.form__group input:focus + .linha-horizontal {
+  display: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-claro) inset !important;
 }

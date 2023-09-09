@@ -27,7 +27,7 @@ $(document).ready(function () {
       nome: $('input[name="nome"]').val(),
       email: $('input[name="email"]').val(),
       assunto: $('input[name="assunto"]').val(),
-      conteudo: $('textarea[name="conteudo"]').val()
+      conteudo: $('input[name="conteudo"]').val()
     };
 
     $('#enviaFormulario').css({
@@ -364,7 +364,7 @@ function alteraTema(tema) {
     $('#altera_tema span').text('light');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
     document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
-    document.documentElement.style.setProperty('--color-cinzento', '#dee2e6');
+    document.documentElement.style.setProperty('--color-cinzento', '#d0d3d7');
     $('modal-body').removeClass('bg-branco');
     $('.shadow-sm').removeClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'light');
