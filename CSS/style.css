@@ -1239,6 +1239,6 @@ input:-webkit-autofill {
   color: var(--color-cinzento);
 }
 
-footer > div {
+#direitosAutorais {
   filter: blur(.5px);
 }
