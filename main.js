@@ -363,14 +363,14 @@ function alteraTema(tema) {
 
   // É aplicado um efeito de blur no body para que a transição de cores seja mais suave
   $('#app').css({
-    'filter': 'blur(5px)',
+    'filter': 'blur(5px) grayscale(100%)',
     'transition': 'filter 0s'
   });
 
   setTimeout(function () {
     $('#app').css({
-      'filter': 'blur(0px)',
-      'transition': 'filter 0.5s ease-out'
+      'filter': 'blur(0px) grayscale(0%)',
+      'transition': 'filter .8s ease-out'
     });
   }, 200);
 
@@ -396,7 +396,6 @@ function alteraTema(tema) {
   $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
   $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
   $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
-  $('nav button').toggleClass('textura-light'); // : Textura black removida
 
   var colorPreto = getComputedStyle(document.documentElement).getPropertyValue('--color-preto');
   var colorBranco = getComputedStyle(document.documentElement).getPropertyValue('--color-branco');

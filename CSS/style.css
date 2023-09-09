@@ -55,6 +55,7 @@ a {
 
 #inicio {
   min-height: 50vh;
+  position: relative;
 }
 
 #inicioContainer {
@@ -265,6 +266,10 @@ footer a {
 
 footer a:hover {
   cursor: pointer;
+}
+
+.bg-especial-dark a {
+  background-color: var(--color-branco);
 }
 .bg-especial-dark a:hover {
   color: var(--color-indigo) !important;
@@ -947,10 +952,6 @@ header h3,
   animation: pulse_down 4s infinite cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-#inicio {
-  position: relative;
-}
-
 .fade-out {
   animation: fade-out 3s ease-in-out;
 }
@@ -960,12 +961,10 @@ header h3,
 @keyframes fade-out {
   0% {
     opacity: 1;
-    transform: translateY(0);
   }
 
   100% {
     opacity: 0 !important;
-    transform: translateY(-20px);
   }
 }
 
@@ -1094,6 +1093,7 @@ header h3,
   border-image-slice: 100% 4;
   border-image-width: 3px;
   background-color: #0f0f0f;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23151819' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 #habilidades .bg-especial-dark:nth-child(even) {
@@ -1138,8 +1138,6 @@ header h3,
   font-family: inherit;
   width: 100%;
   border: none;
-  border-top-right-radius: .5rem;
-  border-top-left-radius: .5rem;
   border-bottom: 2px solid transparent;
   outline: 0;
   font-weight: 700;
@@ -1237,8 +1235,4 @@ input:-webkit-autofill {
   background-size: 200%;
   animation: background-pan 3s linear infinite;
   color: var(--color-cinzento);
-}
-
-#direitosAutorais {
-  filter: blur(.5px);
 }
