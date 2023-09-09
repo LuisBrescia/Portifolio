@@ -53,7 +53,7 @@ $(document).ready(function () {
       },
       complete: function () {
         $('#enviaFormulario').text('Enviar');
-        $('input[name="assunto"], textarea[name="conteudo"]').val('');
+        $('input[name="assunto"], input[name="conteudo"]').val('');
         $('#enviaFormulario').css({ 'cursor': 'pointer', 'animation': 'none' });
       }
     });
@@ -364,6 +364,7 @@ function alteraTema(tema) {
     $('#altera_tema span').text('light');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
     document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
+    document.documentElement.style.setProperty('--color-cinzento', '#dee2e6');
     $('modal-body').removeClass('bg-branco');
     $('.shadow-sm').removeClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'light');
@@ -372,6 +373,7 @@ function alteraTema(tema) {
     $('#altera_tema span').text('dark');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #38bdf8 0%, #2dd4bf 50%, #34d399)');
     document.documentElement.style.setProperty('--color-indigo', '#2dd4bf');
+    document.documentElement.style.setProperty('--color-cinzento', '#495057');
     $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'dark');
     $('body').addClass('Pattern-escuro');
@@ -384,11 +386,11 @@ function alteraTema(tema) {
   $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
   $('nav button').toggleClass('textura-light'); // : Textura black removida
 
-  var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
-  var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');
-
-  var colorBranco = getComputedStyle(document.documentElement).getPropertyValue('--color-branco');
   var colorPreto = getComputedStyle(document.documentElement).getPropertyValue('--color-preto');
+  var colorBranco = getComputedStyle(document.documentElement).getPropertyValue('--color-branco');
+
+  var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');
+  var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
 
   document.documentElement.style.setProperty('--color-branco', colorPreto);
   document.documentElement.style.setProperty('--color-preto', colorBranco);

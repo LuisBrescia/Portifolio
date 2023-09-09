@@ -2,7 +2,7 @@
 
 :root {
   --color-escuro: #151819;
-  --color-cinzento: #b7b7b7;
+  --color-cinzento: #dee2e6;
   --color-branco: #ffffff;
   --color-preto: #0f0f0f;
   --color-claro: #f5f8f9;
@@ -274,17 +274,6 @@ footer a {
 footer a:hover {
   cursor: pointer;
   filter: drop-shadow(0px 0px 1px var(--color-escuro));
-}
-
-form input::placeholder,
-form textarea::placeholder {
-  color: var(--color-cinzento);
-}
-
-form input:focus,
-form textarea:focus,
-form select:focus {
-  outline: var(--color-indigo) solid 1px;
 }
 
 .big {
@@ -845,9 +834,9 @@ section:hover {
   align-items: center;
 }
 
-#habilidades section:hover {
+/* #habilidades section:hover {
   cursor: pointer;
-}
+} */
 
 #habilidades section h3 {
   font-weight: 700;
@@ -1113,11 +1102,6 @@ header h3,
   background-color: #0f0f0f;
 }
 
-form input,
-form textarea {
-  background-color: var(--color-claro);
-}
-
 #habilidades .bg-especial-dark:nth-child(even) {
   border-image: linear-gradient(-36deg, #38bdf8 0%, #2dd4bf 50%, #34d399);
   border-image-slice: 100% 4;
@@ -1128,4 +1112,72 @@ form textarea {
 .carousel-item,
 .carousel-item img {
   height: 100%;
+}
+
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid var(--color-cinzento);
+  border-image: linear-gradient(90deg, var(--color-cinzento), var(--color-claro));
+  border-width: 2px;
+  border-image-slice: 1;
+  outline: 0;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background: transparent !important;
+  color: var(--color-escuro);
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1rem;
+  cursor: text;
+  top: 20px;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  border-width: 2px;
+  border-image: var(--gradiente-roxo);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  background: var(--gradiente-roxo);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  width: fit-content;
+  white-space: nowrap;
+  color: var(--color-indigo);
+}
+
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 16px;
+  pointer-events: none;
+  color: var(--color-cinzento);
 }
