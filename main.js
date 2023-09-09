@@ -363,13 +363,13 @@ function alteraTema(tema) {
 
   // É aplicado um efeito de blur no body para que a transição de cores seja mais suave
   $('#app').css({
-    'filter': 'blur(5px) grayscale(100%)',
+    'filter': 'blur(5px) grayscale(100%) brightness(200%) sepia(.5)',
     'transition': 'filter 0s'
   });
 
   setTimeout(function () {
     $('#app').css({
-      'filter': 'blur(0px) grayscale(0%)',
+      'filter': 'blur(0px) grayscale(0%) brightness(100%) sepia(0)',
       'transition': 'filter .8s ease-out'
     });
   }, 200);
