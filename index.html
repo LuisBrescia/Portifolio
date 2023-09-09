@@ -15,8 +15,7 @@
       data-bs-theme="dark">
 
       <!-- * Botão para alterar tema -->
-      <button id="altera_tema"
-        class="light-mode textura-light border-0 px-3 py-2 btn bg-branco rounded-5 shadow d-flex justify-content-center align-items-center">
+      <button id="altera_tema" class="light-mode textura-light border-0 px-3 py-2 btn bg-branco rounded-5 shadow d-flex justify-content-center align-items-center">
         <div id="stripe1" class="stripe"></div>
         <div id="stripe2" class="stripe"></div>
         <div id="stripe3" class="stripe"></div>
@@ -31,8 +30,7 @@
       </button>
 
       <!-- * Botão Menu -->
-      <button id="menu_portifolio"
-        class="textura-light border-0 px-3 py-2 btn bg-branco rounded-5 shadow"
+      <button id="menu_portifolio" class="textura-light border-0 px-3 py-2 btn bg-branco rounded-5 shadow"
         for="show_menu">
         <input id="show_menu" class="d-none" type="checkbox">
 
@@ -58,13 +56,15 @@
               <h6 class="d-inline fw-light">&nbsp; Projetos</h6>
             </span>
           </a>
-          <a href="#experiencia" class="scroll-link d-block rounded-2 py-1 px-2">
+          <a href="#experiencia"
+            class="scroll-link d-block rounded-2 py-1 px-2">
             <span class="text-especial bi-mortarboard"
               data-default="bi-mortarboard" data-fill="bi-mortarboard-fill">
               <h6 class="d-inline fw-light">&nbsp; Formação</h6>
             </span>
           </a>
-          <a href="#habilidades" class="scroll-link d-block rounded-2 py-1 px-2">
+          <a href="#habilidades"
+            class="scroll-link d-block rounded-2 py-1 px-2">
             <span class="text-especial bi-lightning-charge"
               data-default="bi-lightning-charge"
               data-fill="bi-lightning-charge-fill">
@@ -81,441 +81,450 @@
       </button>
     </nav>
 
-    <!-- * Início -->
-    <div id="inicioContainer" class="py-5">
-      <main class="container justify-content-center align-items-center"
-        id="inicio">
+    <div id="app">
+      <!-- * Início -->
+      <div id="inicioContainer" class="py-5">
+        <main class="container justify-content-center align-items-center"
+          id="inicio">
 
-        <div id="floatElements">
-          <div class="floatElement" id="floatElement-1"></div>
-          <div class="floatElement" id="floatElement-2"></div>
-          <div class="floatElement" id="floatElement-3"></div>
-          <div class="floatElement" id="floatElement-4"></div>
-          <div class="floatElement" id="floatElement-5"></div>
-          <div class="floatElement" id="floatElement-6"></div>
-          <div class="floatElement" id="floatElement-7"></div>
-          <div class="floatElement" id="floatElement-8"></div>
-          <div class="floatElement" id="floatElement-9"></div>
-          <div class="floatElement" id="floatElement-10"></div>
-          <div class="floatElement" id="floatElement-11"></div>
-          <div class="floatElement" id="floatElement-12"></div>
+          <div id="floatElements">
+            <div class="floatElement" id="floatElement-1"></div>
+            <div class="floatElement" id="floatElement-2"></div>
+            <div class="floatElement" id="floatElement-3"></div>
+            <div class="floatElement" id="floatElement-4"></div>
+            <div class="floatElement" id="floatElement-5"></div>
+            <div class="floatElement" id="floatElement-6"></div>
+            <div class="floatElement" id="floatElement-7"></div>
+            <div class="floatElement" id="floatElement-8"></div>
+            <div class="floatElement" id="floatElement-9"></div>
+            <div class="floatElement" id="floatElement-10"></div>
+            <div class="floatElement" id="floatElement-11"></div>
+            <div class="floatElement" id="floatElement-12"></div>
+          </div>
+
+          <div
+            class="text-especial fw-bold fs-bigger text-nowrap mx-auto p-2 font-alternative"
+            id="meuNome">
+            Luís Brescia
+          </div>
+          <div
+            class="my-3 fs-5 letter-spacing d-flex align-items-center justify-content-center">
+            <i class="bi-geo-alt-fill fs-5"></i>&nbsp;Belo Horizonte, Brasil
+          </div>
+          <div class="fw-light max-hd rounded-circle" id="texto_inicio">
+            Estudante de 20 anos formado no curso de Informática do CEFET-MG.
+            Atualmente, cursando o 2° período da faculdade de <span
+              class="fw-bold">Engenharia de Software</span> na PUC Minas.
+          </div>
+
+          <div id="role_para_baixo"
+            class="pulse-down d-flex flex-column align-items-center position-absolute top-100">
+            <i class="bi-chevron-down px-3 rounded-circle"></i>
+            <span class="fw-bold fs-6">Scroll Down</span>
+          </div>
+
+        </main>
+      </div>
+
+      <!-- * Projetos -->
+      <main class="container section" id="projetos">
+
+        <header class="mb-2">
+          <h3 class="fs-1 text-especial bi-rocket-takeoff-fill mb-2">&nbsp;
+            Projetos</h3>
+        </header>
+
+        <!-- * Event Manager -->
+        <section
+          class="interativo shadow-sm bg-especial flex-lg-row p-4 text-white">
+          <div class="col-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <i
+                class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-2 mb-3"></i>
+              <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
+              <div
+                class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto
+                da faculdade</div>
+              <p>
+                Site com intuito de auxiliar o planejamento de um evento.
+                Contém diversas funcionalidades de <strong>alta complexidade
+                </strong>
+                programadas em <strong>javascript</strong>,
+                sendo possível criar relações entre elementos abstratos de
+                diferentes listas.
+              </p>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="col btn btn-claro shadow-sm"
+                id="repo-event-manager">
+                Github <i class="ms-1 bi-github"></i>
+              </button>
+              <button class="col btn btn-claro shadow-sm"
+                id="site-event-manager">
+                Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+              </button>
+            </div>
+
+          </div>
+
+          <div id="carouselEventManager"
+            class="d-flex align-items-center overflow-hidden carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/event-manager-listas-participantes.png"
+                  class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/event-manager-listas-insumos.png"
+                  class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/event-manager-sm.jpeg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/event-manager-chamados.png" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/event-manager-collection.png" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/event-manager-valores.png" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- * RDC - Material extra -->
+        <section
+          class="interativo shadow-sm bg-especial flex-lg-row-reverse p-4 text-white">
+
+          <div class="col-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <i
+                class="bi-router fs-3 bg-verde shadow-sm px-2 py-1 rounded-2 mb-3"></i>
+              <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
+              <div
+                class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto
+                de extensão</div>
+              <p>
+                Desenvolvido como projeto de extensão para ajudar alunos a reter
+                o
+                conteúdo da matéria
+                <strong>Redes de Computadores</strong> lecionada no CEFET-MG,
+                contém diversas atividades variadas,
+                incluindo um questionário corrigido por Inteligência Artificial
+                utilizando a <strong>API OpenAI.</strong>
+              </p>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="col btn btn-claro shadow-sm"
+                id="repo-projeto-redes">
+                Github <i class="ms-1 bi-github"></i>
+              </button>
+              <button class="col btn btn-claro shadow-sm"
+                id="site-projeto-redes">
+                Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="carouselProjetoRedes"
+            class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/projeto-redes-lightmode.png" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/projeto-redes-darkmode.png" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/projeto-redes-questionario.png" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/projeto-redes-questionario-darkmode.png"
+                  class="d-block w-100">
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- * Music Maker -->
+        <section
+          class="interativo shadow-sm bg-especial flex-lg-row p-4 text-white">
+          <div class="col-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <i
+                class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-2 mb-3 ms-auto"></i>
+              <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
+              <div
+                class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto
+                pessoal</div>
+              <p>
+                Meu primeiro projeto, <strong>desenvolvido em 2020,</strong>
+                nele
+                é possível juntar faixas de áudio,
+                criando uma música com diversos instrumentos. Após um loop
+                ser selecionado para entrar na faixa, ele aguarda o tempo certo
+                para entrar.
+                Foi utilizada a biblioteca <strong>Tone.js</strong>
+              </p>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="col btn btn-claro shadow-sm"
+                id="repo-music-maker">
+                Github <i class="ms-1 bi-github"></i>
+              </button>
+              <button class="col btn btn-claro shadow-sm"
+                id="site-music-maker">
+                Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+              </button>
+            </div>
+
+          </div>
+          <div id="carouselProjetoRedes"
+            class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/music-maker-sm.jpeg" class="d-block w-100">
+              </div>
+              <div class="carousel-item active">
+                <img src="/music-maker-activated.png" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- * Experiência -->
+      <main class="container-lg section" id="experiencia">
+
+        <header>
+          <h3 class="fs-1 text-especial bi-mortarboard-fill">&nbsp; Formação</h3>
+        </header>
+
+        <!-- ? Imagem -->
+        <div id="experiencia-image-collection"
+          class="d-none d-md-grid align-items-center mb-3">
+          <img class="w-100 object-fit-cover rounded-2 shadow"
+            src="/tambasa.jpeg"
+            alt="Almoço tambasa">
+          <img class="w-100 object-fit-cover rounded-2 shadow"
+            src="/tambasa2.jpeg" alt="Certificado no Hackatruck">
+          <img class="w-100 object-fit-cover rounded-2 shadow-lg"
+            src="/hackatruck.jpeg" alt="Tambasa com prancheta">
         </div>
 
+        <div id="experiencia-image-collection-mobile"
+          class="d-grid d-md-none align-items-center mb-5 mt-2">
+          <img id="tambasa-almoco"
+            class="w-100 object-fit-cover rounded-2 shadow"
+            src="/tambasa.jpeg" alt="Almoço tambasa">
+          <img id="tambasa-prancheta"
+            class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa2.jpeg"
+            alt="Tambasa com prancheta">
+          <img id="hackatruck"
+            class="w-100 object-fit-cover rounded-2 shadow-lg"
+            src="/hackatruck.jpeg" alt="Certificado no Hackatruck">
+        </div>
+
+        <!-- * Cada experiência será um card-->
         <div
-          class="text-especial fw-bold fs-bigger text-nowrap mx-auto p-2 font-alternative"
-          id="meuNome">
-          Luís Brescia
-        </div>
-        <div
-          class="my-3 fs-5 letter-spacing d-flex align-items-center justify-content-center">
-          <i class="bi-geo-alt-fill fs-5"></i>&nbsp;Belo Horizonte, Brasil
-        </div>
-        <div class="fw-light max-hd rounded-circle" id="texto_inicio">
-          Estudante de 20 anos formado no curso de Informática do CEFET-MG.
-          Atualmente, cursando o 2° período da faculdade de <span
-            class="fw-bold">Engenharia de Software</span> na PUC Minas.
-        </div>
+          class="d-flex flex-column flex-md-row justify-content-between gap-4 gap-md-0 text-center">
 
-        <div id="role_para_baixo"
-          class="pulse-down d-flex flex-column align-items-center position-absolute top-100">
-          <i class="bi-chevron-down px-3 rounded-circle"></i>
-          <span class="fw-bold fs-6">Scroll Down</span>
+          <article class="col-12 col-md-4 mb-4">
+            <div class="fs-3 fw-bold">
+              <i class="bi-patch-check-fill text-verde"></i>
+              &nbsp;CEFET-MG
+            </div>
+            <div class="fs-6 letter-spacing">Técnico em Informática</div>
+            <div class="fs-5 letter-spacing fw-light">2020 - 2022</div>
+            <button id="xp_cefet"
+              class="btn btn-default rounded-5 shadow letter-spacing mt-3 px-3 py-2"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">Mais
+              Detalhes</button>
+          </article>
+
+          <article class="col-12 col-md-4 mb-4">
+            <div class="fs-3 fw-bold">
+              <i class="bi-repeat text-amarelo"></i>
+              &nbsp;PUC Minas
+            </div>
+            <div class="fs-6 letter-spacing">Engenharia de Software</div>
+            <div class="fs-5 letter-spacing fw-light">2023 - 2026</div>
+            <button id="xp_puc"
+              class="btn btn-default rounded-5 shadow letter-spacing mt-3 px-3 py-2"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Mais Detalhes</button>
+          </article>
+
+          <article class="col-12 col-md-4">
+            <div class="fs-3 fw-bold">
+              <i class="bi-patch-check-fill text-verde"></i>
+              &nbsp;Hackatruck
+            </div>
+            <div class="fs-6 letter-spacing">Qualificação profissional</div>
+            <div class="fs-5 letter-spacing fw-light">2023 - 2023</div>
+            <button id="xp_hackatruck"
+              class="btn btn-default rounded-5 shadow letter-spacing mt-3 px-3 py-2"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Mais Detalhes</button>
+          </article>
         </div>
 
       </main>
-    </div>
 
-    <!-- * Projetos -->
-    <main class="container section" id="projetos">
+      <!-- * Habilidades -->
+      <main class="container section" id="habilidades">
 
-      <header class="mb-2">
-        <h3 class="fs-1 text-especial bi-rocket-takeoff-fill mb-2">&nbsp;
-          Projetos</h3>
-      </header>
+        <header>
+          <h3 class="fs-1 text-especial mb-2 bi-lightning-charge-fill">&nbsp;
+            Habilidades</h3>
+          <p class="fs-5">
+            Algumas de minhas <span class="fw-bold">habilidades</span>
+          </p>
+        </header>
 
-      <!-- * Event Manager -->
-      <section
-        class="interativo shadow-sm bg-especial flex-lg-row p-4 text-white">
-        <div class="col-lg-5 d-flex flex-column justify-content-between">
-          <div>
-            <i
-              class="bi-flower1 fs-3 text-white bg-azul shadow-sm px-2 py-1 rounded-2 mb-3"></i>
-            <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Event Manager</div>
-            <div
-              class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto
-              da faculdade</div>
-            <p>
-              Site com intuito de auxiliar o planejamento de um evento.
-              Contém diversas funcionalidades de <strong>alta complexidade
-              </strong>
-              programadas em <strong>javascript</strong>,
-              sendo possível criar relações entre elementos abstratos de
-              diferentes listas.
-            </p>
-          </div>
+        <article class="flex-lg-row">
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
 
-          <div class="d-flex gap-2">
-            <button class="col btn btn-claro shadow-sm"
-              id="repo-event-manager">
-              Github <i class="ms-1 bi-github"></i>
-            </button>
-            <button class="col btn btn-claro shadow-sm"
-              id="site-event-manager">
-              Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
-            </button>
-          </div>
+            <img class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
 
-        </div>
-
-        <div id="carouselEventManager"
-          class="d-flex align-items-center overflow-hidden carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
-          data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/event-manager-listas-participantes.png"
-                class="d-block w-100">
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">Flutter</h3>
+              <p class="fs-6 m-0 text-white">
+                Tecnologia utilizada para desenvolver meu <span class="fw-bold">TCC</span>
+                do
+                curso técnico.
+              </p>
             </div>
-            <div class="carousel-item">
-              <img src="/event-manager-listas-insumos.png" class="d-block w-100">
+
+          </section>
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+
+            <img class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
+
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">Swift</h3>
+              <p class="fs-6 m-0 text-white">
+                Durante o <span class="fw-bold">Hackatruck</span>, desenvolvia
+                aplicativos IOS diariamente.
+              </p>
             </div>
-            <div class="carousel-item">
-              <img src="/event-manager-sm.jpeg" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="/event-manager-chamados.png" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="/event-manager-collection.png" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="/event-manager-valores.png" class="d-block w-100">
-            </div>
-          </div>
-        </div>
 
-      </section>
-
-      <!-- * RDC - Material extra -->
-      <section
-        class="interativo shadow-sm bg-especial flex-lg-row-reverse p-4 text-white">
-
-        <div class="col-lg-5 d-flex flex-column justify-content-between">
-          <div>
-            <i
-              class="bi-router fs-3 bg-verde shadow-sm px-2 py-1 rounded-2 mb-3"></i>
-            <div class="fs-1 fw-bold m-0 p-0 text-nowrap">RDC - Material Extra</div>
-            <div
-              class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto
-              de extensão</div>
-            <p>
-              Desenvolvido como projeto de extensão para ajudar alunos a reter o
-              conteúdo da matéria
-              <strong>Redes de Computadores</strong> lecionada no CEFET-MG,
-              contém diversas atividades variadas,
-              incluindo um questionário corrigido por Inteligência Artificial
-              utilizando a <strong>API OpenAI.</strong>
-            </p>
-          </div>
-
-          <div class="d-flex gap-2">
-            <button class="col btn btn-claro shadow-sm"
-              id="repo-projeto-redes">
-              Github <i class="ms-1 bi-github"></i>
-            </button>
-            <button class="col btn btn-claro shadow-sm"
-              id="site-projeto-redes">
-              Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
-            </button>
-          </div>
-        </div>
-
-        <div id="carouselProjetoRedes"
-          class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
-          data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/projeto-redes-lightmode.png" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="/projeto-redes-darkmode.png" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="/projeto-redes-questionario.png" class="d-block w-100">
-            </div>
-            <div class="carousel-item">
-              <img src="/projeto-redes-questionario-darkmode.png"
-                class="d-block w-100">
-            </div>
-          </div>
-        </div>
-
-      </section>
-
-      <!-- * Music Maker -->
-      <section
-        class="interativo shadow-sm bg-especial flex-lg-row p-4 text-white">
-        <div class="col-lg-5 d-flex flex-column justify-content-between">
-          <div>
-            <i
-              class="bi-music-player fs-3 text-white bg-amarelo shadow-sm px-2 py-1 rounded-2 mb-3 ms-auto"></i>
-            <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Music Maker</div>
-            <div
-              class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto
-              pessoal</div>
-            <p>
-              Meu primeiro projeto, <strong>desenvolvido em 2020,</strong> nele
-              é possível juntar faixas de áudio,
-              criando uma música com diversos instrumentos. Após um loop
-              ser selecionado para entrar na faixa, ele aguarda o tempo certo
-              para entrar.
-              Foi utilizada a biblioteca <strong>Tone.js</strong>
-            </p>
-          </div>
-
-          <div class="d-flex gap-2">
-            <button class="col btn btn-claro shadow-sm"
-              id="repo-music-maker">
-              Github <i class="ms-1 bi-github"></i>
-            </button>
-            <button class="col btn btn-claro shadow-sm"
-              id="site-music-maker">
-              Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
-            </button>
-          </div>
-
-        </div>
-        <div id="carouselProjetoRedes"
-          class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
-          data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="/music-maker-sm.jpeg" class="d-block w-100">
-            </div>
-            <div class="carousel-item active">
-              <img src="/music-maker-activated.png" class="d-block w-100">
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- * Experiência -->
-    <main class="container-lg section" id="experiencia">
-
-      <header>
-        <h3 class="fs-1 text-especial bi-mortarboard-fill">&nbsp; Formação</h3>
-      </header>
-
-      <!-- ? Imagem -->
-      <div id="experiencia-image-collection"
-        class="d-none d-md-grid align-items-center mb-3">
-        <img class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa.jpeg"
-          alt="Almoço tambasa">
-        <img class="w-100 object-fit-cover rounded-2 shadow"
-          src="/tambasa2.jpeg" alt="Certificado no Hackatruck">
-        <img class="w-100 object-fit-cover rounded-2 shadow-lg"
-          src="/hackatruck.jpeg" alt="Tambasa com prancheta">
-      </div>
-
-      <div id="experiencia-image-collection-mobile"
-        class="d-grid d-md-none align-items-center mb-5 mt-2">
-        <img id="tambasa-almoco" class="w-100 object-fit-cover rounded-2 shadow"
-          src="/tambasa.jpeg" alt="Almoço tambasa">
-        <img id="tambasa-prancheta"
-          class="w-100 object-fit-cover rounded-2 shadow" src="/tambasa2.jpeg"
-          alt="Tambasa com prancheta">
-        <img id="hackatruck" class="w-100 object-fit-cover rounded-2 shadow-lg"
-          src="/hackatruck.jpeg" alt="Certificado no Hackatruck">
-      </div>
-
-      <!-- * Cada experiência será um card-->
-      <div
-        class="d-flex flex-column flex-md-row justify-content-between gap-4 gap-md-0 text-center">
-
-        <article class="col-12 col-md-4 mb-4">
-          <div class="fs-3 fw-bold">
-            <i class="bi-patch-check-fill text-verde"></i>
-            &nbsp;CEFET-MG
-          </div>
-          <div class="fs-6 letter-spacing">Técnico em Informática</div>
-          <div class="fs-5 letter-spacing fw-light">2020 - 2022</div>
-          <button id="xp_cefet"
-            class="btn btn-default rounded-5 shadow letter-spacing mt-3 px-3 py-2"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">Mais Detalhes</button>
+          </section>
         </article>
 
-        <article class="col-12 col-md-4 mb-4">
-          <div class="fs-3 fw-bold">
-            <i class="bi-repeat text-amarelo"></i>
-            &nbsp;PUC Minas
-          </div>
-          <div class="fs-6 letter-spacing">Engenharia de Software</div>
-          <div class="fs-5 letter-spacing fw-light">2023 - 2026</div>
-          <button id="xp_puc"
-            class="btn btn-default rounded-5 shadow letter-spacing mt-3 px-3 py-2"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Mais Detalhes</button>
+        <article class="flex-lg-row">
+
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            <img id="javaIcone" class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">Java</h3>
+              <p class="fs-6 m-0 text-white">
+                2 anos de estudo na área acadêmica, <span class="fw-bold">Estrutura
+                  de dados</span> e <span class="fw-bold">Spring boot</span>.
+              </p>
+            </div>
+          </section>
+
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            <img class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">Python</h3>
+              <p class="fs-6 m-0 text-white">
+                Com ele criei um questionário corrigido por <span
+                  class="fw-bold">Inteligência
+                  Artificial</span>.
+              </p>
+            </div>
+          </section>
+
         </article>
 
-        <article class="col-12 col-md-4">
-          <div class="fs-3 fw-bold">
-            <i class="bi-patch-check-fill text-verde"></i>
-            &nbsp;Hackatruck
-          </div>
-          <div class="fs-6 letter-spacing">Qualificação profissional</div>
-          <div class="fs-5 letter-spacing fw-light">2023 - 2023</div>
-          <button id="xp_hackatruck"
-            class="btn btn-default rounded-5 shadow letter-spacing mt-3 px-3 py-2"
-            data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Mais Detalhes</button>
+        <article class="flex-lg-row">
+
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            <img class="col-3 p-1 ps-3 p-sm-3" id="gitIcone"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">Git</h3>
+              <p class="fs-6 m-0 text-white">
+                Para <span class="fw-bold">versionamento de código</span>, já
+                utilizo há quase 4 anos.
+              </p>
+            </div>
+          </section>
+
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            <img class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">C++</h3>
+              <p class="fs-6 m-0 text-white">
+                Onde aprimorei minha <span class="fw-bold">lógica de programação</span>.
+              </p>
+            </div>
+          </section>
+
         </article>
-      </div>
 
-    </main>
+        <article class="flex-lg-row">
 
-    <!-- * Habilidades -->
-    <main class="container section" id="habilidades">
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            <img class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">PostgreSQL</h3>
+              <p class="fs-6 m-0 text-white">
+                Utilizado nas disciplinas de <span class="fw-bold">Banco de
+                  dados</span>
+                no curso de informática.
+              </p>
+            </div>
+          </section>
 
-      <header>
-        <h3 class="fs-1 text-especial mb-2 bi-lightning-charge-fill">&nbsp;
-          Habilidades</h3>
-        <p class="fs-5">
-          Algumas de minhas <span class="fw-bold">habilidades</span>
-        </p>
-      </header>
+          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            <img class="col-3 p-1 ps-3 p-sm-3"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+            <div class="col p-3">
+              <h3 class="fs-3 text-white">Node</h3>
+              <p class="fs-6 m-0 text-white">
+                Possuo ampla experiência em <span class="fw-bold">desenvolvimento
+                  web</span>.
+              </p>
+            </div>
+          </section>
 
-      <article class="flex-lg-row">
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+        </article>
 
-          <img class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
+      </main>
 
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">Flutter</h3>
-            <p class="fs-6 m-0 text-white">
-              Tecnologia utilizada para desenvolver meu <span class="fw-bold">TCC</span>
-              do
-              curso técnico.
-            </p>
-          </div>
+      <!-- * Contato -->
+      <main class="container section" id="contato">
 
-        </section>
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+        <header>
+          <h3 class="fs-1 text-especial bi-send-fill mb-2">&nbsp; Contato</h3>
+          <p class="fs-5 mx-auto" style="width: fit-content;">
+            Atualmente estou em busca de uma <br>
+            oportunidade como estagiário na área de <br>
+            <span class="fw-bold">desenvolvimento de software.</span>
+          </p>
+        </header>
 
-          <img class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
-
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">Swift</h3>
-            <p class="fs-6 m-0 text-white">
-              Durante o <span class="fw-bold">Hackatruck</span>, desenvolvia
-              aplicativos IOS diariamente.
-            </p>
-          </div>
-
-        </section>
-      </article>
-
-      <article class="flex-lg-row">
-
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-          <img id="javaIcone" class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">Java</h3>
-            <p class="fs-6 m-0 text-white">
-              2 anos de estudo na área acadêmica, <span class="fw-bold">Estrutura
-                de dados</span> e <span class="fw-bold">Spring boot</span>.
-            </p>
-          </div>
-        </section>
-
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-          <img class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">Python</h3>
-            <p class="fs-6 m-0 text-white">
-              Com ele criei um questionário corrigido por <span class="fw-bold">Inteligência
-                Artificial</span>.
-            </p>
-          </div>
-        </section>
-
-      </article>
-
-      <article class="flex-lg-row">
-
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-          <img class="col-3 p-1 ps-3 p-sm-3" id="gitIcone"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">Git</h3>
-            <p class="fs-6 m-0 text-white">
-              Para <span class="fw-bold">versionamento de código</span>, já
-              utilizo há quase 4 anos.
-            </p>
-          </div>
-        </section>
-
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-          <img class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">C++</h3>
-            <p class="fs-6 m-0 text-white">
-              Onde aprimorei minha <span class="fw-bold">lógica de programação</span>.
-            </p>
-          </div>
-        </section>
-
-      </article>
-
-      <article class="flex-lg-row">
-
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-          <img class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">PostgreSQL</h3>
-            <p class="fs-6 m-0 text-white">
-              Utilizado nas disciplinas de <span class="fw-bold">Banco de dados</span>
-              no curso de informática.
-            </p>
-          </div>
-        </section>
-
-        <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-          <img class="col-3 p-1 ps-3 p-sm-3"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-          <div class="col p-3">
-            <h3 class="fs-3 text-white">Node</h3>
-            <p class="fs-6 m-0 text-white">
-              Possuo ampla experiência em <span class="fw-bold">desenvolvimento
-                web</span>.
-            </p>
-          </div>
-        </section>
-
-      </article>
-
-    </main>
-
-    <!-- * Contato -->
-    <main class="container section" id="contato">
-
-      <header>
-        <h3 class="fs-1 text-especial bi-send-fill mb-2">&nbsp; Contato</h3>
-        <p class="fs-5 mx-auto" style="width: fit-content;">
-          Atualmente estou em busca de uma <br>
-          oportunidade como estagiário na área de <br>
-          <span class="fw-bold">desenvolvimento de software.</span>
-        </p>
-      </header>
-
-      
-      <!-- <form id="contatoFormulario"
+        <!-- <form id="contatoFormulario"
         class="d-flex flex-column justify-content-center align-items-center gap-2 mx-auto col-12 col-md-8 col-lg-6">
         <div
           class="d-flex col-12 fs-4 fw-bold justify-content-between align-items-end">
@@ -550,83 +559,93 @@
         </div>
       </form> -->
 
-      <!-- ? Formulário para contato-->
-      <form id="contatoFormulario" class="mt-3 d-flex flex-column justify-content-center align-items-center gap-2 mx-auto col-12 col-md-8 col-lg-6">
+        <!-- ? Formulário para contato-->
+        <form id="contatoFormulario"
+          class="mt-3 d-flex flex-column justify-content-center align-items-center gap-2 mx-auto col-12 col-md-8 col-lg-6">
 
-        <div class="d-flex col-12 justify-content-between align-items-end mb-1">
-          <span class="text-especial fs-4 fw-bold">Fale comigo:</span>
-          <span id="form_response" class="fw-light text-verde" style="font-size: 16px;"></span>
-        </div>
-
-        <div class="form__group field mb-3">
-          <input type="text" class="form__field py-2" placeholder="&nbsp;" name="nome">
-          <hr class="linha-horizontal">
-          <label for="name" class="form__label">Nome (opcional)</label>
-        </div>
-
-        <div class="form__group field mb-3">
-          <input type="email" class="form__field py-2" placeholder="&nbsp;" name="email" required>
-          <hr class="linha-horizontal">
-          <label for="name" class="form__label">Email</label>
-        </div>
-
-        <div class="form__group field mb-3">
-          <input type="text" class="form__field py-2" placeholder="&nbsp;" name="assunto" required>
-          <hr class="linha-horizontal">
-          <label for="name" class="form__label">Assunto</label>
-        </div>
-
-        <div class="form__group field mb-3">
-          <input type="text" class="form__field py-2" placeholder="&nbsp;" name="conteudo" required>
-          <hr class="linha-horizontal">
-          <label for="name" class="form__label">Alguma sugestão de melhoria?</label>
-        </div>
-
-        <button class="ms-auto col-12 btn btn-default shadow-sm rounded-2 py-3 letter-spacing"
-          type="submit"
-          id="enviaFormulario">
-          Enviar
-        </button>
-        <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei
-          sua mensagem via
-          <a href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a>
-        </div>
-      </form>
-
-    </main>
-
-    <!-- * Footer -->
-    <footer class="container my-2 section" id="footer">
-      <div class="rounded-2 bg-especial text-center shadow-lg py-1 text-white">
-        <div class="d-flex justify-content-center gap-5 my-3">
-          <a target="_blank" href="https://github.com/LuisBrescia"
-            class="interativo shadow-sm px-2 rounded-2 fs-2 bi-github"></a>
-          <a target="_blank" href="https://www.linkedin.com/in/luis-brescia/"
-            class="interativo shadow-sm px-2 rounded-2 fs-2 bi-linkedin"></a>
-          <a target="_blank" href="https://wa.me/5531981061459"
-            class="interativo shadow-sm px-2 rounded-2 fs-2 bi-whatsapp"></a>
-        </div>
-        <div class="fw-light fs-smaller my-3">
-          Copyright © 2023 Luís Brescia. All rights reserved.
-        </div>
-      </div>
-    </footer>
-
-    <!-- * Modal [Mais detalhes - Experiências] -->
-    <div class="modal fade" id="exampleModal" tabindex="-1"
-      aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content rounded-2 bg-branco">
-
-          <div class="modal-header border-bottom border-claro bg-branco py-0">
-            <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing"
-              id="exampleModalLabel">Modal title</h3>
-            <button type="button" class="btn border-0 p-0"
-              data-bs-dismiss="modal"><i class="fs-1 bi-x"></i></button>
+          <div class="d-flex col-12 justify-content-between align-items-end">
+            <!-- <span class="text-especial fs-4 fw-bold">Fale comigo:</span> -->
+            <span id="form_response" class="fw-light text-verde"
+              style="font-size: 16px;"></span>
           </div>
-          <div class="modal-body fw-light fs-6"></div>
+
+          <div class="form__group field mb-3">
+            <input type="text" class="form__field py-2" placeholder="&nbsp;"
+              name="nome">
+            <hr class="linha-horizontal">
+            <label for="name" class="form__label">Nome (opcional)</label>
+          </div>
+
+          <div class="form__group field mb-3">
+            <input type="email" class="form__field py-2" placeholder="&nbsp;"
+              name="email" required>
+            <hr class="linha-horizontal">
+            <label for="name" class="form__label">Email</label>
+          </div>
+
+          <div class="form__group field mb-3">
+            <input type="text" class="form__field py-2" placeholder="&nbsp;"
+              name="assunto" required>
+            <hr class="linha-horizontal">
+            <label for="name" class="form__label">Assunto</label>
+          </div>
+
+          <div class="form__group field mb-3">
+            <input type="text" class="form__field py-2" placeholder="&nbsp;"
+              name="conteudo" required>
+            <hr class="linha-horizontal">
+            <label for="name" class="form__label">Alguma sugestão de melhoria?</label>
+          </div>
+
+          <button
+            class="ms-auto col-12 btn btn-default shadow-sm rounded-2 py-3 letter-spacing"
+            type="submit"
+            id="enviaFormulario">
+            Enviar
+          </button>
+          <div class="col-12 text-end fs-smaller fw-lighter"
+            style="color: #b7b7b7;">
+            Receberei sua mensagem via
+            <a href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a>
+          </div>
+        </form>
+
+      </main>
+
+      <!-- * Footer -->
+      <footer class="container my-2 section" id="footer">
+        <div class="rounded-2 bg-especial text-center shadow-lg py-1 text-white">
+          <div class="d-flex justify-content-center gap-5 my-3">
+            <a target="_blank" href="https://github.com/LuisBrescia"
+              class="interativo shadow-sm px-2 rounded-2 fs-2 bi-github"></a>
+            <a target="_blank" href="https://www.linkedin.com/in/luis-brescia/"
+              class="interativo shadow-sm px-2 rounded-2 fs-2 bi-linkedin"></a>
+            <a target="_blank" href="https://wa.me/5531981061459"
+              class="interativo shadow-sm px-2 rounded-2 fs-2 bi-whatsapp"></a>
+          </div>
+          <div class="fw-light fs-smaller my-3 mx-auto" id="direitosAutorais">
+            Copyright © 2023 Luís Brescia. All rights reserved.
+          </div>
+        </div>
+      </footer>
+
+      <!-- * Modal [Mais detalhes - Experiências] -->
+      <div class="modal fade" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content rounded-2 bg-branco">
+
+            <div class="modal-header border-bottom border-claro bg-branco py-0">
+              <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing"
+                id="exampleModalLabel">Modal title</h3>
+              <button type="button" class="btn border-0 p-0"
+                data-bs-dismiss="modal"><i class="fs-1 bi-x"></i></button>
+            </div>
+            <div class="modal-body fw-light fs-6"></div>
+          </div>
         </div>
       </div>
+
     </div>
 
     <script type="module" src="./main.js"></script>

@@ -2,7 +2,7 @@
 
 :root {
   --color-escuro: #151819;
-  --color-cinzento: #d0d3d7;
+  --color-cinzento: #b7b7b7;
   --color-branco: #ffffff;
   --color-preto: #0f0f0f;
   --color-claro: #f5f8f9;
@@ -25,14 +25,6 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-*:not(.toggle, .fade) {
-  transition: 
-  background-color .5s ease, 
-  color .5s ease, 
-  border-color .5s ease, 
-  box-shadow .5s ease;
 }
 
 img {
@@ -273,7 +265,9 @@ footer a {
 
 footer a:hover {
   cursor: pointer;
-  filter: drop-shadow(0px 0px 1px var(--color-escuro));
+}
+.bg-especial-dark a:hover {
+  color: var(--color-indigo) !important;
 }
 
 .big {
@@ -1118,7 +1112,7 @@ header h3,
   width: 100%;
   height: 2px;
   border: none;
-  background: linear-gradient(90deg, transparent 40%, var(--color-cinzento), transparent 90%);
+  background: linear-gradient(90deg, #b7b7b733, #b7b7b7, #b7b7b733);
   background-size: 200%;
   animation: background-pan 3s linear infinite;
   opacity: 1;
@@ -1148,6 +1142,7 @@ header h3,
   border-top-left-radius: .5rem;
   border-bottom: 2px solid transparent;
   outline: 0;
+  font-weight: 700;
   font-size: 1rem;
   transition: border-color 0.2s;
   background: transparent;
@@ -1199,7 +1194,7 @@ header h3,
   transition: 0.2s;
   font-size: 1rem;
   pointer-events: none;
-  background: linear-gradient(90deg, transparent 0%, var(--color-cinzento) 50%, transparent);
+  background: linear-gradient(90deg, #b7b7b7 80%, #b7b7b755 90%, #b7b7b7);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1211,10 +1206,39 @@ header h3,
   color: var(--color-cinzento);
 }
 
+.form__group:nth-of-type(3) .linha-horizontal {
+  animation-delay: -50ms;
+}
+
+.form__group:nth-of-type(4) .linha-horizontal {
+  animation-delay: -100ms;
+}
+
+.form__group:nth-of-type(5) .linha-horizontal {
+  animation-delay: -150ms;
+}
+
 .form__group input:focus + .linha-horizontal {
-  display: none;
+  opacity: 0;
 }
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px var(--color-claro) inset !important;
+}
+
+#direitosAutorais {
+  background: linear-gradient(90deg, white 80%, var(--color-indigo) 90%, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  width: fit-content;
+  white-space: nowrap;
+  background-size: 200%;
+  animation: background-pan 3s linear infinite;
+  color: var(--color-cinzento);
+}
+
+footer > div {
+  filter: blur(.5px);
 }

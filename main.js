@@ -360,11 +360,24 @@ function scrollDown_fadeOut() {
 }
 // ? Altera o tema da página
 function alteraTema(tema) {
+
+  // É aplicado um efeito de blur no body para que a transição de cores seja mais suave
+  $('#app').css({
+    'filter': 'blur(5px)',
+    'transition': 'filter 0s'
+  });
+
+  setTimeout(function () {
+    $('#app').css({
+      'filter': 'blur(0px)',
+      'transition': 'filter 0.5s ease-out'
+    });
+  }, 200);
+
   if (tema == 'dark') {
     $('#altera_tema span').text('light');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
     document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
-    document.documentElement.style.setProperty('--color-cinzento', '#d0d3d7');
     $('modal-body').removeClass('bg-branco');
     $('.shadow-sm').removeClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'light');
@@ -373,7 +386,6 @@ function alteraTema(tema) {
     $('#altera_tema span').text('dark');
     document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #38bdf8 0%, #2dd4bf 50%, #34d399)');
     document.documentElement.style.setProperty('--color-indigo', '#2dd4bf');
-    document.documentElement.style.setProperty('--color-cinzento', '#495057');
     $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'dark');
     $('body').addClass('Pattern-escuro');
