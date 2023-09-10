@@ -369,7 +369,7 @@ function alteraTema(tema) {
 
   setTimeout(function () {
     $('#app').css({
-      'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(100%)',
+      'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(150%)',
       'transition': 'filter .8s ease-out'
     });
   }, 200);
@@ -384,7 +384,7 @@ function alteraTema(tema) {
     $('body').addClass('Pattern-claro').removeClass('Pattern-escuro');
   } else {
     $('#altera_tema span').text('dark');
-    document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #38bdf8 0%, #2dd4bf 50%, #34d399)');
+    document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #6ee7b7)');
     document.documentElement.style.setProperty('--color-indigo', '#2dd4bf');
     $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
     $('form').attr('data-bs-theme', 'dark');

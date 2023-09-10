@@ -37,12 +37,12 @@ body {
   background-color: var(--color-claro);
   overflow-x: hidden;
   transition: background-color 0.5s ease-out;
-  filter: saturate(150%);
 }
 
 nav {
   position: sticky;
   top: 0;
+  filter: saturate(200%);
 }
 
 textarea {
@@ -728,24 +728,6 @@ nav button:active {
   transform: skewX(-20deg);
 }
 
-.btn-default::before {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 86%;
-  position: absolute;
-  top: 7%;
-  left: 0%;
-  opacity: 0;
-  background: #f5f8f9;
-  box-shadow: 0 0 50px 18px #f5f8f9;
-  -webkit-transform: skewX(-20deg);
-  -moz-transform: skewX(-20deg);
-  -ms-transform: skewX(-20deg);
-  -o-transform: skewX(-20deg);
-  transform: skewX(-20deg);
-}
-
 #experiencia .btn-default:hover {
   transform: scale(1.025);
 }
@@ -1091,14 +1073,14 @@ header h3,
 }
 
 .bg-especial-dark {
-  border-image: linear-gradient(144deg, #38bdf8 0%, #2dd4bf 50%, #34d399);
+  border-image: var(--gradiente-roxo);
   border-image-slice: 100% 4;
   border-image-width: 3px;
   background-color: #0f0f0f;
 }
 
 #habilidades .bg-especial-dark:nth-child(even) {
-  border-image: linear-gradient(-36deg, #38bdf8 0%, #2dd4bf 50%, #34d399);
+  border-image: linear-gradient(-36deg, #3b82f6 0%, #22d3ee 50%, #6ee7b7);
   border-image-slice: 100% 4;
   border-image-width: 3px;
 }
