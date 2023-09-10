@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900&family=Lobster:wght@400&display=swap');
 
 :root {
-  --color-escuro: #151819;
+  --color-escuro: #0f0f0f;
   --color-cinzento: #b7b7b7;
   --color-branco: #ffffff;
-  --color-preto: #0f0f0f;
+  --color-preto: #050809;
   --color-claro: #f5f8f9;
   --color-indigo: #5b42f3;
   --color-roxo: #8640ff;
@@ -34,7 +34,7 @@ img {
 body {
   font-family: 'Lato', sans-serif;
   color: var(--color-escuro);
-  background-color: var(--color-claro);
+  background-color: var(--color-branco);
   overflow-x: hidden;
   transition: background-color 0.5s ease-out;
 }
@@ -756,14 +756,14 @@ nav button:active {
 
 /** Texturas HeroPatterns */
 
-.textura-light {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%235b42f3' fill-opacity='0.03' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+.Pattern-claro {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f5f8f9' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-.textura-dark {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23151819' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
-
+.Pattern-escuro {
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230f0f0f' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230f0f0f' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+} 
 
 /*: Organização nova */
 
@@ -1051,15 +1051,6 @@ header h3,
   }
 }
 
-/*: Diamantes*/
-.Pattern-claro {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-}
-
-.Pattern-escuro {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230f0f0f' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-} 
-
 .shadow-sm-dark {
   box-shadow: 0 .125rem .25rem #212529bb !important;
 }
@@ -1076,7 +1067,7 @@ header h3,
   border-image: var(--gradiente-roxo);
   border-image-slice: 100% 4;
   border-image-width: 3px;
-  background-color: #0f0f0f;
+  background-color: var(--color-branco);
 }
 
 #habilidades .bg-especial-dark:nth-child(even) {
