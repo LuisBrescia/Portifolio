@@ -39,6 +39,10 @@ body {
   transition: background-color 0.5s ease-out;
 }
 
+#app {
+  filter: blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(150%);
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -76,6 +80,7 @@ a {
   width: 100%;
   height: 100%;
   transform: scale(1);
+  transition: all 0.2s ease-out;
   animation: float 3s ease-in-out infinite;
   z-index: -1;
 }
@@ -186,7 +191,7 @@ a {
 #experiencia-image-collection img {
   grid-row: 1/3;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: grayscale(25%);
+  filter: grayscale(33%);
 }
 
 #experiencia-image-collection img:first-of-type {
@@ -213,7 +218,7 @@ a {
 }
 
 #experiencia-image-collection img:nth-of-type(3):hover {
-  transform: scale(.95);
+  transform: scale(.92);
 }
 
 /** Agora em dipositivos menores */
