@@ -909,15 +909,15 @@ section:hover {
 .section {
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter .5s ease-out !important;
-  filter: blur(5px);
+  filter: blur(3px);
 }
 
 .section:not(footer) {
-  transform: translateY(25px) skewY(5deg);
+  transform: translateY(25px);
 }
 
 .section:not(footer):nth-child(even) {
-  transform: translateY(25px) skewY(-5deg);
+  transform: translateY(25px);
 }
 
 .section.deactive {
@@ -926,7 +926,7 @@ section:hover {
 }
 
 .section.active {
-  transform: translateY(0) scale(1) skew(0deg) !important;
+  transform: translateY(0) skew(0deg) !important;
   filter: blur(0);
   opacity: 1;
 }
