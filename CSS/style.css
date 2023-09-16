@@ -908,7 +908,8 @@ section:hover {
 
 .section {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+  transition: opacity 0.5s ease-in-out, transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1), filter 1s ease !important;
+  filter: blur(3px);
 }
 
 .section:not(footer) {
@@ -921,8 +922,8 @@ section:hover {
 }
 
 .section.active {
-  /* animation: sectionTransition 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) 0.5s 1 both; */
   transform: translateY(0);
+  filter: blur(0);
   opacity: 1;
 }
 
@@ -1013,18 +1014,6 @@ header h3,
   100% {
     transform: translateY(0px);
     opacity: 0;
-  }
-}
-
-@keyframes sectionTransition {
-  0% {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 

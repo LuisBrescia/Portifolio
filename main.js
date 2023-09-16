@@ -351,11 +351,11 @@ function atualizaLink($clickedLi) {
 }
 // * Funções para exibir e esconder ícone de rolagem
 function scrollDown_fadeIn() {
-  $('#role_para_baixo').addClass('pulse-down');
+  // $('#role_para_baixo').addClass('pulse-down');
   $('#role_para_baixo i, #role_para_baixo span').css('opacity', 1)
 }
 function scrollDown_fadeOut() {
-  $('#role_para_baixo').removeClass('pulse-down');
+  // $('#role_para_baixo').removeClass('pulse-down');
   $('#role_para_baixo i, #role_para_baixo span').css('opacity', 0)
 }
 // ? Altera o tema da página
