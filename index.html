@@ -15,7 +15,8 @@
       data-bs-theme="dark">
 
       <!-- * Botão para alterar tema -->
-      <button id="altera_tema" class="light-mode border-0 px-3 py-2 btn bg-branco rounded-5 shadow d-flex justify-content-center align-items-center">
+      <button id="altera_tema"
+        class="light-mode border-0 px-3 py-2 btn bg-branco rounded-5 shadow d-flex justify-content-center align-items-center">
         <div id="stripe1" class="stripe"></div>
         <div id="stripe2" class="stripe"></div>
         <div id="stripe3" class="stripe"></div>
@@ -30,7 +31,8 @@
       </button>
 
       <!-- * Botão Menu -->
-      <button id="menu_portifolio" class="border-0 px-3 py-2 btn bg-branco rounded-5 shadow"
+      <button id="menu_portifolio"
+        class="border-0 px-3 py-2 btn bg-branco rounded-5 shadow"
         for="show_menu">
         <input id="show_menu" class="d-none" type="checkbox">
 
@@ -127,7 +129,7 @@
       </div>
 
       <!-- * Projetos -->
-      <main class="container section" id="projetos">
+      <main class="container section" id="projetos" style="gap: 1.5em;">
 
         <header class="mb-2">
           <h3 class="fs-1 text-especial bi-rocket-takeoff-fill mb-2">&nbsp;
@@ -302,6 +304,51 @@
           </div>
         </section>
 
+        <!-- * Landpage -->
+        <!-- <section
+          class="interativo shadow-sm bg-especial flex-lg-row-reverse p-4 text-white">
+
+          <div class="col-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <i
+                class="bi-fire fs-3 bg-vermelho shadow-sm px-2 py-1 rounded-2 mb-3"></i>
+              <div class="fs-1 fw-bold m-0 p-0 text-nowrap">Landpage</div>
+              <div
+                class="text-uppercase m-0 p-0 mb-2 text-nowrap fw-light letter-spacing">Projeto Comercial</div>
+              <p>
+                Desenvolvido utilizando <strong>Nuxt.js</strong>, um framework para <strong>Vue.js</strong>, 
+                o site foi feito para uma empresa de <strong>marketing digital</strong> que desejava uma página para
+                divulgar seus serviços.
+              </p>
+            </div>
+
+            <div class="d-flex gap-2">
+              <button class="col btn btn-claro shadow-sm"
+                id="repo-projeto-redes">
+                Github <i class="ms-1 bi-github"></i>
+              </button>
+              <button class="col btn btn-claro shadow-sm"
+                id="site-projeto-redes">
+                Ir para site <i class="ms-1 bi-box-arrow-up-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div id="carouselProjetoRedes"
+            class="bg-dark overflow-hidden d-flex align-items-center carousel slide carousel-fade col-lg-6 mt-3 mt-lg-0 rounded-2 shadow"
+            data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/event-manager-sm.jpeg" class="d-block w-100">
+              </div>
+              <div class="carousel-item">
+                <img src="/music-maker-activated.png" class="d-block w-100">
+              </div>
+            </div>
+          </div>
+
+        </section> -->
+
       </main>
 
       <!-- * Experiência -->
@@ -395,117 +442,120 @@
           </p>
         </header>
 
-        <article class="flex-lg-row">
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+        <div>
+          <article class="flex-lg-row">
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
 
-            <img class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
+              <img class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" />
 
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">Flutter</h3>
-              <p class="fs-6 m-0 text-white">
-                Tecnologia utilizada para desenvolver meu <span class="fw-bold">TCC</span>.
-              </p>
-            </div>
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">Flutter</h3>
+                <p class="fs-6 m-0 text-white">
+                  Tecnologia utilizada para desenvolver meu <span
+                    class="fw-bold">TCC</span>.
+                </p>
+              </div>
 
-          </section>
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+            </section>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
 
-            <img class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
+              <img class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" />
 
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">Swift</h3>
-              <p class="fs-6 m-0 text-white">
-                Linguagem utilizada durante o <span class="fw-bold">Hackatruck</span>.
-              </p>
-            </div>
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">Swift</h3>
+                <p class="fs-6 m-0 text-white">
+                  Linguagem utilizada durante o <span class="fw-bold">Hackatruck</span>.
+                </p>
+              </div>
 
-          </section>
-        </article>
+            </section>
+          </article>
 
-        <article class="flex-lg-row">
+          <article class="flex-lg-row">
 
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-            <img id="javaIcone" class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">Java</h3>
-              <p class="fs-6 m-0 text-white">
-                Linguagem que mais programei <span class="fw-bold">academicamente</span>.
-              </p>
-            </div>
-          </section>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+              <img id="javaIcone" class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">Java</h3>
+                <p class="fs-6 m-0 text-white">
+                  Linguagem que mais programei <span class="fw-bold">academicamente</span>.
+                </p>
+              </div>
+            </section>
 
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-            <img class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">Python</h3>
-              <p class="fs-6 m-0 text-white">
-                Com ele criei um questionário corrigido por <span
-                  class="fw-bold">IA</span>.
-              </p>
-            </div>
-          </section>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+              <img class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">Python</h3>
+                <p class="fs-6 m-0 text-white">
+                  Com ele criei um questionário corrigido por <span
+                    class="fw-bold">IA</span>.
+                </p>
+              </div>
+            </section>
 
-        </article>
+          </article>
 
-        <article class="flex-lg-row">
+          <article class="flex-lg-row">
 
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-            <img class="col-3 p-1 ps-3 p-sm-3" id="gitIcone"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">Git</h3>
-              <p class="fs-6 m-0 text-white">
-                Para <span class="fw-bold">versionamento de código</span>, já
-                utilizo há quase 4 anos.
-              </p>
-            </div>
-          </section>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+              <img class="col-3 p-1 ps-3 p-sm-3" id="gitIcone"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">Git</h3>
+                <p class="fs-6 m-0 text-white">
+                  Para <span class="fw-bold">versionamento de código</span>, já
+                  utilizo há quase 4 anos.
+                </p>
+              </div>
+            </section>
 
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-            <img class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">C++</h3>
-              <p class="fs-6 m-0 text-white">
-                Onde aprimorei minha <span class="fw-bold">lógica de programação</span>.
-              </p>
-            </div>
-          </section>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+              <img class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" />
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">C++</h3>
+                <p class="fs-6 m-0 text-white">
+                  Onde aprimorei minha <span class="fw-bold">lógica de
+                    programação</span>.
+                </p>
+              </div>
+            </section>
 
-        </article>
+          </article>
 
-        <article class="flex-lg-row">
+          <article class="flex-lg-row">
 
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-            <img class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">PostgreSQL</h3>
-              <p class="fs-6 m-0 text-white">
-                Utilizado nas disciplinas de <span class="fw-bold">Banco de
-                  dados</span>
-                no curso de informática.
-              </p>
-            </div>
-          </section>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+              <img class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" />
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">PostgreSQL</h3>
+                <p class="fs-6 m-0 text-white">
+                  Utilizado nas disciplinas de <span class="fw-bold">Banco de
+                    dados</span>
+                  no curso de informática.
+                </p>
+              </div>
+            </section>
 
-          <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
-            <img class="col-3 p-1 ps-3 p-sm-3"
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-            <div class="col p-3">
-              <h3 class="fs-3 text-white">Node</h3>
-              <p class="fs-6 m-0 text-white">
-                Possuo ampla experiência em <span class="fw-bold">desenvolvimento
-                  web</span>.
-              </p>
-            </div>
-          </section>
-
-        </article>
+            <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
+              <img class="col-3 p-1 ps-3 p-sm-3"
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+              <div class="col p-3">
+                <h3 class="fs-3 text-white">Node</h3>
+                <p class="fs-6 m-0 text-white">
+                  Possuo ampla experiência em <span class="fw-bold">desenvolvimento
+                    web</span>.
+                </p>
+              </div>
+            </section>
+          </article>
+        </div>
 
       </main>
 
@@ -520,41 +570,6 @@
             <span class="fw-bold">desenvolvimento de software.</span>
           </p>
         </header>
-
-        <!-- <form id="contatoFormulario"
-        class="d-flex flex-column justify-content-center align-items-center gap-2 mx-auto col-12 col-md-8 col-lg-6">
-        <div
-          class="d-flex col-12 fs-4 fw-bold justify-content-between align-items-end">
-          <span class="text-especial">Fale comigo:</span>
-          <span id="form_response" class="fw-light text-verde"
-            style="font-size: 16px;"></span>
-        </div>
-
-        <input class="col-12 border rounded-2 shadow-sm p-2" type="text"
-          name="nome" placeholder="Nome (opcional)">
-
-        <input class="col-12 border rounded-2 shadow-sm p-2" type="email"
-          name="email" placeholder="Email" required>
-
-        <input class="col-12 border rounded-2 shadow-sm p-2" type="text"
-          name="assunto" placeholder="Assunto" required>
-
-        <textarea class="col-12 border rounded-2 shadow-sm p-2" name="conteudo"
-          placeholder="Gostou de algo? &nbsp;Alguma sugestão de melhoria? &nbsp;Escreva aqui."
-          required></textarea>
-        <div class="col-12">
-          <button
-            class="w-100 col-12 btn btn-default shadow-sm rounded-2 py-3 letter-spacing"
-            type="submit"
-            id="enviaFormulario">
-            Enviar
-          </button>
-          <div class="col-12 text-end fs-smaller fw-lighter text-cinzento">Receberei
-            sua mensagem via
-            <a href="mailto:luisfelipebrescia@gmail.com" class="text-especial">e-mail</a>
-          </div>
-        </div>
-      </form> -->
 
         <!-- ? Formulário para contato-->
         <form id="contatoFormulario"
@@ -630,20 +645,20 @@
 
     <!-- * Modal [Mais detalhes - Experiências] -->
     <div class="modal fade" id="exampleModal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-      <div class="modal-content rounded-2 bg-branco">
+      aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content rounded-2 bg-branco">
 
-        <div class="modal-header border-bottom border-claro bg-branco py-0">
-          <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing"
-            id="exampleModalLabel">Modal title</h3>
-          <button type="button" class="btn border-0 p-0"
-            data-bs-dismiss="modal"><i class="fs-1 bi-x"></i></button>
+          <div class="modal-header border-bottom border-claro bg-branco py-0">
+            <h3 class="modal-title fs-3 fw-bold text-especial letter-spacing"
+              id="exampleModalLabel">Modal title</h3>
+            <button type="button" class="btn border-0 p-0"
+              data-bs-dismiss="modal"><i class="fs-1 bi-x"></i></button>
+          </div>
+          <div class="modal-body fw-light fs-6"></div>
         </div>
-        <div class="modal-body fw-light fs-6"></div>
       </div>
     </div>
-  </div>
 
     <script type="module" src="./main.js"></script>
 
