@@ -10,6 +10,9 @@ var rolagemManual = false; // ? True enquando o usuário estiver scrollando
 
 // * Pego o tema do SO do usuário
 var temaOS = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+if (temaOS == 'dark') {
+  alteraTema('light');
+}
 
 $(document).ready(function () {
 
@@ -325,13 +328,6 @@ $(document).ready(function () {
     }
     console.log('Tela sistema alterado');
   });
-
-  setTimeout(() => {
-    if (temaOS == 'dark') {
-      alteraTema('light');
-    }
-    console.log(temaOS);
-  }, 300);
 });
 
 // * Atualiza barra de menu
