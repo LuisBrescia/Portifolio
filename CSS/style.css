@@ -40,13 +40,13 @@ body {
 }
 
 #app {
-  filter: blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(150%);
+  filter: saturate(1.5);
 }
 
 nav {
   position: sticky;
   top: 0;
-  filter: saturate(200%);
+  filter: saturate(150%);
 }
 
 textarea {

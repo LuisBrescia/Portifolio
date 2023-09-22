@@ -216,12 +216,6 @@ $(document).ready(function () {
     $(this).addClass('shadow-sm').removeClass('shadow');
   });
 
-  $('.interativo.shadow-sm-dark').hover(function () {
-    $(this).addClass('shadow-dark').removeClass('shadow-sm-dark');
-  }, function () {
-    $(this).addClass('shadow-sm-dark').removeClass('shadow-dark');
-  });
-
   // * Comportamento do modal
   $('#xp_cefet').click(function () {
     $('.modal-title').text('CEFET-MG');
@@ -333,12 +327,12 @@ $(document).ready(function () {
   function alteraTema(tema) {
 
     $('#app').css({
-      'filter': 'blur(5px) grayscale(100%) brightness(200%) contrast(200%) saturate(200%)',
+      'filter': 'blur(5px) grayscale(100%) brightness(200%) contrast(200%) saturate(2)',
       'transition': 'filter 0s'
     });
     setTimeout(function () {
       $('#app').css({
-        'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(150%)',
+        'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(1.5)',
         'transition': 'filter .8s ease-out'
       });
     }, 200);
