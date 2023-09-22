@@ -341,36 +341,36 @@ $(document).ready(function () {
       $('#altera_tema span').text('light');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
-      $('modal-body').removeClass('bg-branco');
+
+      document.documentElement.style.setProperty('--color-claro', '#f5f8f9');
+      document.documentElement.style.setProperty('--color-escuro', '#0f0f0f');
+
+      document.documentElement.style.setProperty('--color-branco', '#ffffff');
+      document.documentElement.style.setProperty('--color-preto', '#050809');
+
       $('.shadow-sm').removeClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'light');
-      $('body').addClass('Pattern-claro').removeClass('Pattern-escuro');
     } else {
       $('#altera_tema span').text('dark');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #6ee7b7)');
       document.documentElement.style.setProperty('--color-indigo', '#22d3ee');
+
+      document.documentElement.style.setProperty('--color-claro', '#0f0f0f');
+      document.documentElement.style.setProperty('--color-escuro', '#f5f8f9');
+
+      document.documentElement.style.setProperty('--color-branco', '#050809');
+      document.documentElement.style.setProperty('--color-preto', '#ffffff');
+
       $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'dark');
-      $('body').addClass('Pattern-escuro');
     }
-  
+
+    $('body').toggleClass('Pattern-claro Pattern-escuro');
     $('#altera_tema').toggleClass('light-mode dark-mode');
   
     $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
     $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
     $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
-  
-    var colorPreto = getComputedStyle(document.documentElement).getPropertyValue('--color-preto');
-    var colorBranco = getComputedStyle(document.documentElement).getPropertyValue('--color-branco');
-  
-    var colorEscuro = getComputedStyle(document.documentElement).getPropertyValue('--color-escuro');
-    var colorClaro = getComputedStyle(document.documentElement).getPropertyValue('--color-claro');
-  
-    document.documentElement.style.setProperty('--color-branco', colorPreto);
-    document.documentElement.style.setProperty('--color-preto', colorBranco);
-  
-    document.documentElement.style.setProperty('--color-claro', colorEscuro);
-    document.documentElement.style.setProperty('--color-escuro', colorClaro);
   }
 });
 
