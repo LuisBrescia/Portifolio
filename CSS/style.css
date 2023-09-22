@@ -228,6 +228,10 @@ a {
   grid-template-rows: repeat(3, 1fr);
 }
 
+#experiencia-image-collection-mobile img {
+  filter: grayscale(33%);
+}
+
 #experiencia-image-collection-mobile #tambasa-almoco {
   grid-column: 6/-1;
   grid-row: 1/-1;
