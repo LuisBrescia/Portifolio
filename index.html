@@ -442,7 +442,7 @@
           </p>
         </header>
 
-        <div>
+        <div class="d-nonedsads">
           <article class="flex-lg-row">
             <section class="interativo fs-4 col-12 col-lg bg-especial shadow-sm">
 
@@ -577,7 +577,7 @@
 
           <div class="d-flex col-12 justify-content-between align-items-end">
             <!-- <span class="text-especial fs-4 fw-bold">Fale comigo:</span> -->
-            <span id="form_response" class="fw-light text-verde"
+            <span id="form_response" class="fw-light text-verde position-absolute"
               style="font-size: 16px;"></span>
           </div>
 
@@ -612,8 +612,13 @@
           <button
             class="ms-auto col-12 btn btn-default shadow-sm rounded-1 py-3 letter-spacing"
             type="submit"
-            id="enviaFormulario">
-            Enviar
+            id="enviaFormulario" style="height: 3.8rem;">
+            <span>
+              Enviar
+            </span>
+            <div class="spinner-border text-light d-none" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>  
           </button>
           <div class="col-12 text-end fs-smaller fw-lighter"
             style="color: #b7b7b7;">

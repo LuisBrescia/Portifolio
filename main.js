@@ -34,10 +34,13 @@ $(document).ready(function () {
       conteudo: $('input[name="conteudo"]').val()
     };
 
-    $('#enviaFormulario').css({
-      'cursor': 'progress',
-      'animation': 'pulse 1s infinite'
-    });
+    // $('#enviaFormulario').css({
+    //   'cursor': 'progress',
+    //   'animation': 'pulse 1s infinite'
+    // });
+
+    $('form .spinner-border').removeClass('d-none');
+    $('#enviaFormulario > span').addClass('d-none');
 
     $.ajax({
       url: 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec',
