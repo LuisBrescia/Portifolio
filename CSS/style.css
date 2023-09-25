@@ -302,67 +302,67 @@ footer .bg-especial-dark a:hover {
 
 #menu_content {
   width: 12.5rem;
-  top: 50px;
-  right: 5px;
+  top: 60px;
+  right: 0;
   z-index: 1000;
-  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
   opacity: 0;
-  transform: translateY(-20px) translateX(5px) scale(0.9);
+  transform: translateY(-25px) skewY(10deg);
+  filter: blur(5px);
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   pointer-events: none;
+}
+
+#show_menu:checked~#menu_content {
+  width: 12.5rem;
+  transform: translateY(0) skewY(0);
+  filter: blur(0);
+  pointer-events: auto;
+  opacity: 1;
 }
 
 #menu_content a:hover {
   background-color: var(--color-claro);
 }
 
-#show_menu:checked~#menu_content {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translate(0) scale(1);
-}
-
 .toggle {
-  width: 20px;
+  width: 100%;
   height: 35px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  transition-duration: .5s;
   cursor: pointer;
+  position: relative;
 }
 
 .bars {
-  width: 100%;
+  width: 1.2rem;
   height: 0.125rem;
   background-image: var(--gradiente-roxo);
   border-radius: 15px;
-}
-
-#barra_meio {
-  transition-duration: 0.5s;
-}
-
-#show_menu:checked+.toggle .bars {
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   position: absolute;
+}
+
+#barra_baixo {
+  bottom: 10px;
+}
+
+#barra_cima {
+  top: 10px;
 }
 
 #show_menu:checked+.toggle #barra_meio {
   transform: scaleX(0);
-  transition-duration: 0.2s;
 }
 
 #show_menu:checked+.toggle #barra_cima {
-  transform: rotate(45deg);
+  transform: translateY(6.5px) rotate(-45deg);
 }
 
 #show_menu:checked+.toggle #barra_baixo {
-  transform: rotate(-45deg);
-}
-
-#show_menu:checked+.toggle {
-  transform: rotate(180deg);
+  transform: translateY(-6.5px) rotate(45deg);
 }
 
 #alteraTema {
@@ -378,7 +378,7 @@ footer .bg-especial-dark a:hover {
   height: 2px;
   background-image: var(--gradiente-roxo);
   border-radius: 15px;
-  transition: all 0.5s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: absolute;
   z-index: 15;
 }
@@ -426,7 +426,7 @@ footer .bg-especial-dark a:hover {
   height: 20px;
   background-color: var(--color-indigo);
   border-radius: 100%;
-  transition: transform 0.5s ease;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: absolute;
   z-index: 15;
 }
