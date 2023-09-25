@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900&family=Lobster:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900');
 
 :root {
   --color-escuro: #0f0f0f;
@@ -610,10 +610,6 @@ footer .bg-especial-dark a:hover {
   font-weight: 900;
 }
 
-.font-alternative {
-  font-family: 'Lobster', sans-serif;
-}
-
 /** Border - Personalizados */
 
 .border-escuro {
@@ -727,6 +723,7 @@ nav button:active {
   -webkit-transition: all .2s ease-in;
   -moz-transition: all .2s ease-in;
   transition: all .2s ease-in;
+  font-weight: 500;
 }
 
 .btn-default:hover {

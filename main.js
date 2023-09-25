@@ -41,6 +41,7 @@ $(document).ready(function () {
 
     $('form .spinner-border').removeClass('d-none');
     $('#enviaFormulario > span').addClass('d-none');
+    $('#enviaFormulario').css('cursor', 'progress');
 
     $.ajax({
       url: 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec',
@@ -59,9 +60,11 @@ $(document).ready(function () {
         $('#form_response').text('Erro ao enviar e-mail.');
       },
       complete: function () {
-        $('#enviaFormulario').text('Enviar');
+        $('#enviaFormulario > span').text('Enviar');
         $('input[name="assunto"], input[name="conteudo"]').val('');
-        $('#enviaFormulario').css({ 'cursor': 'pointer', 'animation': 'none' });
+        $('#enviaFormulario > span').removeClass('d-none');
+        $('form .spinner-border').addClass('d-none');
+        $('#enviaFormulario').css('cursor', 'pointer');
       }
     });
   });
