@@ -259,8 +259,6 @@ a {
   mix-blend-mode: lighten;
   transition: mix-blend-mode 0s !important; */
   filter: grayscale(0%) drop-shadow(0px 0px 1px black);
-  stroke: #0b0b0b !important;
-  stroke-width: 2px;
 }
 
 /* #habilidades #javaIcone {
@@ -629,7 +627,6 @@ nav button {
   border: none;
   width: 52px;
   height: 51px;
-  transform: scale(1);
 }
 
 nav button:hover {
@@ -638,6 +635,10 @@ nav button:hover {
 
 nav button:active {
   transform: scale(1.05);
+}
+
+nav button ul, nav button ul h6 {
+  font-size: large;
 }
 
 nav button ul, nav button ul h6 {
