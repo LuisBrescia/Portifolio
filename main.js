@@ -338,7 +338,7 @@ $(document).ready(function () {
     });
     setTimeout(function () {
       $('#app').css({
-        'filter': 'blur(0px) grayscale(0%) brightness(100%) contrast(100%) saturate(1.5)',
+        'filter': 'none',
         'transition': 'filter .8s ease-out'
       });
     }, 200);
@@ -346,13 +346,14 @@ $(document).ready(function () {
     if (tema == 'dark') {
       $('#altera_tema span').text('light');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
+      // > Uma cor só document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #5B42F3, #5B42F3)');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
 
       document.documentElement.style.setProperty('--color-claro', '#f5f8f9');
-      document.documentElement.style.setProperty('--color-escuro', '#0f0f0f');
+      document.documentElement.style.setProperty('--color-escuro', '#131313');
 
       document.documentElement.style.setProperty('--color-branco', '#ffffff');
-      document.documentElement.style.setProperty('--color-preto', '#050809');
+      document.documentElement.style.setProperty('--color-preto', '#0b0b0b');
 
       $('.shadow-sm').removeClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'light');
@@ -361,10 +362,10 @@ $(document).ready(function () {
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #6ee7b7)');
       document.documentElement.style.setProperty('--color-indigo', '#22d3ee');
 
-      document.documentElement.style.setProperty('--color-claro', '#0f0f0f');
+      document.documentElement.style.setProperty('--color-claro', '#131313');
       document.documentElement.style.setProperty('--color-escuro', '#f5f8f9');
 
-      document.documentElement.style.setProperty('--color-branco', '#050809');
+      document.documentElement.style.setProperty('--color-branco', '#0b0b0b');
       document.documentElement.style.setProperty('--color-preto', '#ffffff');
 
       $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');

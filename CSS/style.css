@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900');
 
 :root {
-  --color-escuro: #0f0f0f;
+  --color-escuro: #131313;
   --color-cinzento: #b7b7b7;
   --color-branco: #ffffff;
-  --color-preto: #050809;
+  --color-preto: #0b0b0b;
   --color-claro: #f5f8f9;
   --color-indigo: #5b42f3;
   --color-roxo: #8640ff;
@@ -40,13 +40,13 @@ body {
 }
 
 #app {
-  filter: saturate(1.5);
+  filter: none;
 }
 
 nav {
   position: sticky;
   top: 0;
-  filter: saturate(150%);
+  filter: none;
 }
 
 textarea {
@@ -191,7 +191,7 @@ a {
 #experiencia-image-collection img {
   grid-row: 1/3;
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  filter: grayscale(33%);
+  filter: none;
 }
 
 #experiencia-image-collection img:first-of-type {
@@ -229,7 +229,7 @@ a {
 }
 
 #experiencia-image-collection-mobile img {
-  filter: grayscale(33%);
+  filter: none;
 }
 
 #experiencia-image-collection-mobile #tambasa-almoco {
@@ -259,6 +259,8 @@ a {
   mix-blend-mode: lighten;
   transition: mix-blend-mode 0s !important; */
   filter: grayscale(0%) drop-shadow(0px 0px 1px black);
+  stroke: #0b0b0b !important;
+  stroke-width: 2px;
 }
 
 /* #habilidades #javaIcone {
@@ -301,7 +303,7 @@ footer .bg-especial-dark a:hover {
 }
 
 #menu_content {
-  width: 10rem;
+  width: 12.5rem;
   top: 50px;
   right: 5px;
   z-index: 1000;
@@ -335,7 +337,7 @@ footer .bg-especial-dark a:hover {
 
 .bars {
   width: 100%;
-  height: 2px;
+  height: 0.125rem;
   background-image: var(--gradiente-roxo);
   border-radius: 15px;
 }
@@ -627,6 +629,7 @@ nav button {
   border: none;
   width: 52px;
   height: 51px;
+  transform: scale(1);
 }
 
 nav button:hover {
@@ -635,6 +638,10 @@ nav button:hover {
 
 nav button:active {
   transform: scale(1.05);
+}
+
+nav button ul, nav button ul h6 {
+  font-size: large;
 }
 
 .btn-claro {
@@ -705,7 +712,7 @@ nav button:active {
 }
 
 .btn-escuro:hover {
-  background-color: #191919;
+  background-color: #131313;
   color: var(--color-claro);
 }
 
@@ -723,7 +730,7 @@ nav button:active {
   -webkit-transition: all .2s ease-in;
   -moz-transition: all .2s ease-in;
   transition: all .2s ease-in;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .btn-default:hover {
@@ -790,8 +797,7 @@ nav button:active {
 }
 
 .Pattern-escuro {
-  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230f0f0f' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230f0f0f' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23131313' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /*: Organização nova */
