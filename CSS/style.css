@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900');
 
 :root {
-  --color-escuro: #131313;
+  --color-escuro: #171717;
   --color-cinzento: #b7b7b7;
   --color-branco: #ffffff;
-  --color-preto: #0b0b0b;
-  --color-claro: #f5f8f9;
+  --color-preto: #0f0f0f;
+  --color-claro: #f5f5f5;
   --color-indigo: #5b42f3;
   --color-roxo: #8640ff;
   --color-vermelho: #ff0044;
@@ -81,21 +81,21 @@ a {
   height: 100%;
   transform: scale(1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation: float 3s ease-in-out infinite;
+  /* animation: float 3s ease-in-out infinite; */ /* > Animação suspensa */
   z-index: -1;
 }
 
 .floatElement {
   position: absolute;
-  width: 25px;
-  height: 25px;
+  width: 1.75rem;
+  height: 1.75rem;
   background: var(--gradiente-roxo);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   display: grid;
   place-items: center;
   color: var(--color-branco);
   font-weight: 900;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #floatElement-1 {
@@ -312,7 +312,7 @@ footer .bg-especial-dark a:hover {
 }
 
 #menu_content, .bars, .stripe, .circle {
-    transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0s;
 }
 
 #show_menu:checked~#menu_content {
@@ -357,6 +357,7 @@ footer .bg-especial-dark a:hover {
 
 #show_menu:checked+.toggle #barra_meio {
   transform: scaleX(0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) !important;
 }
 
 #show_menu:checked+.toggle #barra_cima {
@@ -376,8 +377,8 @@ footer .bg-especial-dark a:hover {
 }
 
 .stripe {
-  width: 6px;
-  height: 2px;
+  width: 0.45rem;
+  height: 0.125rem;
   background-image: var(--gradiente-roxo);
   border-radius: 15px;
   position: absolute;
@@ -401,25 +402,25 @@ footer .bg-especial-dark a:hover {
   transform: translateY(-12px) rotate(90deg);
 }
 
+.light-mode :is(#stripe5, #stripe6, #stripe7, #stripe8) {
+  width: 0.3rem;
+}
+
 /*: Diagonais*/
 .light-mode #stripe5 {
   transform: translateX(9px) translateY(9px) rotate(45deg);
-  width: 4.5px;
 }
 
 .light-mode #stripe6 {
   transform: translateX(-9px) translateY(9px) rotate(125deg);
-  width: 4.5px;
 }
 
 .light-mode #stripe7 {
   transform: translateX(9px) translateY(-9px) rotate(125deg);
-  width: 4.5px;
 }
 
 .light-mode #stripe8 {
   transform: translateX(-9px) translateY(-9px) rotate(45deg);
-  width: 4.5px;
 }
 
 .circle {
@@ -445,6 +446,7 @@ footer .bg-especial-dark a:hover {
 
 .light-mode #circle2 {
   transform: translateX(0px) scale(0);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) !important;
 }
 
 .dark-mode #circle1 {
@@ -794,11 +796,11 @@ nav button ul, nav button ul h6 {
 /** Texturas HeroPatterns */
 
 .Pattern-claro {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f5f8f9' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23f5f5f5' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .Pattern-escuro {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23131313' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23171717' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /*: Organização nova */

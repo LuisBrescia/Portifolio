@@ -349,11 +349,11 @@ $(document).ready(function () {
       // > Uma cor só document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #5B42F3, #5B42F3)');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
 
-      document.documentElement.style.setProperty('--color-claro', '#f5f8f9');
-      document.documentElement.style.setProperty('--color-escuro', '#131313');
+      document.documentElement.style.setProperty('--color-claro', '#f5f5f5');
+      document.documentElement.style.setProperty('--color-escuro', '#171717');
 
       document.documentElement.style.setProperty('--color-branco', '#ffffff');
-      document.documentElement.style.setProperty('--color-preto', '#0b0b0b');
+      document.documentElement.style.setProperty('--color-preto', '#0f0f0f');
 
       $('.shadow-sm').removeClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'light');
@@ -362,10 +362,10 @@ $(document).ready(function () {
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #6ee7b7)');
       document.documentElement.style.setProperty('--color-indigo', '#22d3ee');
 
-      document.documentElement.style.setProperty('--color-claro', '#131313');
-      document.documentElement.style.setProperty('--color-escuro', '#f5f8f9');
+      document.documentElement.style.setProperty('--color-claro', '#171717');
+      document.documentElement.style.setProperty('--color-escuro', '#f5f5f5');
 
-      document.documentElement.style.setProperty('--color-branco', '#0b0b0b');
+      document.documentElement.style.setProperty('--color-branco', '#0f0f0f');
       document.documentElement.style.setProperty('--color-preto', '#ffffff');
 
       $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
