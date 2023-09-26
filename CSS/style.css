@@ -48,7 +48,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  animation: rotate-blob 20s infinite linear;
+  animation: rotate-blob 15s infinite linear;
   filter: blur(200px) saturate(150%);
   z-index: 9999;
   pointer-events: none;
@@ -1313,7 +1313,7 @@ input:-webkit-autofill {
   }
 
   50% {
-    transform: translate(-50%, -50%) rotate(180deg) scaleY(1.5);
+    transform: translate(-50%, -50%) rotate(180deg) scaleY(1.75);
   }
 
   to {
