@@ -834,7 +834,7 @@ section {
   color: var(--color-branco);
 }
 
-section:hover {
+#projetos section:hover {
   box-shadow: inherit;
   transform: scale(1.025);
 }
@@ -1267,7 +1267,7 @@ input:-webkit-autofill {
 }
 
 .Pattern-claro #blob {
-  filter: blur(200px) saturate(200%) brightness(1.5);
+  filter: blur(200px) saturate(400%) brightness(1.25); 
 }
 
 #blobEl {
