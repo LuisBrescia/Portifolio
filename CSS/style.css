@@ -57,6 +57,7 @@ body {
 .Pattern-claro #blob {
   filter: blur(200px) saturate(500%) brightness(2);
   opacity: 0;
+  z-index: 10;
 }
 
 #blobEl {
@@ -70,6 +71,7 @@ nav {
   position: sticky;
   top: 0;
   filter: none;
+  pointer-events: none;
 }
 
 textarea {
@@ -667,6 +669,8 @@ nav button {
   border: none;
   width: 52px;
   height: 51px;
+  z-index: 9999;
+  pointer-events: all;
 }
 
 nav button:hover {
