@@ -43,6 +43,28 @@ body {
   filter: none;
 }
 
+#blob {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-blob 20s infinite linear;
+  filter: blur(200px) saturate(150%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.Pattern-claro #blob {
+  filter: blur(200px) saturate(400%) brightness(1.25);
+}
+
+#blobEl {
+  aspect-ratio: 1;
+  width: 200px;
+  background: var(--gradiente-roxo);
+  border-radius: 50%;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -81,15 +103,19 @@ a {
   height: 100%;
   transform: scale(1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* animation: float 3s ease-in-out infinite; */ /* > Animação suspensa */
+  /* animation: float 3s ease-in-out infinite; */
+  /* > Animação suspensa */
   z-index: -1;
+}
+
+.floatElement:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5), :nth-of-type(11)) {
+  background: var(--gradiente-roxo);
 }
 
 .floatElement {
   position: absolute;
   width: 1.75rem;
   aspect-ratio: 1;
-  background: var(--gradiente-roxo);
   border-radius: 0.5rem;
   display: grid;
   place-items: center;
@@ -98,88 +124,97 @@ a {
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+#floatElement-1,
+#floatElement-2,
+#floatElement-11 {
+  opacity: .8;
+}
+
+#floatElement-3,
+#floatElement-4,
+#floatElement-5,
+#floatElement-9 {
+  opacity: 0.6;
+}
+
+#floatElement-6,
+#floatElement-7,
+#floatElement-8,
+#floatElement-10,
+#floatElement-12 {
+  opacity: 0.4;
+}
+
 #floatElement-1 {
   top: 50%;
   left: 5%;
   transform: rotate(-15deg);
-  opacity: .6;
 }
 
 #floatElement-2 {
   top: 25%;
   right: 5%;
   transform: rotate(15deg);
-  opacity: .6;
 }
 
 #floatElement-3 {
   top: 40%;
   left: 25%;
   transform: rotate(-30deg) scale(.75);
-  opacity: .4;
 }
 
 #floatElement-4 {
   top: 15%;
   right: 25%;
   transform: rotate(30deg) scale(.75);
-  opacity: .4;
 }
 
 #floatElement-5 {
   top: 85%;
   left: 75%;
   transform: rotate(30deg) scale(.75);
-  opacity: .4;
 }
 
 #floatElement-6 {
   top: 80%;
   right: 75%;
   transform: rotate(45deg) scale(.5);
-  opacity: .2;
 }
 
 #floatElement-7 {
   top: 45%;
   right: 18%;
   transform: rotate(45deg) scale(.5);
-  opacity: .2;
 }
 
 #floatElement-8 {
   top: 20%;
   left: 10%;
   transform: rotate(45deg) scale(.5);
-  opacity: .2;
 }
 
 #floatElement-9 {
   top: 5%;
   left: 25%;
   transform: rotate(10deg) scale(.75);
-  opacity: .4;
 }
 
 #floatElement-10 {
   top: 10%;
   left: 50%;
   transform: rotate(-35deg) scale(.5);
-  opacity: .2;
 }
 
 #floatElement-11 {
   bottom: 0;
   left: 38%;
   transform: rotate(35deg);
-  opacity: .6;
 }
 
 #floatElement-12 {
   bottom: 5%;
   left: 53%;
   transform: rotate(-5deg) scale(.5);
-  opacity: .2;
 }
 
 /*: Formação */
@@ -311,8 +346,11 @@ footer .bg-especial-dark a:hover {
   pointer-events: none;
 }
 
-#menu_content, .bars, .stripe, .circle {
-    transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0s;
+#menu_content,
+.bars,
+.stripe,
+.circle {
+  transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0s;
 }
 
 #show_menu:checked~#menu_content {
@@ -639,11 +677,13 @@ nav button:active {
   transform: scale(1.05);
 }
 
-nav button ul, nav button ul h6 {
+nav button ul,
+nav button ul h6 {
   font-size: large;
 }
 
-nav button ul, nav button ul h6 {
+nav button ul,
+nav button ul h6 {
   font-size: large;
 }
 
@@ -917,6 +957,9 @@ section {
   #inicioContainer {
     overflow: visible;
   }
+  #blobEl {
+    width: 300px;
+  }
 }
 
 /** A partir de LG */
@@ -1128,8 +1171,10 @@ header h3,
   opacity: 1;
 }
 
-.form__field, .form__field:focus~.form__label, .form__label {
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.form__field,
+.form__field:focus~.form__label,
+.form__label {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .form__group {
@@ -1255,35 +1300,15 @@ input:-webkit-autofill {
   flex-direction: column;
 }
 
-#blob {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: rotate-blob 20s infinite linear;
-  filter: blur(200px) saturate(150%); 
-  z-index: 9999;
-  pointer-events: none;
-}
-
-.Pattern-claro #blob {
-  filter: blur(200px) saturate(400%) brightness(1.25); 
-}
-
-#blobEl {
-  aspect-ratio: 1;
-  width: 300px;
-  background: var(--gradiente-roxo);
-  border-radius: 50%;
-}
-
 @keyframes rotate-blob {
   from {
     transform: translate(-50%, -50%) rotate(0deg) scaleY(1);
   }
+
   50% {
     transform: translate(-50%, -50%) rotate(180deg) scaleY(1.5);
   }
+
   to {
     transform: translate(-50%, -50%) rotate(360deg) scaleY(1);
   }
