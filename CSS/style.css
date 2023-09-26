@@ -54,13 +54,9 @@ body {
   pointer-events: none;
 }
 
-.Pattern-claro #blob {
-  filter: blur(200px) saturate(1.5);
-}
-
 #blobEl {
   aspect-ratio: 1;
-  width: 150px;
+  width: 175px;
   background: var(--gradiente-roxo);
   border-radius: 50%;
 }
@@ -635,7 +631,7 @@ footer .bg-especial-dark a:hover {
 /** Tamanho de fontes - Personalizados */
 
 #meuNome {
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
 
 .fs-bigger {
@@ -965,7 +961,7 @@ section {
     font-size: 20px;
   }
   #blobEl {
-    width: 200px;
+    width: 225px;
   }
   .Pattern-claro #blob {
     opacity: 1;
