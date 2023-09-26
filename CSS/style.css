@@ -308,8 +308,11 @@ footer .bg-especial-dark a:hover {
   opacity: 0;
   transform: translateY(-25px) skewY(10deg);
   filter: blur(5px);
-  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   pointer-events: none;
+}
+
+#menu_content, .bars, .stripe, .circle {
+    transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #show_menu:checked~#menu_content {
@@ -341,7 +344,6 @@ footer .bg-especial-dark a:hover {
   height: 0.125rem;
   background-image: var(--gradiente-roxo);
   border-radius: 15px;
-  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   position: absolute;
 }
 
@@ -378,7 +380,6 @@ footer .bg-especial-dark a:hover {
   height: 2px;
   background-image: var(--gradiente-roxo);
   border-radius: 15px;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: absolute;
   z-index: 15;
 }
@@ -426,7 +427,6 @@ footer .bg-especial-dark a:hover {
   height: 20px;
   background-color: var(--color-indigo);
   border-radius: 100%;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: absolute;
   z-index: 15;
 }
@@ -935,15 +935,11 @@ section:hover {
 
 .section {
   opacity: 0;
-  transition: opacity .4s ease-out, transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter .4s ease-out !important;
-  filter: blur(3px);
+  transition: opacity .4s ease-out, transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter .4s ease-out !important;
+  filter: blur(5px);
 }
 
 .section:not(footer) {
-  transform: translateY(25px);
-}
-
-.section:not(footer):nth-child(even) {
   transform: translateY(25px);
 }
 
@@ -1130,6 +1126,10 @@ header h3,
   opacity: 1;
 }
 
+.form__field, .form__field:focus~.form__label, .form__label {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
 .form__group {
   position: relative;
   padding: 20px 0 0;
@@ -1154,7 +1154,6 @@ header h3,
   outline: 0;
   font-weight: 700;
   font-size: 1rem;
-  transition: border-color 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background: transparent;
   color: var(--color-escuro);
   z-index: 4;
@@ -1181,7 +1180,6 @@ header h3,
   position: absolute;
   top: -1px;
   display: block;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-size: 1rem;
   background: var(--gradiente-roxo);
   background-clip: text;
@@ -1202,7 +1200,6 @@ header h3,
   position: absolute;
   top: -1px;
   display: block;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-size: 1rem;
   pointer-events: none;
   background: linear-gradient(90deg, #b7b7b7 80%, #b7b7b755 90%, #b7b7b7);
