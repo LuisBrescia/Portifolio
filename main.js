@@ -30,7 +30,7 @@ $(document).ready(function () {
     blob.animate({
       left: clientX + 'px',
       top: clientY + 'px'
-    }, {duration: 1000, fill: 'forwards'});
+    }, {duration: 3000, fill: 'forwards'});
   });
 
   // * Envio do formulátio

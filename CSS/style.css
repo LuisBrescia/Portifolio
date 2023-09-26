@@ -36,7 +36,7 @@ body {
   color: var(--color-escuro);
   background-color: var(--color-branco);
   overflow-x: hidden;
-  transition: background-color 0.5s ease-out;
+  transition: background-color 0.8s ease-out;
 }
 
 #app {
@@ -55,7 +55,7 @@ body {
 }
 
 .Pattern-claro #blob {
-  filter: blur(200px) saturate(400%) brightness(1.25);
+  filter: blur(200px) saturate(500%) brightness(1.5);
 }
 
 #blobEl {
@@ -102,7 +102,7 @@ a {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   /* animation: float 3s ease-in-out infinite; */
   /* > Animação suspensa */
   z-index: -1;
@@ -114,14 +114,13 @@ a {
 
 .floatElement {
   position: absolute;
-  width: 1.75rem;
+  width: 2rem;
   aspect-ratio: 1;
   border-radius: 0.5rem;
   display: grid;
   place-items: center;
   color: var(--color-branco);
   font-weight: 900;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #floatElement-1,
@@ -950,6 +949,9 @@ section {
     text-align: center;
     font-size: 20px;
   }
+  #blobEl {
+    width: 250px;
+  }
 }
 
 /** A partir de MD */
@@ -980,12 +982,13 @@ section {
 
 .section {
   opacity: 0;
-  transition: opacity .4s ease-out, transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter .4s ease-out !important;
-  filter: blur(5px);
+  transition: opacity .4s ease-out, transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  filter: blur(10px);
+  transform: skewY(1deg);
 }
 
 .section:not(footer) {
-  transform: translateY(25px);
+  transform: translateY(25px) skewY(1deg);
 }
 
 .section.deactive {
@@ -994,7 +997,7 @@ section {
 }
 
 .section.active {
-  transform: translateY(-5px) !important;
+  transform: translateY(-5px) skewY(0deg) !important;
   filter: blur(0);
   opacity: 1;
 }
