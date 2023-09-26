@@ -88,7 +88,7 @@ a {
 .floatElement {
   position: absolute;
   width: 1.75rem;
-  height: 1.75rem;
+  aspect-ratio: 1;
   background: var(--gradiente-roxo);
   border-radius: 0.5rem;
   display: grid;
@@ -1253,4 +1253,38 @@ input:-webkit-autofill {
   gap: 1em;
   display: flex;
   flex-direction: column;
+}
+
+#blob {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate-blob 20s infinite linear;
+  filter: blur(200px) saturate(150%); 
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.Pattern-claro #blob {
+  filter: blur(200px) saturate(200%) brightness(1.5);
+}
+
+#blobEl {
+  aspect-ratio: 1;
+  width: 300px;
+  background: var(--gradiente-roxo);
+  border-radius: 50%;
+}
+
+@keyframes rotate-blob {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) scaleY(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(180deg) scaleY(1.5);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) scaleY(1);
+  }
 }

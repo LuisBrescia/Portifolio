@@ -23,6 +23,16 @@ $(document).ready(function () {
     $('#show_menu').prop('checked', !$('#show_menu').prop('checked'));
   });
 
+  const blob = document.getElementById('blob');
+
+  $('body').mousemove(function (event) {
+    const { clientX, clientY } = event;
+    blob.animate({
+      left: clientX + 'px',
+      top: clientY + 'px'
+    }, {duration: 1000, fill: 'forwards'});
+  });
+
   // * Envio do formulátio
   $('#contatoFormulario').submit(function (event) {
     event.preventDefault();
@@ -342,7 +352,7 @@ $(document).ready(function () {
         'transition': 'filter .8s ease-out'
       });
     }, 200);
-  
+
     if (tema == 'dark') {
       $('#altera_tema span').text('light');
       document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)');
@@ -374,7 +384,7 @@ $(document).ready(function () {
 
     $('body').toggleClass('Pattern-claro Pattern-escuro');
     $('#altera_tema').toggleClass('light-mode dark-mode');
-  
+
     $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
     $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
     $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
