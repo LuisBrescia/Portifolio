@@ -369,7 +369,7 @@ $(document).ready(function () {
       $('form').attr('data-bs-theme', 'light');
     } else {
       $('#altera_tema span').text('dark');
-      document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #6ee7b7)');
+      document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #86efac)');
       document.documentElement.style.setProperty('--color-indigo', '#22d3ee');
 
       document.documentElement.style.setProperty('--color-claro', '#171717');
