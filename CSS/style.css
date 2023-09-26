@@ -55,7 +55,7 @@ body {
 }
 
 .Pattern-claro #blob {
-  filter: blur(200px) saturate(500%) brightness(1.5);
+  filter: blur(200px) saturate(500%) brightness(2);
 }
 
 #blobEl {
