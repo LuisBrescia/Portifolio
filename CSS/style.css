@@ -56,11 +56,12 @@ body {
 
 .Pattern-claro #blob {
   filter: blur(200px) saturate(500%) brightness(2);
+  opacity: 0;
 }
 
 #blobEl {
   aspect-ratio: 1;
-  width: 200px;
+  width: 250px;
   background: var(--gradiente-roxo);
   border-radius: 50%;
 }
@@ -950,7 +951,10 @@ section {
     font-size: 20px;
   }
   #blobEl {
-    width: 250px;
+    width: 275px;
+  }
+  .Pattern-claro #blob {
+    opacity: 1;
   }
 }
 
