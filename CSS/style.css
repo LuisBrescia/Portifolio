@@ -77,9 +77,9 @@ img {
   pointer-events: none;
 }
 
-.Pattern-claro #blob {
+/* .Pattern-claro #blob {
   z-index: -9999;
-}
+} */
 
 #blobEl {
   aspect-ratio: 1;
