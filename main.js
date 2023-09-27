@@ -1,6 +1,7 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/style.css';
+// import $, { event } from 'jquery';
 import $ from 'jquery';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // import * as bootsrap from 'bootstrap';
@@ -11,11 +12,18 @@ var rolagemManual = false; // ? True enquando o usuário estiver scrollando
 // * Pego o tema do SO do usuário
 var temaOS = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
+const letters = "_";
+let interval = null;
+
+document.querySelector("#meuNome").onclick = event => {  
+  embaralhaPalavra('#meuNome > span');
+}
+
 $(document).ready(function () {
 
-  if (temaOS == 'dark') {
-    alteraTema('light');
-  }
+  if (temaOS == 'dark') alteraTema('light');
+
+  embaralhaPalavra('#meuNome > span');
 
   $('#menu_portifolio').on('click', function () {
     if ($(event.target).closest('#menu_content').length) { return; }
@@ -30,7 +38,7 @@ $(document).ready(function () {
     blob.animate({
       left: clientX + 'px',
       top: clientY + 'px'
-    }, {duration: 3000, fill: 'forwards'});
+    }, { duration: 3000, fill: 'forwards' });
   });
 
   // * Envio do formulátio
@@ -421,3 +429,31 @@ function scrollDown_fadeOut() {
 // linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)
 // linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% )
 // linear-gradient(160deg, #bdc3c7 0%, #2c3e50 100%)
+
+function embaralhaPalavra(elemento) {
+
+  clearInterval(interval)
+
+  let iteration = 0;
+
+  const elNome = document.querySelector(elemento);
+  
+  interval = setInterval(() => {
+    elNome.innerText = elNome.innerText
+      .split("")
+      .map((letter, index) => {
+        if(index < iteration) {
+          return elNome.dataset.value[index];
+        }
+      
+        return letters[Math.floor(Math.random() * letters.length)]
+      })
+      .join("");
+    
+    if(iteration >= elNome.dataset.value.length){ 
+      clearInterval(interval);
+    }
+    
+    iteration += 1;
+  }, 100);
+}
