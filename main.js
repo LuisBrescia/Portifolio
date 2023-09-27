@@ -367,11 +367,13 @@ $(document).ready(function () {
       // > Uma cor só document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #5B42F3, #5B42F3)');
       document.documentElement.style.setProperty('--color-indigo', '#5b42f3');
 
-      document.documentElement.style.setProperty('--color-claro', '#f5f5f5');
+      document.documentElement.style.setProperty('--color-claro', '#f0f0f0');
       document.documentElement.style.setProperty('--color-escuro', '#171717');
 
-      document.documentElement.style.setProperty('--color-branco', '#ffffff');
+      document.documentElement.style.setProperty('--color-branco', '#f5f5f5');
       document.documentElement.style.setProperty('--color-preto', '#0f0f0f');
+
+      document.documentElement.style.setProperty('--color-cinzento', '#6c757d');
 
       $('.shadow-sm').removeClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'light');
@@ -381,10 +383,12 @@ $(document).ready(function () {
       document.documentElement.style.setProperty('--color-indigo', '#22d3ee');
 
       document.documentElement.style.setProperty('--color-claro', '#171717');
-      document.documentElement.style.setProperty('--color-escuro', '#f5f5f5');
+      document.documentElement.style.setProperty('--color-escuro', '#f0f0f0');
 
       document.documentElement.style.setProperty('--color-branco', '#0f0f0f');
-      document.documentElement.style.setProperty('--color-preto', '#ffffff');
+      document.documentElement.style.setProperty('--color-preto', '#f5f5f5');
+
+      document.documentElement.style.setProperty('--color-cinzento', '#b7b7b7');
 
       $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'dark');

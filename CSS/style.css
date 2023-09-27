@@ -10,10 +10,10 @@ body {
 
 :root {
   --color-escuro: #171717;
-  --color-cinzento: #b7b7b7;
-  --color-branco: #ffffff;
+  --color-cinzento: #6c757d;
+  --color-branco: #f5f5f5;
   --color-preto: #0f0f0f;
-  --color-claro: #f5f5f5;
+  --color-claro: #f0f0f0;
   --color-indigo: #5b42f3;
   --color-roxo: #8640ff;
   --color-vermelho: #ff0044;
@@ -353,13 +353,18 @@ footer a:hover {
   cursor: pointer;
 }
 
+footer a {
+  color: var(--color-branco);
+}
+
 footer .bg-especial-dark a {
+  color: var(--color-cinzento);
   background-color: var(--color-branco);
   box-shadow: none !important;
 }
 
 footer .bg-especial-dark a:hover {
-  color: var(--color-indigo) !important;
+  color: var(--color-preto) !important;
 }
 
 .big {
@@ -873,7 +878,7 @@ nav button ul h6 {
 }
 
 .Pattern-escuro {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23171717' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%230f0f0f' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /*: Organização nova */
@@ -1212,7 +1217,7 @@ header h3,
   width: 100%;
   height: 1px;
   border: none;
-  background: linear-gradient(90deg, #b7b7b733, #b7b7b7, #b7b7b733);
+  background: linear-gradient(90deg, transparent, var(--color-cinzento), transparent);
   background-size: 200%;
   animation: background-pan 3s linear infinite;
   opacity: 1;
@@ -1296,7 +1301,7 @@ header h3,
   display: block;
   font-size: 1rem;
   pointer-events: none;
-  background: linear-gradient(90deg, #b7b7b7 80%, #b7b7b755 90%, #b7b7b7);
+  background: linear-gradient(90deg, var(--color-cinzento) 80%, #bbb5 90%, var(--color-cinzento));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1329,7 +1334,7 @@ input:-webkit-autofill {
 }
 
 #direitosAutorais {
-  background: linear-gradient(90deg, white 80%, var(--color-indigo) 90%, white);
+  background: linear-gradient(90deg, var(--color-branco) 80%, transparent 90%, var(--color-branco));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1338,10 +1343,23 @@ input:-webkit-autofill {
   white-space: nowrap;
   background-size: 200%;
   animation: background-pan 3s linear infinite;
-  color: var(--color-cinzento);
+  color: var(--color-branco);
 }
 
-#habilidades>div {
+.bg-especial-dark #direitosAutorais {
+  background: linear-gradient(90deg, var(--color-cinzento) 80%, transparent 90%, var(--color-cinzento));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  width: fit-content;
+  white-space: nowrap;
+  background-size: 200%;
+  animation: background-pan 3s linear infinite;
+  color: var(--color-branco);
+}
+
+#habilidades > div {
   gap: 1em;
   display: flex;
   flex-direction: column;
