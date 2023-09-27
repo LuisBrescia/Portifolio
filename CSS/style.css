@@ -1,4 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900');
+@import url('https://fonts.googleapis.com/css2?family=Mooli:wght@200;300;400;500;600;700;900');
+
+body {
+  font-family: 'Mooli', sans-serif;
+  color: var(--color-escuro);
+  background-color: var(--color-branco);
+  overflow-x: hidden;
+  transition: background-color 0.8s ease-out;
+}
+
 
 :root {
   --color-escuro: #171717;
@@ -29,14 +38,6 @@ html {
 
 img {
   object-fit: contain;
-}
-
-body {
-  font-family: 'Lato', sans-serif;
-  color: var(--color-escuro);
-  background-color: var(--color-branco);
-  overflow-x: hidden;
-  transition: background-color 0.8s ease-out;
 }
 
 #app {
