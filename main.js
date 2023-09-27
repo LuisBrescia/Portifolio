@@ -437,7 +437,7 @@ function embaralhaPalavra(elemento) {
   let iteration = 0;
 
   const elNome = document.querySelector(elemento);
-  
+
   interval = setInterval(() => {
     elNome.innerText = elNome.innerText
       .split("")
