@@ -54,6 +54,10 @@ body {
   pointer-events: none;
 }
 
+.Pattern-claro #blob {
+  z-index: -9999;
+}
+
 #blobEl {
   aspect-ratio: 1;
   width: 175px;
@@ -631,7 +635,7 @@ footer .bg-especial-dark a:hover {
 /** Tamanho de fontes - Personalizados */
 
 #meuNome {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
 }
 
 .fs-bigger {
