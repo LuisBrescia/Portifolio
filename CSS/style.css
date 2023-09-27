@@ -354,6 +354,10 @@ footer a:hover {
   transform: translateY(-2px);
 }
 
+footer a:active {
+  transform: translateY(0);
+}
+
 footer .bg-especial-dark a:hover {
   color: var(--color-preto) !important;
 }
@@ -810,6 +814,11 @@ nav button ul h6 {
   -webkit-transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   -moz-transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(-2px);
+}
+
+.btn-default:active {
+  transform: translateY(0px);
 }
 
 .btn-default:hover::before {
@@ -834,10 +843,6 @@ nav button ul h6 {
   -ms-transform: skewX(-20deg);
   -o-transform: skewX(-20deg);
   transform: skewX(-20deg);
-}
-
-#experiencia .btn-default:hover {
-  transform: scale(1.025);
 }
 
 @keyframes sh02 {
