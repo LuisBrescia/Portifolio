@@ -44,11 +44,8 @@ img {
   cursor: pointer;
 }
 
-#meuNome::before {
-  margin-left: auto;
-}
-
-#meuNome::after, #meuNome::before {
+#meuNome::after {
+  margin: auto;
   content: '';
   width: 0%;
   height: 3px;
@@ -58,7 +55,7 @@ img {
   border-radius: 4px;
 }
 
-#meuNome:hover::after, #meuNome:hover::before {
+#meuNome:hover::after {
   width: 100%;
 }
 
