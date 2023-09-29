@@ -377,10 +377,13 @@ footer .bg-especial-dark a:hover {
 }
 
 #menu_content,
-.bars,
 .stripe,
 .circle {
   transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0s;
+}
+
+.bars {
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) !important;
 }
 
 #show_menu:checked~#menu_content {
@@ -425,7 +428,6 @@ footer .bg-especial-dark a:hover {
 
 #show_menu:checked+.toggle #barra_meio {
   transform: scaleX(0);
-  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) !important;
 }
 
 #show_menu:checked+.toggle #barra_cima {
@@ -1172,15 +1174,15 @@ header h3,
 }
 
 .shadow-sm-dark {
-  box-shadow: 0 .125rem .25rem #22d3ee2a;
+  box-shadow: 0 .125rem .25rem #22d3ee1a;
 }
 
 .shadow-dark {
-  box-shadow: 0 .5rem 1rem #22d3ee2a;
+  box-shadow: 0 .5rem 1rem #22d3ee1a;
 }
 
 .shadow-lg-dark {
-  box-shadow: 0 1rem 3rem #22d3ee2a;
+  box-shadow: 0 1rem 3rem #22d3ee1a;
 }
 
 .shadow-sm {

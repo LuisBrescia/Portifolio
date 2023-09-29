@@ -12,7 +12,7 @@ var rolagemManual = false; // ? True enquando o usuário estiver scrollando
 // * Pego o tema do SO do usuário
 var temaOS = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
-const letters = "_";
+const letters = "01";
 let interval = null;
 
 document.querySelector("#meuNome").onclick = event => {  
@@ -450,6 +450,6 @@ function embaralhaPalavra(elemento) {
       clearInterval(interval);
     }
     
-    iteration += 1;
-  }, 100);
+    iteration += 1/5;
+  }, 25);
 }
