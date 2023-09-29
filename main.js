@@ -233,13 +233,6 @@ $(document).ready(function () {
 
   });
 
-  // * Quando o mouse passa por cima de um projeto, este projeto ganha uma sobra maior
-  $('.interativo').hover(function () {
-    $(this).addClass('shadow').removeClass('shadow-sm');
-  }, function () {
-    $(this).addClass('shadow-sm').removeClass('shadow');
-  });
-
   // * Comportamento do modal
   $('#xp_cefet').click(function () {
     $('.modal-title').text('CEFET-MG');
@@ -356,7 +349,7 @@ $(document).ready(function () {
     });
     setTimeout(function () {
       $('#app').css({
-        'filter': 'none',
+        'filter': 'blur(0) grayscale(0) brightness(1) contrast(1) saturate(1.5)',
         'transition': 'filter .8s ease-out'
       });
     }, 200);
@@ -375,7 +368,6 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty('--color-cinzento', '#6c757d');
 
-      $('.shadow-sm').removeClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'light');
     } else {
       $('#altera_tema span').text('dark');
@@ -390,7 +382,6 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty('--color-cinzento', '#b7b7b7');
 
-      $('.shadow-sm:not(form input, form textarea)').addClass('shadow-sm-dark');
       $('form').attr('data-bs-theme', 'dark');
     }
 
@@ -398,6 +389,7 @@ $(document).ready(function () {
     $('#altera_tema').toggleClass('light-mode dark-mode');
 
     $('.bg-especial, .bg-especial-dark').toggleClass('bg-especial bg-especial-dark');
+    $('.shadow-sm, .shadow-sm-dark').toggleClass('shadow-sm shadow-sm-dark');
     $('.shadow, .shadow-dark').toggleClass('shadow shadow-dark');
     $('.shadow-lg, .shadow-lg-dark').toggleClass('shadow-lg shadow-lg-dark');
   }
