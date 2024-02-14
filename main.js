@@ -267,23 +267,23 @@ $(document).ready(function () {
   $('#xp_puc').click(function () {
     $('.modal-title').text('PUC Minas');
     $('.modal-body').html(
-      '<i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">1° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-repeat text-amarelo"></i>&nbsp; <span class="fw-normal">2° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">3° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">4° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">5° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">6° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">7° Período - </span>' +
-      '<span class="text-especial">Info</span> <br>' +
-      '<i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">8° Período - </span>' +
-      '<span class="text-especial">Info</span> <br><br>' +
-      'Atualmente, curso o <span class="text-especial">2° período</span> de forma regular.'
+      `<i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">1° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">2° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-repeat text-amarelo"></i>&nbsp; <span class="fw-normal">3° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">4° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">5° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">6° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">7° Período - </span>
+      <span class="text-especial">Info</span> <br>
+      <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">8° Período - </span>
+      <span class="text-especial">Info</span> <br><br>
+      Atualmente, curso o <span class="text-especial">3° período</span> de forma regular.`
     );
   });
   $('#xp_hackatruck').click(function () {
