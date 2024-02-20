@@ -307,6 +307,9 @@ $(document).ready(function () {
   });
 
   // * Redirecionamento de projetos ONLINE/GITHUB
+  $('#site-task-unity').on('click', function () {
+    window.open('https://task-unity.vercel.app', '_blank');
+  });
   $('#site-event-manager').on('click', function () {
     window.open('https://event-manager-tiaw-e7211e805cd0.herokuapp.com', '_blank');
   });
@@ -315,6 +318,9 @@ $(document).ready(function () {
   });
   $('#site-music-maker').on('click', function () {
     window.open('https://luisbrescia.github.io/DragonMusicMaker/', '_blank');
+  });
+  $('#repo-task-unity').on('click', function () {
+    window.open('https://github.com/LuisBrescia/TaskUnity', '_blank');
   });
   $('#repo-event-manager').on('click', function () {
     window.open('https://github.com/LuisBrescia/EventManager', '_blank');
