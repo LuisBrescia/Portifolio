@@ -1216,6 +1216,43 @@ header h3,
   height: 100%;
 }
 
+.bg-task-unity {
+  background-color: #030303;
+}
+
+#task-unity-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.task-unity-bg {
+  position: absolute;
+  width: 50%;
+  aspect-ratio: 1;
+  background-color: red;
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+#task-unity-blue {
+  background-color: #3b82f6;
+  top: 0;
+  left: 0;
+}
+#task-unity-green {
+  background-color: red;
+  right: 0;
+  bottom: 0;
+}
+#task-unity-yellow {
+  background-color: #3b82f6;
+}
+#task-unity-red {
+  background-color: #3b82f6;
+}
+
 .linha-horizontal {
   width: 100%;
   height: 1px;
