@@ -62,7 +62,7 @@ $(document).ready(function () {
     $('#enviaFormulario').css('cursor', 'progress');
 
     $.ajax({
-      url: 'https://script.google.com/macros/s/AKfycbx_h9GqjWMU1f5y5YJ7M6dfd07460JlMrFLulbcyYN6nUgyGzY-hKVkTytI-pCSRclvfQ/exec',
+      url: 'https://script.google.com/macros/s/AKfycbyfKwG8Y96wWhLQvXRCkrRZ3QC1qKw21MS7ZR42r-IBF8VfBLWlK0ucay-WbzyUQbaM9w/exec',
       type: 'POST',
       contentType: 'text/plain;charset=utf-8',
       data: JSON.stringify(data),
