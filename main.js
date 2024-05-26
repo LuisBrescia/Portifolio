@@ -15,7 +15,7 @@ var temaOS = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' 
 const letters = "01";
 let interval = null;
 
-document.querySelector("#meuNome").onclick = event => {  
+document.querySelector("#meuNome").onclick = event => {
   embaralhaPalavra('#meuNome > span');
 }
 
@@ -311,7 +311,7 @@ $(document).ready(function () {
     window.open('https://task-unity.vercel.app', '_blank');
   });
   $('#site-event-manager').on('click', function () {
-    window.open('https://event-manager-tiaw-e7211e805cd0.herokuapp.com', '_blank');
+    window.open('https://event-manager-phi.vercel.app', '_blank');
   });
   $('#site-projeto-redes').on('click', function () {
     window.open('https://projeto-redes.onrender.com', '_blank');
@@ -444,18 +444,18 @@ function embaralhaPalavra(elemento) {
     elNome.innerText = elNome.innerText
       .split("")
       .map((letter, index) => {
-        if(index < iteration) {
+        if (index < iteration) {
           return elNome.dataset.value[index];
         }
-      
+
         return letters[Math.floor(Math.random() * letters.length)]
       })
       .join("");
-    
-    if(iteration >= elNome.dataset.value.length){ 
+
+    if (iteration >= elNome.dataset.value.length) {
       clearInterval(interval);
     }
-    
-    iteration += 1/5;
+
+    iteration += 1 / 5;
   }, 25);
 }
