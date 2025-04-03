@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@200;300;400;500;600;700;900");
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: var(--color-escuro);
   background-color: var(--color-branco);
   overflow-x: hidden;
@@ -21,7 +21,7 @@ body {
   --color-azul: #0044ff;
   --color-azul-claro: #00ddeb;
   --color-amarelo: #fdc714;
-  --gradiente-roxo: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  --gradiente-roxo: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
 }
 
 html {
@@ -46,7 +46,7 @@ img {
 
 #meuNome::after {
   margin: auto;
-  content: '';
+  content: "";
   width: 0%;
   height: 3px;
   background: var(--gradiente-roxo);
@@ -69,24 +69,26 @@ img {
   top: 50%;
   transform: translate(-50%, -50%);
   animation: rotate-blob 15s infinite linear;
-  filter: blur(200px) saturate(1.5);
+  filter: blur(50px) saturate(2);
+  opacity: 0.3;
   z-index: 10;
   pointer-events: none;
 }
 
-/* .Pattern-claro #blob {
-  z-index: -9999;
-} */
+.Pattern-claro #blob {
+  /* z-index: -9999; */
+  opacity: 0.2;
+}
 
 #blobEl {
   aspect-ratio: 1;
-  width: 175px;
+  width: 250px;
   background: var(--gradiente-roxo);
   border-radius: 50%;
 }
 
 .Pattern-claro #blobEl {
-  background: linear-gradient(to right, #e344ff, #593fff, #00DDEB);
+  background: linear-gradient(to right, #e344ff, #593fff, #00ddeb);
 }
 
 .Pattern-escuro #blobEl {
@@ -132,13 +134,20 @@ a {
   width: 100%;
   height: 100%;
   transform: scale(1);
-  transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   /* animation: float 3s ease-in-out infinite; */
   /* > Animação suspensa */
   z-index: -1;
 }
 
-.floatElement:not(:nth-of-type(1), :nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5), :nth-of-type(11)) {
+.floatElement:not(
+    :nth-of-type(1),
+    :nth-of-type(2),
+    :nth-of-type(3),
+    :nth-of-type(4),
+    :nth-of-type(5),
+    :nth-of-type(11)
+  ) {
   background: var(--gradiente-roxo);
 }
 
@@ -156,7 +165,7 @@ a {
 #floatElement-1,
 #floatElement-2,
 #floatElement-11 {
-  opacity: .8;
+  opacity: 0.8;
 }
 
 #floatElement-3,
@@ -189,49 +198,49 @@ a {
 #floatElement-3 {
   top: 40%;
   left: 25%;
-  transform: rotate(-30deg) scale(.75);
+  transform: rotate(-30deg) scale(0.75);
 }
 
 #floatElement-4 {
   top: 15%;
   right: 25%;
-  transform: rotate(30deg) scale(.75);
+  transform: rotate(30deg) scale(0.75);
 }
 
 #floatElement-5 {
   top: 85%;
   left: 75%;
-  transform: rotate(30deg) scale(.75);
+  transform: rotate(30deg) scale(0.75);
 }
 
 #floatElement-6 {
   top: 80%;
   right: 75%;
-  transform: rotate(45deg) scale(.5);
+  transform: rotate(45deg) scale(0.5);
 }
 
 #floatElement-7 {
   top: 45%;
   right: 18%;
-  transform: rotate(45deg) scale(.5);
+  transform: rotate(45deg) scale(0.5);
 }
 
 #floatElement-8 {
   top: 20%;
   left: 10%;
-  transform: rotate(45deg) scale(.5);
+  transform: rotate(45deg) scale(0.5);
 }
 
 #floatElement-9 {
   top: 5%;
   left: 25%;
-  transform: rotate(10deg) scale(.75);
+  transform: rotate(10deg) scale(0.75);
 }
 
 #floatElement-10 {
   top: 10%;
   left: 50%;
-  transform: rotate(-35deg) scale(.5);
+  transform: rotate(-35deg) scale(0.5);
 }
 
 #floatElement-11 {
@@ -243,7 +252,7 @@ a {
 #floatElement-12 {
   bottom: 5%;
   left: 53%;
-  transform: rotate(-5deg) scale(.5);
+  transform: rotate(-5deg) scale(0.5);
 }
 
 /*: Formação */
@@ -282,7 +291,7 @@ a {
 }
 
 #experiencia-image-collection img:nth-of-type(3):hover {
-  transform: scale(.92);
+  transform: scale(0.92);
 }
 
 /** Agora em dipositivos menores */
@@ -379,14 +388,15 @@ footer .bg-especial-dark a:hover {
 #menu_content,
 .stripe,
 .circle {
-  transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0s;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background-color 0s;
 }
 
 .bars {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1) !important;
 }
 
-#show_menu:checked~#menu_content {
+#show_menu:checked ~ #menu_content {
   width: 12.5rem;
   transform: translateY(0) skewY(0);
   filter: blur(0);
@@ -426,15 +436,15 @@ footer .bg-especial-dark a:hover {
   top: 10px;
 }
 
-#show_menu:checked+.toggle #barra_meio {
+#show_menu:checked + .toggle #barra_meio {
   transform: scaleX(0);
 }
 
-#show_menu:checked+.toggle #barra_cima {
+#show_menu:checked + .toggle #barra_cima {
   transform: translateY(6.5px) rotate(-45deg);
 }
 
-#show_menu:checked+.toggle #barra_baixo {
+#show_menu:checked + .toggle #barra_baixo {
   transform: translateY(-6.5px) rotate(45deg);
 }
 
@@ -612,7 +622,7 @@ footer .bg-especial-dark a:hover {
   -moz-background-clip: text;
   white-space: nowrap;
   color: transparent;
-  background-color: #5B42F3;
+  background-color: #5b42f3;
   background-image: var(--gradiente-roxo);
 }
 
@@ -695,7 +705,7 @@ footer .bg-especial-dark a:hover {
 /** Botões - Personalizados */
 
 nav button {
-  transition: transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
   border: none;
   width: 52px;
   height: 51px;
@@ -804,17 +814,17 @@ nav button ul h6 {
   color: #f5f5f5 !important;
   position: relative;
   overflow: hidden;
-  -webkit-transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   font-weight: 600;
 }
 
 .btn-default:hover {
   background: var(--gradiente-roxo);
-  -webkit-transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: translateY(-2px);
 }
 
@@ -829,7 +839,7 @@ nav button ul h6 {
 }
 
 .btn-default::before {
-  content: '';
+  content: "";
   display: block;
   width: 0px;
   height: 86%;
@@ -853,7 +863,7 @@ nav button ul h6 {
   }
 
   12.5% {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   25% {
@@ -944,7 +954,7 @@ section {
 }
 
 #habilidades section img {
-  object-fit: cover
+  object-fit: cover;
 }
 
 /*: Meu próprio modal */
@@ -984,10 +994,6 @@ section {
     width: 225px;
   }
 
-  .Pattern-claro #blob {
-    opacity: 1;
-  }
-
   #meuNome {
     font-size: 3.4rem;
   }
@@ -1006,7 +1012,7 @@ section {
 
 /** A partir de LG */
 @media screen and (min-width: 992px) {
-  #habilidades>div {
+  #habilidades > div {
     /* animation: skewing 1s infinite alternate-reverse; */
     transform: skewY(0);
   }
@@ -1058,7 +1064,7 @@ header h3,
 
 #role_para_baixo i,
 #role_para_baixo span {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .pulse-down {
@@ -1142,7 +1148,6 @@ header h3,
 }
 
 @keyframes floatingLetters {
-
   0%,
   100% {
     transform: translateY(0) scale(0.975);
@@ -1174,11 +1179,11 @@ header h3,
 }
 
 .shadow-sm-dark {
-  box-shadow: 0 .125rem .25rem #22d3ee1a;
+  box-shadow: 0 0.125rem 0.25rem #22d3ee1a;
 }
 
 .shadow-dark {
-  box-shadow: 0 .5rem 1rem #22d3ee1a;
+  box-shadow: 0 0.5rem 1rem #22d3ee1a;
 }
 
 .shadow-lg-dark {
@@ -1186,11 +1191,11 @@ header h3,
 }
 
 .shadow-sm {
-  box-shadow: 0 .125rem .25rem #5b42f344 !important;
+  box-shadow: 0 0.125rem 0.25rem #5b42f344 !important;
 }
 
 .shadow {
-  box-shadow: 0 .5rem 1rem #5b42f344 !important;
+  box-shadow: 0 0.5rem 1rem #5b42f344 !important;
 }
 
 .shadow-lg {
@@ -1264,7 +1269,7 @@ header h3,
 }
 
 .form__field,
-.form__field:focus~.form__label,
+.form__field:focus ~ .form__label,
 .form__label {
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -1302,7 +1307,7 @@ header h3,
   color: transparent;
 }
 
-.form__field:placeholder-shown~.form__label {
+.form__field:placeholder-shown ~ .form__label {
   font-size: 1rem;
   cursor: text;
   top: 20px;
@@ -1315,7 +1320,7 @@ header h3,
   border-image-slice: 1;
 }
 
-.form__field:focus~.form__label {
+.form__field:focus ~ .form__label {
   position: absolute;
   top: -1px;
   display: block;
@@ -1341,7 +1346,12 @@ header h3,
   display: block;
   font-size: 1rem;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--color-cinzento) 80%, #bbb5 90%, var(--color-cinzento));
+  background: linear-gradient(
+    90deg,
+    var(--color-cinzento) 80%,
+    #bbb5 90%,
+    var(--color-cinzento)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1365,7 +1375,7 @@ header h3,
   animation-delay: -150ms;
 }
 
-.form__group input:focus+.linha-horizontal {
+.form__group input:focus + .linha-horizontal {
   opacity: 0;
 }
 
