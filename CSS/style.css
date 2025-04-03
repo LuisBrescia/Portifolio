@@ -1420,8 +1420,8 @@ input:-webkit-autofill {
   }
 }
 
-@supports (-moz-appearance: none) {
+/* @supports (-moz-appearance: none) {
   #blob {
     opacity: 0.3;
   }
-}
+} */
