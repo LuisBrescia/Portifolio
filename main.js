@@ -58,14 +58,12 @@ $(document).ready(function () {
       conteudo: $('input[name="conteudo"]').val(),
     };
 
-    // $('#enviaFormulario').css({
-    //   'cursor': 'progress',
-    //   'animation': 'pulse 1s infinite'
-    // });
-
     $("form .spinner-border").removeClass("d-none");
     $("#enviaFormulario > span").addClass("d-none");
-    $("#enviaFormulario").css("cursor", "progress");
+    $("#enviaFormulario").css({
+      cursor: "progress",
+      animation: "pulse 1s infinite",
+    });
 
     $.ajax({
       url: "https://script.google.com/macros/s/AKfycbyfKwG8Y96wWhLQvXRCkrRZ3QC1qKw21MS7ZR42r-IBF8VfBLWlK0ucay-WbzyUQbaM9w/exec",
