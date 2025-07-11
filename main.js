@@ -255,28 +255,28 @@ $(document).ready(function () {
     $(".modal-body").html(
       "<strong>1° Ano: (2020)</strong><br>" +
         "<ul>" +
-        '<li>Algorítmos e lógica de programação - <span class="text-especial">C / C++</span></li>' +
-        '<li>Programação para web - <span class="text-especial">HTML / CSS / Javascript</span></li>' +
-        '<li>Fundamentos da informática - <span class="text-especial">Básico da computação</span></li>' +
+        '<li>Algorítmos e lógica de programação - <span class="text-primario">C / C++</span></li>' +
+        '<li>Programação para web - <span class="text-primario">HTML / CSS / Javascript</span></li>' +
+        '<li>Fundamentos da informática - <span class="text-primario">Básico da computação</span></li>' +
         "</ul>" +
         "<strong>2° Ano: (2021)</strong><br>" +
         "<ul>" +
-        '<li>Linguagem de programação 1 - <span class="text-especial">Java</span></li>' +
-        '<li>Aplicações para web - <span class="text-especial">PHP / Servlets</span></li>' +
-        '<li>Organização de computadores - <span class="text-especial">Computação avançada</span></li>' +
+        '<li>Linguagem de programação 1 - <span class="text-primario">Java</span></li>' +
+        '<li>Aplicações para web - <span class="text-primario">PHP / Servlets</span></li>' +
+        '<li>Organização de computadores - <span class="text-primario">Computação avançada</span></li>' +
         "</ul>" +
         "<strong>3° Ano: (2022)</strong><br>" +
         "<ul>" +
-        '<li>Linguagem de programação 2 - <span class="text-especial">Criação de microsseviços</span></li>' +
-        '<li>Banco de dados - <span class="text-especial">PostgreSQL</span></li>' +
-        '<li>Tecnologias emergentes em informática - <span class="text-especial">C++ avançado</span></li>' +
-        '<li>Redes de Computadores - <span class="text-especial">Funcionamento / Quantificação</span></li>' +
-        '<li>Serviços do sistema operacional - <span class="text-especial">Protocolos / Segurança</span></li>' +
-        '<li>Projeto de sistemas - <span class="text-especial">Desenvolvimento de Software</span></li>' +
+        '<li>Linguagem de programação 2 - <span class="text-primario">Criação de microsseviços</span></li>' +
+        '<li>Banco de dados - <span class="text-primario">PostgreSQL</span></li>' +
+        '<li>Tecnologias emergentes em informática - <span class="text-primario">C++ avançado</span></li>' +
+        '<li>Redes de Computadores - <span class="text-primario">Funcionamento / Quantificação</span></li>' +
+        '<li>Serviços do sistema operacional - <span class="text-primario">Protocolos / Segurança</span></li>' +
+        '<li>Projeto de sistemas - <span class="text-primario">Desenvolvimento de Software</span></li>' +
         "</ul>" +
         "<span>" +
-        '<strong class="fw-bold">TCC:</strong> Utilizando o aprendizado das disciplinas acima, foi desenvolvido um aplicativo para celular intitulado "Quebra-Galho",' +
-        '<a href="https://github.com/cefetmg-2022-psi-g2" class="text-especial"> clique aqui</a> para mais detalhes.<br>' +
+        '<strong class="fw-bold">TCC:</strong> Utilizando o aprendizado das disciplinas acima, foi desenvolvido um aplicativo para celular intitulado "Quebra-Galho", ' +
+        '<a href="https://github.com/cefetmg-2022-psi-g2" class="text-primario hover-underline">clique aqui</a> para mais detalhes.<br>' +
         "</span>"
     );
   });
@@ -284,22 +284,22 @@ $(document).ready(function () {
     $(".modal-title").text("PUC Minas");
     $(".modal-body").html(
       `<i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">1° Período - </span>
-      <span class="text-especial">Info</span> <br>
+      <span class="text-primario">Info</span> <br>
       <i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">2° Período - </span>
-      <span class="text-especial">Info</span> <br>
+      <span class="text-primario">Info</span> <br>
       <i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">3° Período - </span>
-      <span class="text-especial">Info</span> <br>
+      <span class="text-primario">Info</span> <br>
       <i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">4° Período - </span>
-      <span class="text-especial">Info</span> <br>
-      <i class="bi-repeat text-amarelo"></i>&nbsp; <span class="fw-normal">5° Período - </span>
-      <span class="text-especial">Info</span> <br>
-      <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">6° Período - </span>
-      <span class="text-especial">Info</span> <br>
+      <span class="text-primario">Info</span> <br>
+      <i class="bi-patch-check-fill text-verde"></i>&nbsp; <span class="fw-normal">5° Período - </span>
+      <span class="text-primario">Info</span> <br>
+      <i class="bi-repeat text-amarelo"></i>&nbsp; <span class="fw-normal">6° Período - </span>
+      <span class="text-primario">Info</span> <br>
       <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">7° Período - </span>
-      <span class="text-especial">Info</span> <br>
+      <span class="text-primario">Info</span> <br>
       <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">8° Período - </span>
-      <span class="text-especial">Info</span> <br><br>
-      Atualmente, curso o <span class="text-especial">3° período</span> de forma regular.`
+      <span class="text-primario">Info</span> <br><br>
+      Atualmente, curso o <span class="text-primario">6° período</span> de forma regular.`
     );
   });
   $("#xp_hackatruck").click(function () {
@@ -317,7 +317,7 @@ $(document).ready(function () {
         "<li>Configuração de rotas utilizando Node Red</li>" +
         "</ul>" +
         "Junto de um grupo, desenvolvi um aplicativo para IOS que auxilia pessoas na execução de exercícios físicos, " +
-        '<a href="https://github.com/LuisBrescia/Hackatruck-Academia>" class="text-especial">clique aqui</a> para mais detalhes.'
+        '<a href="https://github.com/LuisBrescia/Hackatruck-Academia>" class="text-primario hover-underline">clique aqui</a> para mais detalhes.'
     );
   });
 
@@ -384,6 +384,7 @@ $(document).ready(function () {
         "linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)"
       );
       // > Uma cor só document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #5B42F3, #5B42F3)');
+      document.documentElement.style.setProperty("--primario", "#5b42f3");
       document.documentElement.style.setProperty("--color-indigo", "#5b42f3");
 
       document.documentElement.style.setProperty("--color-claro", "#f0f0f0");
@@ -401,6 +402,7 @@ $(document).ready(function () {
         "--gradiente-roxo",
         "linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #86efac)"
       );
+      document.documentElement.style.setProperty("--primario", "#22d3ee");
       document.documentElement.style.setProperty("--color-indigo", "#22d3ee");
 
       document.documentElement.style.setProperty("--color-claro", "#171717");

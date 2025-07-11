@@ -22,6 +22,7 @@ body {
   --color-azul-claro: #00ddeb;
   --color-amarelo: #fdc714;
   --gradiente-roxo: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  --primario: #5b42f3;
 }
 
 html {
@@ -643,6 +644,10 @@ footer .bg-especial-dark a:hover {
   color: var(--color-verde);
 }
 
+.text-primario {
+  color: var(--primario);
+}
+
 .text-azul {
   color: var(--color-azul);
 }
@@ -669,6 +674,11 @@ footer .bg-especial-dark a:hover {
 
 .letter-spacing {
   letter-spacing: 1px;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+  color: var(--primario);
 }
 
 /** Tamanho de fontes - Personalizados */
