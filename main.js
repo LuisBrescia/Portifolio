@@ -397,7 +397,7 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty(
         "--background-motion",
-        "#d9d9d9"
+        "#e9e9e9"
       );
       $("form").attr("data-bs-theme", "light");
     } else {
@@ -417,7 +417,10 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty("--color-cinzento", "#b7b7b7");
 
-      document.documentElement.style.setProperty("--background-motion", "#000");
+      document.documentElement.style.setProperty(
+        "--background-motion",
+        "#090909"
+      );
       $("form").attr("data-bs-theme", "dark");
     }
 
