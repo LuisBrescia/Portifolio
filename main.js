@@ -395,6 +395,10 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty("--color-cinzento", "#6c757d");
 
+      document.documentElement.style.setProperty(
+        "--background-motion",
+        "#d9d9d9"
+      );
       $("form").attr("data-bs-theme", "light");
     } else {
       $("#altera_tema span").text("dark");
@@ -413,6 +417,7 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty("--color-cinzento", "#b7b7b7");
 
+      document.documentElement.style.setProperty("--background-motion", "#000");
       $("form").attr("data-bs-theme", "dark");
     }
 
