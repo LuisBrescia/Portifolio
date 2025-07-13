@@ -168,7 +168,7 @@ $(document).ready(function () {
         break;
     }
 
-    $(window).scrollTop() + $(window).height() >= $(document).height() - 100
+    $(window).scrollTop() + $(window).height() >= $(document).height() - 150
       ? $("#footer").addClass("active")
       : $("#footer").removeClass("active");
   });
