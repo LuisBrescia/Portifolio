@@ -43,7 +43,7 @@ $(document).ready(function () {
         left: clientX + "px",
         top: clientY + "px",
       },
-      { duration: 3000, fill: "forwards" }
+      { duration: 3000, fill: "forwards" },
     );
   });
 
@@ -66,7 +66,7 @@ $(document).ready(function () {
     });
 
     $.ajax({
-      url: "https://script.google.com/macros/s/AKfycbyfKwG8Y96wWhLQvXRCkrRZ3QC1qKw21MS7ZR42r-IBF8VfBLWlK0ucay-WbzyUQbaM9w/exec",
+      url: "https://script.google.com/macros/s/AKfycbyma3VDy-8BF5bs7LEnvywX45rXSZLDRQpgYZep-QgIoqaOZDG646UGPDDXJR-4ZZMAXw/exec",
       type: "POST",
       contentType: "text/plain;charset=utf-8",
       data: JSON.stringify(data),
@@ -181,7 +181,7 @@ $(document).ready(function () {
         {
           scrollTop: $("#projetos").offset().top - 45,
         },
-        0
+        0,
       );
   });
 
@@ -212,7 +212,7 @@ $(document).ready(function () {
           {
             scrollTop: target.offset().top - 45,
           },
-          0
+          0,
         );
 
       setTimeout(function () {
@@ -277,7 +277,7 @@ $(document).ready(function () {
         "<span>" +
         '<strong class="fw-bold">TCC:</strong> Utilizando o aprendizado das disciplinas acima, foi desenvolvido um aplicativo para celular intitulado "Quebra-Galho", ' +
         '<a href="https://github.com/cefetmg-2022-psi-g2" class="text-primario hover-underline">clique aqui</a> para mais detalhes.<br>' +
-        "</span>"
+        "</span>",
     );
   });
   $("#xp_puc").click(function () {
@@ -299,7 +299,7 @@ $(document).ready(function () {
       <span class="text-primario">Info</span> <br>
       <i class="bi-dash text-vermelho"></i>&nbsp; <span class="fw-normal">8° Período - </span>
       <span class="text-primario">Info</span> <br><br>
-      Atualmente, curso o <span class="text-primario">6° período</span> de forma regular.`
+      Atualmente, curso o <span class="text-primario">6° período</span> de forma regular.`,
     );
   });
   $("#xp_hackatruck").click(function () {
@@ -317,7 +317,7 @@ $(document).ready(function () {
         "<li>Configuração de rotas utilizando Node Red</li>" +
         "</ul>" +
         "Junto de um grupo, desenvolvi um aplicativo para IOS que auxilia pessoas na execução de exercícios físicos, " +
-        '<a href="https://github.com/LuisBrescia/Hackatruck-Academia>" class="text-primario hover-underline">clique aqui</a> para mais detalhes.'
+        '<a href="https://github.com/LuisBrescia/Hackatruck-Academia>" class="text-primario hover-underline">clique aqui</a> para mais detalhes.',
     );
   });
 
@@ -381,7 +381,7 @@ $(document).ready(function () {
       $("#altera_tema span").text("light");
       document.documentElement.style.setProperty(
         "--gradiente-roxo",
-        "linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)"
+        "linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB)",
       );
       // > Uma cor só document.documentElement.style.setProperty('--gradiente-roxo', 'linear-gradient(144deg, #5B42F3, #5B42F3)');
       document.documentElement.style.setProperty("--primario", "#5b42f3");
@@ -397,14 +397,14 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty(
         "--background-motion",
-        "#e9e9e9"
+        "#e9e9e9",
       );
       $("form").attr("data-bs-theme", "light");
     } else {
       $("#altera_tema span").text("dark");
       document.documentElement.style.setProperty(
         "--gradiente-roxo",
-        "linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #86efac)"
+        "linear-gradient(144deg, #3b82f6 0%, #22d3ee 50%, #86efac)",
       );
       document.documentElement.style.setProperty("--primario", "#22d3ee");
       document.documentElement.style.setProperty("--color-indigo", "#22d3ee");
@@ -419,7 +419,7 @@ $(document).ready(function () {
 
       document.documentElement.style.setProperty(
         "--background-motion",
-        "#090909"
+        "#090909",
       );
       $("form").attr("data-bs-theme", "dark");
     }
@@ -428,7 +428,7 @@ $(document).ready(function () {
     $("#altera_tema").toggleClass("light-mode dark-mode");
 
     $(".bg-especial, .bg-especial-dark").toggleClass(
-      "bg-especial bg-especial-dark"
+      "bg-especial bg-especial-dark",
     );
     $(".shadow-sm, .shadow-sm-dark").toggleClass("shadow-sm shadow-sm-dark");
     $(".shadow, .shadow-dark").toggleClass("shadow shadow-dark");
