@@ -174,13 +174,13 @@ a {
 }
 
 .floatElement:not(
-    :nth-of-type(1),
-    :nth-of-type(2),
-    :nth-of-type(3),
-    :nth-of-type(4),
-    :nth-of-type(5),
-    :nth-of-type(11)
-  ) {
+  :nth-of-type(1),
+  :nth-of-type(2),
+  :nth-of-type(3),
+  :nth-of-type(4),
+  :nth-of-type(5),
+  :nth-of-type(11)
+) {
   background: var(--gradiente-roxo);
 }
 
@@ -421,7 +421,8 @@ footer .bg-especial-dark a:hover {
 #menu_content,
 .stripe,
 .circle {
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+  transition:
+    all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     background-color 0s;
 }
 
@@ -1472,7 +1473,7 @@ input:-webkit-autofill {
   width: fit-content;
   white-space: nowrap;
   background-size: 200%;
-  animation: background-pan 3s linear infinite;
+  /* animation: background-pan 3s linear infinite; */
   color: var(--color-branco);
 }
 
